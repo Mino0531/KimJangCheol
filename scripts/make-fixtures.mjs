@@ -1,0 +1,15 @@
+import vm from 'node:vm';
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url);
+const app=await readFile(new URL('src/app.js',root),'utf8');
+const chart=await readFile(new URL('src/patient-charts.js',root),'utf8');
+const sandbox={window:{},document:{querySelectorAll:()=>[],querySelector:()=>null},console,crypto:globalThis.crypto};
+vm.createContext(sandbox);vm.runInContext(chart,sandbox);
+const prefix=app.slice(0,app.indexOf('let db;'));
+vm.runInContext(prefix+'window.seedExport=seed();})();',sandbox);
+const data=sandbox.window.seedExport;data.patients=sandbox.window.HospitalPatientCharts.createProfiles();data.chart_fixture_version=1;
+const links=Object.fromEntries(Array.from({length:12},(_,i)=>[`demo-call-${String(i+1).padStart(3,'0')}`,`demo-patient-${String(i+1).padStart(3,'0')}`]));
+Object.assign(links,{'past-call-1':'demo-patient-003','past-call-2':'demo-patient-003','past-call-3':'demo-patient-004'});
+for(const c of data.calls)c.patient_id=links[c.id]||null;
+await writeFile(new URL('backend/fixtures/demo.json',root),JSON.stringify(data,null,2)+'\n');
+console.log(`Fixtures: ${data.patients.length} patients, ${data.calls.length} calls`);

@@ -1,0 +1,737 @@
+{
+  "$defs": {
+    "AllergyHistory": {
+      "additionalProperties": false,
+      "properties": {
+        "knowledge_status": {
+          "enum": [
+            "recorded",
+            "none_reported",
+            "unknown"
+          ],
+          "title": "Knowledge Status",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/AllergyRecord"
+          },
+          "maxItems": 100,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "knowledge_status",
+        "items"
+      ],
+      "title": "AllergyHistory",
+      "type": "object"
+    },
+    "AllergyRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "allergy_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Allergy Id",
+          "type": "string"
+        },
+        "substance": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Substance",
+          "type": "string"
+        },
+        "reaction": {
+          "anyOf": [
+            {
+              "maxLength": 300,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reaction"
+        },
+        "recorded_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Recorded On"
+        }
+      },
+      "required": [
+        "allergy_id",
+        "substance",
+        "recorded_on"
+      ],
+      "title": "AllergyRecord",
+      "type": "object"
+    },
+    "ConditionHistory": {
+      "additionalProperties": false,
+      "properties": {
+        "knowledge_status": {
+          "enum": [
+            "recorded",
+            "none_reported",
+            "unknown"
+          ],
+          "title": "Knowledge Status",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/ConditionRecord"
+          },
+          "maxItems": 100,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "knowledge_status",
+        "items"
+      ],
+      "title": "ConditionHistory",
+      "type": "object"
+    },
+    "ConditionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "condition_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Condition Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "resolved",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "diagnosed_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Diagnosed On"
+        },
+        "note": {
+          "default": "",
+          "maxLength": 500,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "condition_id",
+        "name",
+        "status",
+        "diagnosed_on"
+      ],
+      "title": "ConditionRecord",
+      "type": "object"
+    },
+    "EncounterRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "encounter_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Encounter Id",
+          "type": "string"
+        },
+        "visited_on": {
+          "format": "date",
+          "title": "Visited On",
+          "type": "string"
+        },
+        "department": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Department",
+          "type": "string"
+        },
+        "institution": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Institution",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "note": {
+          "maxLength": 1000,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "encounter_id",
+        "visited_on",
+        "department",
+        "institution",
+        "title",
+        "note"
+      ],
+      "title": "EncounterRecord",
+      "type": "object"
+    },
+    "Identity": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "birth_date": {
+          "format": "date",
+          "title": "Birth Date",
+          "type": "string"
+        },
+        "sex": {
+          "enum": [
+            "female",
+            "male",
+            "unknown"
+          ],
+          "title": "Sex",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Synthetic phone only in this demo format.",
+          "pattern": "^010-0000-\\d{4}$",
+          "title": "Phone",
+          "type": "string"
+        },
+        "region": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "birth_date",
+        "sex",
+        "phone",
+        "region"
+      ],
+      "title": "Identity",
+      "type": "object"
+    },
+    "MedicationHistory": {
+      "additionalProperties": false,
+      "properties": {
+        "knowledge_status": {
+          "enum": [
+            "recorded",
+            "none_reported",
+            "unknown"
+          ],
+          "title": "Knowledge Status",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/MedicationRecord"
+          },
+          "maxItems": 100,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "knowledge_status",
+        "items"
+      ],
+      "title": "MedicationHistory",
+      "type": "object"
+    },
+    "MedicationRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "medication_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Medication Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "purpose": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Purpose",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "stopped",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "started_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Started On"
+        },
+        "ended_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Ended On"
+        },
+        "is_fictional": {
+          "const": true,
+          "title": "Is Fictional",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "medication_id",
+        "name",
+        "purpose",
+        "status",
+        "started_on",
+        "ended_on",
+        "is_fictional"
+      ],
+      "title": "MedicationRecord",
+      "type": "object"
+    },
+    "ObservationRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "observation_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Observation Id",
+          "type": "string"
+        },
+        "observed_on": {
+          "format": "date",
+          "title": "Observed On",
+          "type": "string"
+        },
+        "systolic": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Systolic"
+        },
+        "diastolic": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Diastolic"
+        },
+        "glucose": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Glucose"
+        },
+        "blood_pressure_unit": {
+          "const": "mmHg",
+          "default": "mmHg",
+          "title": "Blood Pressure Unit",
+          "type": "string"
+        },
+        "glucose_unit": {
+          "const": "mg/dL",
+          "default": "mg/dL",
+          "title": "Glucose Unit",
+          "type": "string"
+        },
+        "glucose_context": {
+          "default": "unknown",
+          "enum": [
+            "fasting",
+            "random",
+            "unknown"
+          ],
+          "title": "Glucose Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "observation_id",
+        "observed_on"
+      ],
+      "title": "ObservationRecord",
+      "type": "object"
+    },
+    "PatientChart": {
+      "additionalProperties": false,
+      "properties": {
+        "patient_id": {
+          "pattern": "^demo-patient-\\d{3}$",
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "chart_number": {
+          "pattern": "^KJC-2026-\\d{3}$",
+          "title": "Chart Number",
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "#/$defs/Identity"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "conditions": {
+          "$ref": "#/$defs/ConditionHistory"
+        },
+        "allergies": {
+          "$ref": "#/$defs/AllergyHistory"
+        },
+        "medications": {
+          "$ref": "#/$defs/MedicationHistory"
+        },
+        "prescriptions": {
+          "items": {
+            "$ref": "#/$defs/PrescriptionRecord"
+          },
+          "maxItems": 500,
+          "title": "Prescriptions",
+          "type": "array"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/ObservationRecord"
+          },
+          "maxItems": 2000,
+          "title": "Observations",
+          "type": "array"
+        },
+        "encounters": {
+          "items": {
+            "$ref": "#/$defs/EncounterRecord"
+          },
+          "maxItems": 500,
+          "title": "Encounters",
+          "type": "array"
+        },
+        "visit_preparation": {
+          "$ref": "#/$defs/VisitPreparation"
+        }
+      },
+      "required": [
+        "patient_id",
+        "chart_number",
+        "identity",
+        "provenance",
+        "conditions",
+        "allergies",
+        "medications",
+        "prescriptions",
+        "observations",
+        "encounters",
+        "visit_preparation"
+      ],
+      "title": "PatientChart",
+      "type": "object"
+    },
+    "PrescriptionItem": {
+      "additionalProperties": false,
+      "properties": {
+        "medication_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Medication Id",
+          "type": "string"
+        },
+        "medication_name": {
+          "description": "Snapshot at prescription time.",
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Medication Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "medication_id",
+        "medication_name"
+      ],
+      "title": "PrescriptionItem",
+      "type": "object"
+    },
+    "PrescriptionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "prescription_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Prescription Id",
+          "type": "string"
+        },
+        "prescribed_on": {
+          "format": "date",
+          "title": "Prescribed On",
+          "type": "string"
+        },
+        "department": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Department",
+          "type": "string"
+        },
+        "institution": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Institution",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/PrescriptionItem"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "prescription_id",
+        "prescribed_on",
+        "department",
+        "institution",
+        "items"
+      ],
+      "title": "PrescriptionRecord",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "recorded_at": {
+          "format": "date-time",
+          "title": "Recorded At",
+          "type": "string"
+        },
+        "source_kind": {
+          "const": "synthetic_fixture",
+          "title": "Source Kind",
+          "type": "string"
+        },
+        "verification_status": {
+          "enum": [
+            "demo_verified",
+            "unverified"
+          ],
+          "title": "Verification Status",
+          "type": "string"
+        },
+        "source_label": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Source Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "as_of",
+        "recorded_at",
+        "source_kind",
+        "verification_status",
+        "source_label"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "VisitPreparation": {
+      "additionalProperties": false,
+      "properties": {
+        "mobility": {
+          "enum": [
+            "independent",
+            "needs_support",
+            "wheelchair",
+            "unknown"
+          ],
+          "title": "Mobility",
+          "type": "string"
+        },
+        "hearing": {
+          "enum": [
+            "standard",
+            "needs_slow_speech",
+            "unknown"
+          ],
+          "title": "Hearing",
+          "type": "string"
+        },
+        "preferred_channel": {
+          "enum": [
+            "voice",
+            "text",
+            "unknown"
+          ],
+          "title": "Preferred Channel",
+          "type": "string"
+        },
+        "companion": {
+          "enum": [
+            "planned",
+            "not_planned",
+            "unknown"
+          ],
+          "title": "Companion",
+          "type": "string"
+        },
+        "phone_type": {
+          "enum": [
+            "feature_phone",
+            "smartphone",
+            "unknown"
+          ],
+          "title": "Phone Type",
+          "type": "string"
+        },
+        "staff_note": {
+          "maxLength": 800,
+          "title": "Staff Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mobility",
+        "hearing",
+        "preferred_channel",
+        "companion",
+        "phone_type",
+        "staff_note"
+      ],
+      "title": "VisitPreparation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "format_id": {
+      "const": "KJC_VISIT_PREPARATION_CHART",
+      "title": "Format Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "hospital_code": {
+      "const": "KJC_DEMO",
+      "title": "Hospital Code",
+      "type": "string"
+    },
+    "data_classification": {
+      "const": "synthetic",
+      "title": "Data Classification",
+      "type": "string"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "patients": {
+      "items": {
+        "$ref": "#/$defs/PatientChart"
+      },
+      "maxItems": 200,
+      "minItems": 1,
+      "title": "Patients",
+      "type": "array"
+    }
+  },
+  "required": [
+    "format_id",
+    "schema_version",
+    "hospital_code",
+    "data_classification",
+    "generated_at",
+    "patients"
+  ],
+  "title": "ChartBundle",
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checks": [
+    "16 API/DB integration tests passed from extracted ZIP",
+    "Actual run.py first-run snapshot copy and localhost server passed",
+    "Health, bootstrap, RAG 100, patient preparation and staff-note persistence passed",
+    "Runtime SQLite integrity and foreign keys passed",
+    "Distributed DB snapshot unchanged by runtime writes",
+    "Phone AI sender example: six events accepted, six identical retries deduplicated, ended summary and preparation verified using temporary DB"
+  ],
+  "data": {
+    "patients": 12,
+    "calls": 15,
+    "knowledge_documents": 100,
+    "preparation_cards": 10,
+    "initial_staff_actions": 8
+  },
+  "environment": {
+    "python": "3.13.2",
+    "platform": "darwin"
+  },
+  "limits": [
+    "Windows and Python 3.12 not executed",
+    "Fresh pip installation not repeated; tested with the pinned environment",
+    "Browser visual verification unavailable in current Work settings"
+  ]
+}

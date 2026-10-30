@@ -1,0 +1,10 @@
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url);
+const [html,css,chartJs,prepJs,appJs]=await Promise.all(['src/index.html','src/styles.css','src/patient-charts.js','src/preparation.js','src/app.js'].map(p=>readFile(new URL(p,root),'utf8')));
+const fixture=await readFile(new URL('backend/fixtures/chart-display-v1.json',root),'utf8');
+const preparations=await readFile(new URL('backend/fixtures/rag/preparation-display.json',root),'utf8');
+const js='window.HospitalPreparationFixtures='+preparations+';\n'+'window.HospitalCommonChartFixtures='+fixture+';\n'+chartJs+'\n'+prepJs+'\n'+appJs;
+const output=html.replace('<!--STYLE-->',()=>`<style>${css}</style>`).replace('<!--SCRIPT-->',()=>`<script>${js.replace(/<\/script/gi,'<\\/script')}</script>`);
+await mkdir(new URL('dist/',root),{recursive:true});
+await writeFile(new URL('dist/index.html',root),output);
+console.log(`Built standalone dashboard: ${Buffer.byteLength(output)} bytes`);

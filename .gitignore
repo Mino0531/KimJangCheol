@@ -1,0 +1,10 @@
+backend/.venv/
+backend/__pycache__/
+backend/.local-data/
+**/__pycache__/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Intentionally shared synthetic snapshot; runtime DB remains ignored.
+!data/hospital-demo.sqlite3

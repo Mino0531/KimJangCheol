@@ -1,0 +1,16 @@
+(()=>{
+'use strict';
+const e=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const level={1:'일상 표현',2:'진료 용어',3:'전문 용어'};
+function render(result,query='',status='ready',linksEnabled=true){
+const citation=(id,label)=>linksEnabled?`<a href="/api/team/knowledge/documents/${encodeURIComponent(id)}" target="_blank" rel="noopener">${e(label)}</a>`:`<span class="prep-offline-source">${e(label)}</span>`;
+ const head=`<div class="prep-intro"><div><span class="prep-sparkle">✧</span><strong>이 환자의 방문 준비</strong></div><span class="prep-count">차트 × 지식 ${result?.knowledge_document_count||100}개</span></div><p class="prep-description">기록된 지병·복용약·방문 목적에 맞춰 준비할 것과 병원에 확인할 질문을 정리했어요.</p><form id="preparation-search" class="prep-query"><label class="sr-only" for="preparation-query">방문 목적이나 어르신 표현 추가</label><input id="preparation-query" maxlength="500" value="${e(query)}" placeholder="예: 피검사 하러 가요" autocomplete="off"><button type="submit">다시 찾기</button></form>`;
+ if(status==='loading')return head+'<div class="prep-loading" role="status">환자 차트와 방문 준비 문서를 연결하고 있어요…</div>';
+ if(status==='error')return head+'<div class="prep-loading prep-error" role="status">준비사항을 불러오지 못했어요. <button id="retry-preparation">다시 시도</button></div>';
+ if(!result)return head+'<p class="prep-description">로컬 DB 연결 버전에서 준비사항을 조회할 수 있어요.</p>';
+ const cards=result.cards||[];
+ const words=result.word_comparison||[];
+ return head+`<div class="prep-legend"><span><i></i>방문 준비 전용</span><small>검색 + 정해진 문장으로 정리</small></div><div class="prep-cards">${cards.map((c,i)=>`<article class="prep-card"><header><span class="prep-card-number">${String(i+1).padStart(2,'0')}</span><h4>${e(c.title)}</h4></header><p class="prep-action">${e(c.easy_text)}</p><div class="prep-reason"><span>선택 이유</span>${c.reasons.map(e).join(' · ')}</div><details class="prep-evidence"><summary>직원 확인 질문 · 참고 문서 <span>⌄</span></summary><div><p><strong>병원에 확인할 것</strong>${e(c.staff_question)}</p><p class="prep-citation"><strong>준비 안내 문서</strong>${citation(c.document_id,c.document_id+' · 서비스 작성')}<small>의료정보 검토 대기 · 방문 준비 문장만 사용</small></p>${c.reference_documents.length?`<p class="prep-citation"><strong>관련 원문 · 검토 대기</strong>${c.reference_documents.map(r=>citation(r.document_id,r.document_id+' · '+r.category)).join('')}<small>이 원문의 복약·금식·처치 지시는 안내 생성에 사용하지 않았어요.</small></p>`:''}</div></details></article>`).join('')||'<div class="prep-loading">현재 정보에 맞는 준비 문서가 없어요. 방문 목적을 추가해 주세요.</div>'}</div>${words.length?`<details class="prep-word-panel"><summary><span>어려운 말 → 쉬운 표현</span><small>${words.length}개 연결</small></summary><p>단어 수준은 서비스 내부 기준이며, 문자 유사도는 진단 정확도가 아니에요.</p><div class="prep-word-list">${words.map(w=>`<div class="prep-word-row"><div><strong>${e(w.canonical)}</strong><span class="word-tier tier-${w.professional_level}">${level[w.professional_level]}</span></div><p>→ ${e(w.easy_expression)} <span class="word-tier tier-1">일상 표현</span></p><small>검색 표현: ${e(w.input_expression)} · ${w.match_type==='spelling_similarity'?'철자 유사 후보':w.match_type==='alias'?'표현 연결':'용어 일치'}</small></div>`).join('')}</div></details>`:''}<p class="prep-footer">준비 안내 초안 · 새 진단이나 약 복용·중단 지시를 만들지 않습니다. 실제 검사 준비는 병원 안내를 확인해 주세요.</p>`;
+}
+window.HospitalPreparation=Object.freeze({render});
+})();

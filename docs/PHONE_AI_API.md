@@ -1,0 +1,193 @@
+# 전화 AI 담당자용 API 연결 가이드
+
+이 문서는 현재 패키지 코드의 계약을 설명합니다. 전화번호 발급·전화 수신·STT·AI·TTS 구현은 전화 AI 모듈이 담당하고, 이 백엔드는 확정된 텍스트 이벤트를 저장합니다. 오디오 업로드·통화 연결·TTS 재생 API는 없습니다.
+
+## 실행과 연결 주소
+
+먼저 루트의 `README.md`대로 `setup.py`, `run.py`를 실행합니다.
+
+- 기본 API 주소: `http://127.0.0.1:8767`
+- 대시보드: `http://127.0.0.1:8767/`
+- Swagger UI: `http://127.0.0.1:8767/docs`
+- OpenAPI JSON: `http://127.0.0.1:8767/openapi.json`
+- 상태 확인: `GET /api/health`
+
+127.0.0.1은 현재 PC 자신입니다. 서버는 현재 로컬 인터페이스에만 연결되므로 외부 전화 서비스에서 직접 호출할 수 없습니다. 처음에는 전화 AI 모듈과 이 서버를 같은 PC에서 실행해 API 계약을 맞추세요. 공용 서버·인증·외부 콜백 접근은 별도 배포 작업입니다.
+
+## 통화 이벤트 공통 형식
+
+```http
+POST /api/team/call-events
+Content-Type: application/json
+```
+
+```json
+{
+  "source": "phone-ai",
+  "event_id": "phone-demo-001-start",
+  "call_id": "phone-demo-001",
+  "event_type": "call_started",
+  "occurred_at": "2026-10-30T15:00:00+09:00",
+  "payload": {
+    "patient_id": "demo-patient-003",
+    "caller_key": "demo-caller-3",
+    "name": "이정례",
+    "age": 82,
+    "phone": "010-0000-1003",
+    "region": "화순군 화순읍",
+    "purpose": "방문 준비 재확인",
+    "visit_type": "재진",
+    "hospital_code": "KJC_DEMO",
+    "planned_visit_text": "다음 방문 전 안내 확인"
+  }
+}
+```
+
+위 시각은 예시입니다. 실제 이벤트에는 발생 시각과 시간대를 넣습니다.
+
+| 공통 필드 | 필수·규칙 |
+|---|---|
+| source | 1~80자. 예: phone-ai. 같은 송신 시스템은 동일한 값을 사용 |
+| event_id | 1~160자. source 안에서 고유. 재전송 시 같은 값과 같은 본문 유지 |
+| call_id | 1~160자. 같은 통화에서 동일, 새 통화에는 새 ID |
+| event_type | 아래 지원 이벤트 중 하나 |
+| occurred_at | 시간대가 포함된 ISO 8601. 예: +09:00 또는 Z |
+| payload | 이벤트별 JSON 객체 |
+
+현재 지원 이벤트는 `call_started`, `message_finalized`, `location_observed`, `call_ended`, `summary_ready`의 5개입니다. 다른 이름의 이벤트를 보내면 422입니다. call_failed·통화 연결 중 상태·부분 STT는 현재 지원하지 않습니다.
+
+## 1. call_started — 필수, 가장 먼저 전송
+
+위 전체 예시를 참고하세요. 성공 응답을 받은 후 나머지 이벤트를 보냅니다.
+
+| payload 필드 | 규칙 |
+|---|---|
+| patient_id | 선택. 기존 환자 ID 또는 null. 예시 demo-patient-003 |
+| caller_key | 필수. 발신자 식별값, 1~160자. 환자 신원 인증값은 아님 |
+| name | 필수. 1~100자 |
+| age | 필수. 정수, 0~120 |
+| phone | 필수. 문자열, 최대 40자 |
+| region | 필수. 문자열, 최대 200자 |
+| purpose | 필수. 문자열, 최대 200자 |
+| visit_type | 필수. 문자열, 최대 100자. 시연 값은 초진/재진/미확인 |
+| hospital_code | 필수. 현재 고정값 KJC_DEMO |
+| planned_visit_text | 선택. 최대 300자. 기본값 빈 문자열 |
+| color | 선택. peach/mint/blue/violet. 기본값 peach |
+
+현재 API는 기본정보가 수집된 시점에 시작 이벤트를 저장하는 계약입니다. 실제 전화가 연결되는 순간 정보가 아직 없다면, 별도의 ‘연결됨’ 이벤트 또는 통화 정보 보완 API를 합의해야 합니다. 가짜 정보를 만들어 넣지 마세요.
+
+patient_id가 확인되지 않으면 생략하거나 null로 보냅니다. 존재하지 않는 ID는 422입니다. 전화번호만으로 환자를 연결하지 않습니다. 이 시연의 예시 연결은 사전에 지정된 가상 환자 매핑입니다.
+
+## 2. message_finalized — 확정된 STT와 실제 안내한 AI 텍스트
+
+공통 형식에서 event_type을 message_finalized로 바꾸고 payload를 다음과 같이 보냅니다.
+
+```json
+{
+  "sequence": 1,
+  "speaker": "caller",
+  "text": "내일 피검사 하러 가려고 해요."
+}
+```
+
+- sequence: 1 이상의 정수. caller와 assistant를 합쳐 통화 전체에서 1, 2, 3…으로 증가합니다.
+- speaker: caller 또는 assistant.
+- text: 1~4,000자. 부분 인식 결과가 아닌 확정된 발화를 보냅니다.
+- 같은 call_id에서 sequence는 중복될 수 없습니다.
+- assistant에는 실제로 안내한 응답을 저장합니다. 아직 말하지 않은 초안을 확정 발화로 보내지 않습니다.
+
+## 3. location_observed — 선택
+
+```json
+{
+  "latitude": 35.057,
+  "longitude": 126.977,
+  "location_source": "simulated",
+  "accuracy_m": null
+}
+```
+
+위 좌표는 가상 위치입니다. 현재 API는 location_source=simulated만 받습니다. 기기의 실제 GPS를 전화 수신 정보만으로 얻는 기능은 없습니다.
+
+위도는 -90~90, 경도는 -180~180이고 두 좌표는 함께 존재하거나 함께 null이어야 합니다. accuracy_m은 null 또는 0 이상의 수치입니다. 위치를 모르면 이 이벤트를 보내지 않아도 됩니다.
+
+## 4. call_ended — 통화 종료
+
+```json
+{}
+```
+
+공통 occurred_at을 종료 시각으로 저장합니다. 이미 종료된 통화에 새로운 종료 이벤트를 보내면 409입니다. 동일 이벤트의 재전송은 동일 event_id·본문을 유지하세요.
+
+## 5. summary_ready — 종료 후 요약 저장
+
+```json
+{
+  "summary_text": "이정례 님은 혼자 병원을 방문할 예정이며, 검사 전 확인할 사항을 다시 설명해 달라고 요청했습니다."
+}
+```
+
+summary_text는 1~4,000자입니다. 종료 후 요약이 늦게 도착해도 저장할 수 있고 통화 상태가 진행 중으로 돌아가지 않습니다. 이 이벤트는 요약을 생성하는 API가 아니라, 전화 AI에서 만든 요약을 저장하는 API입니다.
+
+현재 백엔드는 data_mode=simulated, ai_mode=null, summary_source=fixture를 고정 저장합니다. 실제 AI 연결 시 해당 메타데이터를 제대로 남기려면 이 계약을 확장해야 합니다. 임의 필드 추가만으로 실제 AI 실행 모드가 기록되는 것은 아닙니다.
+
+## 응답과 오류
+
+정상 저장은 HTTP 200이고 응답에 applied=true, call_id, 저장된 call이 포함됩니다.
+
+같은 이벤트를 동일하게 재전송하면 다음처럼 반환합니다.
+
+```json
+{
+  "applied": false,
+  "duplicate": true,
+  "call_id": "phone-demo-001"
+}
+```
+
+| 응답 | 의미 |
+|---|---|
+| 200 / applied=true | 새 이벤트 저장 성공 |
+| 200 / duplicate=true | 동일 이벤트가 이미 저장됨. 다시 생성하지 않음 |
+| 409 | 시작 전 후속 이벤트, 기존 call_id 재생성, 같은 ID의 다른 본문, 발화 순서 중복, 이미 종료된 통화 등 |
+| 422 | 필드·시간대·좌표·환자 ID·허용 값 오류 |
+| 404 | 조회 대상이 없음 |
+
+네트워크 타임아웃으로 응답을 받지 못했다면 같은 event_id·본문을 재전송할 수 있습니다. 409/422를 새 event_id로 바꿔 무한 반복하지 말고 원인을 확인하세요. 이벤트별 본문과 발생 시각도 재전송 시 고정해야 합니다.
+
+## 전화 AI가 읽을 수 있는 API
+
+| 메서드·경로 | 용도 |
+|---|---|
+| GET /api/team/calls/{call_id}/preparation | 해당 통화의 환자별 방문 준비 카드 |
+| GET /api/team/calls/{call_id}/preparation?q=피검사 | 어르신 표현을 추가한 검색 |
+| GET /api/team/patients/{patient_id}/chart | 환자 차트 |
+| GET /api/team/calls/{call_id} | 통화·환자·위치·확정 발화·직원 처리 |
+| GET /api/team/knowledge/word-levels?q=피검사 | 전문용어·쉬운 표현 비교 |
+| GET /api/team/knowledge/stats | 문서 100개 및 정책·표현 사전 통계 |
+
+preparation 응답에서 cards[].easy_text는 준비 안내, staff_question은 병원에 확인할 질문, reasons는 선택 이유, document_id는 서비스 작성 문서 ID입니다. 관련 의료 원문은 검토 대기이고 행동 지시 생성에 사용하지 않습니다. 준비 결과는 임베딩·LLM이 아닌 어휘 검색과 정해진 문장 조합입니다.
+
+대시보드는 기본 5초 주기로 조회합니다. 입력 중 또는 화면 자체 시연 중에는 갱신을 잠시 멈춥니다.
+
+## 바로 시험하는 예제
+
+서버가 실행 중인 같은 PC에서 실행합니다.
+
+macOS/Linux:
+
+```sh
+backend/.venv/bin/python examples/phone_ai_sender.py --dry-run
+backend/.venv/bin/python examples/phone_ai_sender.py
+```
+
+Windows:
+
+```text
+backend\.venv\Scripts\python.exe examples\phone_ai_sender.py --dry-run
+backend\.venv\Scripts\python.exe examples\phone_ai_sender.py
+```
+
+--dry-run은 전송 없이 JSON만 출력합니다. 실제 실행은 새 가상 통화 한 건·가상 위치·발화·종료·요약을 DB에 추가합니다. 새 call_id는 자동 생성합니다. 서버를 8777로 실행했다면 `--base-url http://127.0.0.1:8777`을 추가하세요.
+
+이 예제는 전화망을 연결하지 않고 텍스트 이벤트 전송만 재현합니다. 위치·환자·발화는 모두 가상입니다.
