@@ -1,0 +1,18 @@
+{
+  "coordination-006": {
+    "status": "checking",
+    "category": "unreachable",
+    "report_text": "[가상 추가 접수] 다시 연락했으나 응답이 없어 현재 안부와 위치 확인을 요청했습니다. 건강 상태는 확인되지 않았습니다.",
+    "location_text": "현재 위치 미확인 · 거주 지역은 화순군 이양면으로 기록됨",
+    "reported_by": "방문 지원 담당자 · 가상 추가 접수",
+    "opened_at": "2026-10-30T13:50:00+09:00"
+  },
+  "coordination-012": {
+    "status": "checking",
+    "category": "unreachable",
+    "report_text": "[가상 추가 접수] 통화가 끊긴 뒤 현재 상황이 확인되지 않아 연락 지원이 필요합니다.",
+    "location_text": "현재 위치 미확인",
+    "reported_by": "방문 지원 담당자 · 가상 추가 접수",
+    "opened_at": "2026-10-30T13:48:00+09:00"
+  }
+}

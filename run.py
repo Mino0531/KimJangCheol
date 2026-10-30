@@ -29,7 +29,9 @@ def main():
             importlib.import_module(name)
         except ImportError:
             raise SystemExit(f'{name} 설치가 필요합니다. 먼저 python setup.py 를 실행하세요.')
-    required = ['dist/index.html', 'backend/app.py', 'backend/fixtures/demo.json',
+    required = ['dist/index.html', 'dist/municipality.html', 'backend/app.py', 'backend/coordination.py',
+                'backend/fixtures/coordination.json', 'backend/fixtures/safety-guidance.json',
+                'backend/fixtures/safety-scenarios.json', 'backend/fixtures/demo.json',
                 'backend/fixtures/charts-v1.json', 'backend/schemas/patient-chart-v1.template.json',
                 'backend/fixtures/rag/medical-knowledge-source.txt', 'backend/fixtures/rag/visit-preparation-extra.txt',
                 'backend/fixtures/rag/preparation-policies.json', 'backend/fixtures/rag/vocabulary-levels.json']
@@ -55,7 +57,7 @@ def main():
             pass
     env = dict(os.environ)
     env['HOSPITAL_DB_PATH'] = str(target)
-    print(f'화면: http://127.0.0.1:{args.port}/\nAPI 문서: http://127.0.0.1:{args.port}/docs\nDB: {target}\n종료: Ctrl+C', flush=True)
+    print(f'병원 화면: http://127.0.0.1:{args.port}/\n지자체 화면: http://127.0.0.1:{args.port}/municipality\nAPI 문서: http://127.0.0.1:{args.port}/docs\nDB: {target}\n종료: Ctrl+C', flush=True)
     try:
         result = subprocess.run([sys.executable, '-m', 'uvicorn', 'backend.app:app', '--host', '127.0.0.1',
                                  '--port', str(args.port)], cwd=ROOT, env=env)

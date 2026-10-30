@@ -8,3 +8,11 @@ backend/.local-data/
 
 # Intentionally shared synthetic snapshot; runtime DB remains ignored.
 !data/hospital-demo.sqlite3
+
+# Local credentials and OS-generated files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store

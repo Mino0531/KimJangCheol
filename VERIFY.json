@@ -1,27 +1,33 @@
 {
+  "release": "v3",
   "status": "passed",
+  "tests": 23,
   "checks": [
-    "16 API/DB integration tests passed from extracted ZIP",
-    "Actual run.py first-run snapshot copy and localhost server passed",
-    "Health, bootstrap, RAG 100, patient preparation and staff-note persistence passed",
-    "Runtime SQLite integrity and foreign keys passed",
-    "Distributed DB snapshot unchanged by runtime writes",
-    "Phone AI sender example: six events accepted, six identical retries deduplicated, ended summary and preparation verified using temporary DB"
+    "23 API/DB tests passed from extracted candidate ZIP",
+    "run.py environment and required-file check passed",
+    "Actual CLI first-start DB copy and both local HTTP dashboards passed",
+    "HTTP hospital-to-municipality response, resident guidance and completion passed",
+    "HTTP missed-contact handoff rejection and guardian welfare confirmation passed",
+    "Bundled phone AI sender submitted six events and retrieved preparation successfully",
+    "Actual CLI restart preserved coordination, safety and telephone event writes",
+    "Runtime SQLite integrity and foreign keys passed; distributed snapshot unchanged",
+    "Existing v2 DB upgrade retained original calls and a preexisting synthetic staff note"
   ],
-  "data": {
-    "patients": 12,
-    "calls": 15,
-    "knowledge_documents": 100,
-    "preparation_cards": 10,
-    "initial_staff_actions": 8
-  },
   "environment": {
     "python": "3.13.2",
     "platform": "darwin"
   },
+  "data": {
+    "patients": 12,
+    "calls": 15,
+    "coordination_cases": 12,
+    "active_safety_cases": 2,
+    "knowledge_documents": 100
+  },
   "limits": [
+    "Fresh pip installation not repeated; validated using the pinned Python environment",
     "Windows and Python 3.12 not executed",
-    "Fresh pip installation not repeated; tested with the pinned environment",
-    "Browser visual verification unavailable in current Work settings"
+    "Browser control disabled in Work settings; visual and click QA not performed",
+    "Local FastAPI preview only; existing Sites project not found"
   ]
 }

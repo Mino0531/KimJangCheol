@@ -19,6 +19,7 @@
       <button class="nav-item" data-view="locations"><span data-icon="pin"></span><span>위치 현황</span></button>
       <button class="nav-item" data-view="notes"><span data-icon="note"></span><span>직원 메모</span><b id="nav-note-count"></b></button>
     </nav>
+    <a class="municipality-link" id="municipality-link" href="municipality.html" target="_blank" rel="noopener"><span data-icon="users"></span>지자체 대시보드 ↗</a>
     <div class="sidebar-bottom"><div class="demo-help"><span class="small-icon" data-icon="sparkles"></span><strong>전화 한 통의 안심</strong><p>방문 전 준비를 함께하고,<br>도착 후의 낯섦을 줄여요.</p><button class="text-link" id="help-button">시연 가이드 <span>↗</span></button></div><div class="sidebar-status"><span class="status-dot"></span>가상 데이터 시연 환경</div><button class="profile" id="profile-help"><span class="avatar">지</span><span><strong>이지은</strong><small>원무팀 · 데스크 담당자</small></span><span data-icon="chevron-right"></span></button></div>
   </aside>
   <div class="app-shell">
@@ -26,6 +27,7 @@
     <main>
       <section class="page-heading"><div><div class="eyebrow"><span></span>CARE STARTS BEFORE THE VISIT</div><h1 id="page-title">방문 준비 데스크</h1><p id="page-description">어르신의 전화 한 통부터 병원 방문까지, 준비 상황을 한눈에 확인하세요.</p></div><button class="button primary" id="start-demo"><span data-icon="plus"></span>새 통화 시연</button></section>
       <section class="stats" id="stats" aria-label="오늘의 통화 요약"></section>
+      <section class="panel hospital-inbox" id="coordination-inbox" aria-label="지자체 연계 요청"></section>
       <div class="main-grid">
         <div class="primary-column">
           <section class="panel call-panel" id="call-panel">

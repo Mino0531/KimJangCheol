@@ -1,10 +1,13 @@
-﻿팀원분들, 병원 방문 준비 서비스 개발본 공유합니다.
+﻿팀원분들, 최신 v3 공유합니다.
 
-첨부한 `김장철병원_팀전달_전체패키지_2026-10-30_v2.zip`에 대시보드, FastAPI 백엔드, SQLite DB 사본, 가상 환자 12명, RAG 문서 100개, 표현 사전 27쌍과 실행 안내를 넣었습니다.
+이번 버전에는 병원 대시보드와 지자체의 병원 연결·위기 대응 화면, 가상 DB, 환자 12명·통화 15건·연계 업무 12건·안부 확인 사례 2건, RAG 100개를 포함했습니다.
 
-1. 압축을 모두 풀고 `kimjangcheol-hospital-team` 폴더에서 실행해 주세요.
+GitHub: https://github.com/Mino0531/KimJangCheol
+ZIP: downloads/kimjangcheol-hospital-team-2026-10-30-v3.zip
 
-macOS/Linux:
+처음 받는 분은 저장소를 git clone하거나 ZIP을 모두 풀고 프로젝트 폴더에서 실행해 주세요.
+
+macOS / Linux:
 
 ```sh
 python3 setup.py
@@ -18,53 +21,40 @@ py setup.py
 py run.py
 ```
 
-Python 3.13 권장입니다. `setup.py`는 최초 한 번만 실행하면 됩니다. 기본 실행에는 Node.js·AWS API 키가 필요하지 않습니다.
+Python 3.13 권장입니다. 기본 실행에는 Node.js나 AWS API 키가 필요하지 않습니다.
 
-2. 실행 후 접속합니다.
+- 병원: http://127.0.0.1:8767/
+- 지자체: http://127.0.0.1:8767/municipality
+- API 테스트: http://127.0.0.1:8767/docs
 
-- 대시보드: http://127.0.0.1:8767/
-- API 문서 및 요청 테스트: http://127.0.0.1:8767/docs
-- 종료: 서버 터미널에서 Ctrl+C
+기존에 복제한 분은 작업 내용을 현재 브랜치에 커밋하고 서버를 종료한 뒤 main에서 최신 코드를 받아 주세요.
 
-현재는 각자 PC에서 실행하므로 DB도 각각 별개입니다. 다른 PC나 외부 전화 플랫폼에서 접속할 공용 서버 주소는 추후 정해야 합니다.
+```sh
+git switch main
+git pull --ff-only origin main
+python3 setup.py
+python3 run.py
+```
 
-3. 화면에서 확인할 내용입니다.
+Windows는 Python 명령을 py로 바꾸면 됩니다. 기존 로컬 DB는 보존됩니다. 최신 API 반영을 위해 서버 재시작이 필요합니다. 각자 PC의 DB는 서로 별개입니다.
 
-- 환자를 누르면 오른쪽에서 환자별 방문 준비와 근거 문서를 확인할 수 있습니다.
-- ‘피검사 하러 가요’를 추가 입력하면 표현에 맞춰 다시 검색합니다.
-- 환자 차트에서 지병·현재 복용약·과거 처방·진료 기록을 볼 수 있습니다.
-- 대화·과거 통화·위치·직원 메모·확인 상태도 조회하고 저장할 수 있습니다.
-- ‘새 통화 시연’으로 약 17초 동안 전체 흐름을 확인할 수 있습니다.
+시연은 지자체에서 이정례 님의 요청 확인 → 병원 화면 상단 요청함에서 답변 저장 → 지자체에서 주민 재안내·완료 순서입니다. 안전·위기 대응은 별도로 현재 위치와 전달받은 상황, 실제 연락 결과·인계·후속 확인을 기록합니다. 실제 전화 발신·신고·출동은 실행하지 않습니다.
 
-4. 전화 AI 담당자 연결 지점입니다.
+전화 AI 담당자 연결:
 
-전화 수신·STT·AI·TTS 처리는 전화 AI 쪽에서 담당하고, 확정된 통화 이벤트는 `POST /api/team/call-events`로 보내주세요.
+- 확정된 텍스트 이벤트 전송: POST /api/team/call-events
+- 순서: call_started → message_finalized 반복 → call_ended → summary_ready
+- 위치 이벤트는 선택이며 현재 가상 좌표만 허용합니다.
+- 통화 전체는 같은 call_id, 이벤트마다 고유 event_id를 사용합니다. 재전송 시 event_id와 본문을 유지합니다.
+- 자세한 JSON·필드·중복 처리: docs/PHONE_AI_API.md
+- 바로 전송하는 가상 예제: examples/phone_ai_sender.py
+- 지자체는 통화를 조회하고 별도로 연계 업무를 등록합니다. AI가 자동으로 위급도를 판정하거나 신고하지 않습니다.
 
-이벤트 순서:
+코드 수정은 각자 브랜치에서 커밋·푸시하고 PR로 합쳐 주세요. docs/TEAM_COLLABORATION.md에 전체 명령을 정리했습니다. 프론트 변경 시 node scripts/build.mjs로 두 HTML을 빌드하고 변경된 dist 파일을 함께 올립니다. 실행용 DB·가상환경은 Git에 올리지 않습니다.
 
-`call_started` → `message_finalized` 반복 → `call_ended` → `summary_ready`
+상세 실행: README.md / 실행방법.md
+지자체 기능·API: docs/municipality-dashboard.md
+전화 AI API: docs/PHONE_AI_API.md
+Git 협업: docs/TEAM_COLLABORATION.md
 
-위치는 선택 사항이며, 현재는 `location_source=simulated`인 가상 좌표만 받습니다.
-
-- 통화 전체에서 같은 call_id를 사용합니다.
-- 이벤트마다 새 event_id를 쓰고, 재전송은 같은 event_id·같은 본문을 유지합니다.
-- call_started 성공 응답 후 다음 이벤트를 보냅니다.
-- speaker는 caller/assistant, sequence는 두 화자를 합쳐 1부터 증가합니다.
-- 시간이 포함된 값에는 +09:00 또는 Z 등 시간대가 필요합니다.
-- 환자 ID가 확인되지 않으면 null로 보내고, 전화번호만으로 차트를 연결하지 않습니다.
-- 현재 시작 이벤트는 이름·나이·연락처·지역·방문 목적 등을 요구합니다. 수집 전부터 연결 상태를 저장해야 한다면 별도 API 확장이 필요합니다.
-
-자세한 필드와 JSON 예제는 `docs/PHONE_AI_API.md`를 확인해 주세요. `examples/phone_ai_sender.py`로 가상 이벤트를 직접 보내볼 수 있습니다.
-
-5. 전화 AI가 조회할 수 있는 API입니다.
-
-- `GET /api/team/calls/{call_id}/preparation`: 해당 통화의 환자별 준비사항
-- `GET /api/team/calls/{call_id}/preparation?q=피검사`: 추가 표현을 반영한 준비사항
-- `GET /api/team/patients/{patient_id}/chart`: 환자 차트
-- `GET /api/team/calls/{call_id}`: 통화·환자·대화·직원 처리 내역
-
-대시보드는 기본적으로 5초마다 DB를 조회합니다. 입력 중이거나 자체 통화 시연 중에는 자동 갱신을 잠시 멈춥니다.
-
-현재는 가상 데이터 기반이며, 방문 준비는 표현 검색과 정해진 문장 조합입니다. 임베딩·LLM 호출과 실제 전화망·EMR·예약은 연결되지 않았습니다. 실제 AI 요약의 출처와 실행 모드를 저장하려면 현재 시연용 메타데이터도 확장해야 합니다.
-
-실행 방법은 `README.md`와 `실행방법.md`, API 연결 설명은 `docs/PHONE_AI_API.md`에 정리했습니다. macOS·Python 3.13에서 압축 해제 실행과 API·DB 테스트 16개를 검증했습니다. Windows·Python 3.12는 실행 안내만 포함되어 있고 직접 검증하지 않았습니다.
+23개 API·DB 테스트를 검증했습니다. Windows·Python 3.12와 브라우저 클릭·시각 검증은 직접 수행하지 않았습니다. 방문 준비는 어휘 검색·정해진 문장 조합이며, 실제 전화망·EMR·LLM·예약·차량 배차는 연결되지 않았습니다.

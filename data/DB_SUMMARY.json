@@ -1,9 +1,10 @@
 {
-  "snapshot_at_kst": "2026-10-30T14:50:16.284444+09:00",
+  "snapshot_at_kst": "2026-10-30T19:49:42.682347+09:00",
   "synthetic_data": true,
+  "source": "Fresh initialization from committed synthetic fixtures; excludes live runtime edits",
   "clinical_system_connected": false,
   "database": "hospital-demo.sqlite3",
-  "sha256": "0ae556594d81b06b4e9f3789180ead7864e9b197621c5add8f91f42d2da1e31f",
+  "sha256": "78983bf4b2a91309099bb4c878f104c9ebb03fa20f23ba67183c12a21a13b7ac",
   "integrity_check": "ok",
   "foreign_key_check": [],
   "row_counts": {
@@ -13,6 +14,8 @@
     "calls": 15,
     "chart_imports": 1,
     "chart_revisions": 12,
+    "coordination_actions": 37,
+    "coordination_cases": 12,
     "desk_actions": 8,
     "patient_conditions": 19,
     "patient_encounters": 33,
@@ -26,5 +29,7 @@
     "rag_imports": 2,
     "rag_preparation_policies": 27,
     "rag_vocabulary": 27
-  }
+  },
+  "active_safety_cases": 2,
+  "snapshot_journal_mode": "DELETE for a self-contained distribution file; runtime enables WAL"
 }

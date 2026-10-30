@@ -16,6 +16,7 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 from backend.chart_schema import ChartBundle
 from backend.knowledge import import_knowledge, register_knowledge_routes, EXTRA_SOURCE
 from backend.preparation import seed_preparation_policies, register_preparation_routes
+from backend.coordination import seed_coordination, register_coordination_routes
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB = Path(__file__).resolve().parent / '.local-data' / 'hospital.sqlite3'
@@ -356,6 +357,7 @@ def create_app(db_path: Path = DEFAULT_DB):
         import_knowledge(engine)
         import_knowledge(engine, EXTRA_SOURCE, source_kind='service_authored')
         seed_preparation_policies(engine)
+        seed_coordination(engine, Call)
         yield
         engine.dispose()
 
@@ -363,6 +365,7 @@ def create_app(db_path: Path = DEFAULT_DB):
     app.state.engine = engine
     register_knowledge_routes(app, engine)
     register_preparation_routes(app, engine, Call, Message, Patient, call_dict, patient_dict)
+    register_coordination_routes(app, engine, Call, Message, Location)
 
     @app.get('/api/team/chart-format')
     def chart_format():

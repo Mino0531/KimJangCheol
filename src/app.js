@@ -229,6 +229,7 @@ function updateStorageLabels(){if(!apiMode)return;
  const reset=$('#reset-demo');reset.disabled=true;reset.textContent='DB 기록 보존 중';
  const help=document.querySelector('.help-note');if(help)help.textContent='가상 환자 정보와 통화·메모·확인 상태가 로컬 SQLite DB에 저장됩니다. 실제 병원 EMR 또는 GPS와 연결되지 않습니다.';
 }
+window.addEventListener('coordination-select-call',event=>selectCall(event.detail.callId,true));
 persist();render();updateStorageLabels();
 if(apiMode)setInterval(async()=>{if(document.hidden||state.playing||document.activeElement?.matches('textarea,select,input'))return;try{await refreshDatabase();}catch{document.querySelector('.sidebar-status').textContent='DB 동기화 실패 · 서버 확인 필요';}},5000);
 })();
