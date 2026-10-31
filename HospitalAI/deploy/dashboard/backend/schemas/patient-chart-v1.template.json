@@ -1,0 +1,50 @@
+{
+  "format_id": "KJC_VISIT_PREPARATION_CHART",
+  "schema_version": "1.0",
+  "hospital_code": "KJC_DEMO",
+  "data_classification": "synthetic",
+  "generated_at": "2026-10-30T14:00:00+09:00",
+  "patients": [
+    {
+      "patient_id": "demo-patient-099",
+      "chart_number": "KJC-2026-099",
+      "identity": {
+        "name": "가상환자",
+        "birth_date": "1950-01-15",
+        "sex": "unknown",
+        "phone": "010-0000-1099",
+        "region": "가상 지역"
+      },
+      "provenance": {
+        "as_of": "2026-10-23",
+        "recorded_at": "2026-10-30T14:00:00+09:00",
+        "source_kind": "synthetic_fixture",
+        "verification_status": "unverified",
+        "source_label": "공통 차트 v1 · 가상 수기 자료"
+      },
+      "conditions": {
+        "knowledge_status": "unknown",
+        "items": []
+      },
+      "allergies": {
+        "knowledge_status": "unknown",
+        "items": []
+      },
+      "medications": {
+        "knowledge_status": "unknown",
+        "items": []
+      },
+      "prescriptions": [],
+      "observations": [],
+      "encounters": [],
+      "visit_preparation": {
+        "mobility": "unknown",
+        "hearing": "unknown",
+        "preferred_channel": "unknown",
+        "companion": "unknown",
+        "phone_type": "unknown",
+        "staff_note": ""
+      }
+    }
+  ]
+}

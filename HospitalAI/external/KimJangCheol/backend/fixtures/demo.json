@@ -1,0 +1,2321 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "id": "demo-call-001",
+      "caller_key": "demo-caller-1",
+      "name": "임정숙",
+      "age": 76,
+      "region": "화순군 동면",
+      "purpose": "정기 외래 방문",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T04:42:00.000Z",
+      "ended_at": null,
+      "call_status": "in_progress",
+      "review_status": "unreviewed",
+      "color": "mint",
+      "phone": "010-0000-1001",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "pending",
+      "summary_text": "",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-001"
+    },
+    {
+      "id": "demo-call-002",
+      "caller_key": "demo-caller-2",
+      "name": "박정호",
+      "age": 81,
+      "region": "화순군 한천면",
+      "purpose": "방문 절차 문의",
+      "visit_type": "초진",
+      "started_at": "2026-10-30T04:39:00.000Z",
+      "ended_at": null,
+      "call_status": "in_progress",
+      "review_status": "unreviewed",
+      "color": "blue",
+      "phone": "010-0000-1002",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "pending",
+      "summary_text": "",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-002"
+    },
+    {
+      "id": "demo-call-003",
+      "caller_key": "demo-caller-3",
+      "name": "이정례",
+      "age": 82,
+      "region": "화순군 화순읍",
+      "purpose": "정기 외래 방문",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T04:31:00.000Z",
+      "ended_at": "2026-10-30T04:33:03.000Z",
+      "call_status": "ended",
+      "review_status": "unreviewed",
+      "color": "peach",
+      "phone": "010-0000-1003",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "10월 31일 오후 방문 예정",
+      "summary_status": "ready",
+      "summary_text": "이정례 님은 정기 외래 방문을 위해 전화했습니다. 기존에 다니던 병원에 방문할 예정으로, 받은 안내와 준비사항을 다시 확인하고 싶어 합니다. 혼자 방문할 예정이며, 도착 후 먼저 할 일을 짧게 설명해 달라고 요청했습니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-003"
+    },
+    {
+      "id": "demo-call-004",
+      "caller_key": "demo-caller-4",
+      "name": "김영숙",
+      "age": 78,
+      "region": "화순군 능주면",
+      "purpose": "준비사항 확인",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T04:24:00.000Z",
+      "ended_at": "2026-10-30T04:26:03.000Z",
+      "call_status": "ended",
+      "review_status": "reviewing",
+      "color": "violet",
+      "phone": "010-0000-1004",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "김영숙 님은 준비사항 확인을 위해 전화했습니다. 기존에 다니던 병원에 방문할 예정으로, 받은 안내와 준비사항을 다시 확인하고 싶어 합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-004"
+    },
+    {
+      "id": "demo-call-005",
+      "caller_key": "demo-caller-5",
+      "name": "최복순",
+      "age": 74,
+      "region": "화순군 도곡면",
+      "purpose": "첫 방문 안내",
+      "visit_type": "초진",
+      "started_at": "2026-10-30T04:15:00.000Z",
+      "ended_at": "2026-10-30T04:17:03.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "mint",
+      "phone": "010-0000-1005",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "최복순 님은 첫 방문 안내을 위해 전화했습니다. 김장철병원에 처음 방문할 예정으로, 접수 장소와 방문 순서에 대한 안내가 필요합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-005"
+    },
+    {
+      "id": "demo-call-006",
+      "caller_key": "demo-caller-6",
+      "name": "정만수",
+      "age": 79,
+      "region": "화순군 이양면",
+      "purpose": "접수 순서 문의",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T03:56:00.000Z",
+      "ended_at": "2026-10-30T03:58:03.000Z",
+      "call_status": "ended",
+      "review_status": "unreviewed",
+      "color": "blue",
+      "phone": "010-0000-1006",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "정만수 님은 접수 순서 문의을 위해 전화했습니다. 기존에 다니던 병원에 방문할 예정으로, 받은 안내와 준비사항을 다시 확인하고 싶어 합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-006"
+    },
+    {
+      "id": "demo-call-007",
+      "caller_key": "demo-caller-7",
+      "name": "박순임",
+      "age": 83,
+      "region": "화순군 화순읍",
+      "purpose": "방문 일정 확인",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T03:38:00.000Z",
+      "ended_at": "2026-10-30T03:40:03.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "peach",
+      "phone": "010-0000-1007",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "박순임 님은 방문 일정 확인을 위해 전화했습니다. 기존에 다니던 병원에 방문할 예정으로, 받은 안내와 준비사항을 다시 확인하고 싶어 합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-007"
+    },
+    {
+      "id": "demo-call-008",
+      "caller_key": "demo-caller-8",
+      "name": "강태식",
+      "age": 77,
+      "region": "위치 미확인",
+      "purpose": "첫 방문 안내",
+      "visit_type": "초진",
+      "started_at": "2026-10-30T03:21:00.000Z",
+      "ended_at": "2026-10-30T03:23:03.000Z",
+      "call_status": "ended",
+      "review_status": "reviewing",
+      "color": "violet",
+      "phone": "010-0000-1008",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "강태식 님은 첫 방문 안내을 위해 전화했습니다. 김장철병원에 처음 방문할 예정으로, 접수 장소와 방문 순서에 대한 안내가 필요합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-008"
+    },
+    {
+      "id": "demo-call-009",
+      "caller_key": "demo-caller-9",
+      "name": "오정숙",
+      "age": 75,
+      "region": "화순군 동복면",
+      "purpose": "준비사항 확인",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T02:48:00.000Z",
+      "ended_at": "2026-10-30T02:50:03.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "mint",
+      "phone": "010-0000-1009",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "오정숙 님은 준비사항 확인을 위해 전화했습니다. 기존에 다니던 병원에 방문할 예정으로, 받은 안내와 준비사항을 다시 확인하고 싶어 합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-009"
+    },
+    {
+      "id": "demo-call-010",
+      "caller_key": "demo-caller-10",
+      "name": "윤영수",
+      "age": 80,
+      "region": "화순군 사평면",
+      "purpose": "방문 절차 문의",
+      "visit_type": "초진",
+      "started_at": "2026-10-30T02:25:00.000Z",
+      "ended_at": "2026-10-30T02:27:03.000Z",
+      "call_status": "ended",
+      "review_status": "unreviewed",
+      "color": "blue",
+      "phone": "010-0000-1010",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "윤영수 님은 방문 절차 문의을 위해 전화했습니다. 김장철병원에 처음 방문할 예정으로, 접수 장소와 방문 순서에 대한 안내가 필요합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-010"
+    },
+    {
+      "id": "demo-call-011",
+      "caller_key": "demo-caller-11",
+      "name": "장명자",
+      "age": 72,
+      "region": "화순군 춘양면",
+      "purpose": "정기 외래 방문",
+      "visit_type": "재진",
+      "started_at": "2026-10-30T01:46:00.000Z",
+      "ended_at": "2026-10-30T01:48:03.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "peach",
+      "phone": "010-0000-1011",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "ready",
+      "summary_text": "장명자 님은 정기 외래 방문을 위해 전화했습니다. 기존에 다니던 병원에 방문할 예정으로, 받은 안내와 준비사항을 다시 확인하고 싶어 합니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-011"
+    },
+    {
+      "id": "demo-call-012",
+      "caller_key": "demo-caller-12",
+      "name": "한덕수",
+      "age": 85,
+      "region": "위치 미확인",
+      "purpose": "연결 중 종료",
+      "visit_type": "미확인",
+      "started_at": "2026-10-30T01:12:00.000Z",
+      "ended_at": "2026-10-30T01:14:03.000Z",
+      "call_status": "failed",
+      "review_status": "unreviewed",
+      "color": "violet",
+      "phone": "010-0000-1012",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "방문 전 안내 확인",
+      "summary_status": "pending",
+      "summary_text": "",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-012"
+    },
+    {
+      "id": "past-call-1",
+      "caller_key": "demo-caller-3",
+      "name": "이정례",
+      "age": 82,
+      "region": "화순군 화순읍",
+      "purpose": "정기 외래 방문",
+      "visit_type": "재진",
+      "started_at": "2026-10-23T01:32:00.000Z",
+      "ended_at": "2026-10-23T01:34:00.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "peach",
+      "phone": "010-0000-1003",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "이전 방문 준비 상담",
+      "summary_status": "ready",
+      "summary_text": "정기 외래 방문 전 접수 순서와 병원에서 받은 안내를 확인한 시연 기록입니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-003"
+    },
+    {
+      "id": "past-call-2",
+      "caller_key": "demo-caller-3",
+      "name": "이정례",
+      "age": 82,
+      "region": "화순군 화순읍",
+      "purpose": "정기 외래 방문",
+      "visit_type": "재진",
+      "started_at": "2026-10-09T05:16:00.000Z",
+      "ended_at": "2026-10-09T05:18:00.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "peach",
+      "phone": "010-0000-1003",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "이전 방문 준비 상담",
+      "summary_status": "ready",
+      "summary_text": "이전 방문 전 준비사항을 다시 설명하고 확인한 시연 기록입니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-003"
+    },
+    {
+      "id": "past-call-3",
+      "caller_key": "demo-caller-4",
+      "name": "김영숙",
+      "age": 78,
+      "region": "화순군 능주면",
+      "purpose": "준비사항 확인",
+      "visit_type": "재진",
+      "started_at": "2026-10-26T02:20:00.000Z",
+      "ended_at": "2026-10-26T02:22:00.000Z",
+      "call_status": "ended",
+      "review_status": "reviewed",
+      "color": "violet",
+      "phone": "010-0000-1004",
+      "hospital_code": "KJC_DEMO",
+      "planned_visit_text": "이전 방문 준비 상담",
+      "summary_status": "ready",
+      "summary_text": "이전 방문 전 준비사항을 다시 설명하고 확인한 시연 기록입니다.",
+      "data_mode": "simulated",
+      "ai_mode": null,
+      "summary_source": "fixture",
+      "version": 1,
+      "patient_id": "demo-patient-004"
+    }
+  ],
+  "call_locations": [
+    {
+      "id": "loc-demo-call-001",
+      "call_id": "demo-call-001",
+      "latitude": 35.086,
+      "longitude": 127.026,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T04:42:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-002",
+      "call_id": "demo-call-002",
+      "latitude": 35.006,
+      "longitude": 127.001,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T04:39:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-003",
+      "call_id": "demo-call-003",
+      "latitude": 35.061,
+      "longitude": 126.992,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T04:31:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-004",
+      "call_id": "demo-call-004",
+      "latitude": 35.001,
+      "longitude": 126.947,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T04:24:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-005",
+      "call_id": "demo-call-005",
+      "latitude": 35.025,
+      "longitude": 126.914,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T04:15:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-006",
+      "call_id": "demo-call-006",
+      "latitude": 34.983,
+      "longitude": 126.994,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T03:56:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-007",
+      "call_id": "demo-call-007",
+      "latitude": 35.069,
+      "longitude": 126.981,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T03:38:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-009",
+      "call_id": "demo-call-009",
+      "latitude": 35.124,
+      "longitude": 127.062,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T02:48:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-010",
+      "call_id": "demo-call-010",
+      "latitude": 35.019,
+      "longitude": 127.048,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T02:25:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-demo-call-011",
+      "call_id": "demo-call-011",
+      "latitude": 34.996,
+      "longitude": 126.953,
+      "location_source": "simulated",
+      "observed_at": "2026-10-30T01:46:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-past-call-1",
+      "call_id": "past-call-1",
+      "latitude": 35.041,
+      "longitude": 126.974,
+      "location_source": "simulated",
+      "observed_at": "2026-10-23T01:32:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-past-call-2",
+      "call_id": "past-call-2",
+      "latitude": 35.061,
+      "longitude": 126.992,
+      "location_source": "simulated",
+      "observed_at": "2026-10-09T05:16:00.000Z",
+      "accuracy_m": null
+    },
+    {
+      "id": "loc-past-call-3",
+      "call_id": "past-call-3",
+      "latitude": 35.002,
+      "longitude": 126.947,
+      "location_source": "simulated",
+      "observed_at": "2026-10-26T02:20:00.000Z",
+      "accuracy_m": null
+    }
+  ],
+  "call_messages": [
+    {
+      "id": "msg-demo-call-001-0",
+      "call_id": "demo-call-001",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T04:42:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-001-1",
+      "call_id": "demo-call-001",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "임정숙인데요. 병원에 가기 전에 정기 외래 방문에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T04:42:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-001-2",
+      "call_id": "demo-call-001",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T04:42:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-002-0",
+      "call_id": "demo-call-002",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T04:39:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-002-1",
+      "call_id": "demo-call-002",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "박정호인데요. 병원에 가기 전에 방문 절차 문의에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T04:39:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-002-2",
+      "call_id": "demo-call-002",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T04:39:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-003-0",
+      "call_id": "demo-call-003",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T04:31:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-003-1",
+      "call_id": "demo-call-003",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "이정례인데요. 병원에 가기 전에 정기 외래 방문에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T04:31:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-003-2",
+      "call_id": "demo-call-003",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T04:31:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-003-3",
+      "call_id": "demo-call-003",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "아니요, 전에 다녔어요. 이번에는 혼자 가려고 해요.",
+      "occurred_at": "2026-10-30T04:31:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-003-4",
+      "call_id": "demo-call-003",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T04:31:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-004-0",
+      "call_id": "demo-call-004",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T04:24:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-004-1",
+      "call_id": "demo-call-004",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "김영숙인데요. 병원에 가기 전에 준비사항 확인에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T04:24:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-004-2",
+      "call_id": "demo-call-004",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T04:24:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-004-3",
+      "call_id": "demo-call-004",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "아니요, 전에 다녔어요. 이번에는 혼자 가려고 해요.",
+      "occurred_at": "2026-10-30T04:24:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-004-4",
+      "call_id": "demo-call-004",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T04:24:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-005-0",
+      "call_id": "demo-call-005",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T04:15:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-005-1",
+      "call_id": "demo-call-005",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "최복순인데요. 병원에 가기 전에 첫 방문 안내에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T04:15:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-005-2",
+      "call_id": "demo-call-005",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T04:15:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-005-3",
+      "call_id": "demo-call-005",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "네, 처음 가는 거라 어디로 가야 할지 모르겠어요.",
+      "occurred_at": "2026-10-30T04:15:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-005-4",
+      "call_id": "demo-call-005",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T04:15:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-006-0",
+      "call_id": "demo-call-006",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T03:56:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-006-1",
+      "call_id": "demo-call-006",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "정만수인데요. 병원에 가기 전에 접수 순서 문의에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T03:56:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-006-2",
+      "call_id": "demo-call-006",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T03:56:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-006-3",
+      "call_id": "demo-call-006",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "아니요, 전에 다녔어요. 이번에는 혼자 가려고 해요.",
+      "occurred_at": "2026-10-30T03:56:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-006-4",
+      "call_id": "demo-call-006",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T03:56:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-007-0",
+      "call_id": "demo-call-007",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T03:38:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-007-1",
+      "call_id": "demo-call-007",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "박순임인데요. 병원에 가기 전에 방문 일정 확인에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T03:38:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-007-2",
+      "call_id": "demo-call-007",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T03:38:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-007-3",
+      "call_id": "demo-call-007",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "아니요, 전에 다녔어요. 이번에는 혼자 가려고 해요.",
+      "occurred_at": "2026-10-30T03:38:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-007-4",
+      "call_id": "demo-call-007",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T03:38:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-008-0",
+      "call_id": "demo-call-008",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T03:21:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-008-1",
+      "call_id": "demo-call-008",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "강태식인데요. 병원에 가기 전에 첫 방문 안내에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T03:21:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-008-2",
+      "call_id": "demo-call-008",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T03:21:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-008-3",
+      "call_id": "demo-call-008",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "네, 처음 가는 거라 어디로 가야 할지 모르겠어요.",
+      "occurred_at": "2026-10-30T03:21:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-008-4",
+      "call_id": "demo-call-008",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T03:21:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-009-0",
+      "call_id": "demo-call-009",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T02:48:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-009-1",
+      "call_id": "demo-call-009",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "오정숙인데요. 병원에 가기 전에 준비사항 확인에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T02:48:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-009-2",
+      "call_id": "demo-call-009",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T02:48:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-009-3",
+      "call_id": "demo-call-009",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "아니요, 전에 다녔어요. 이번에는 혼자 가려고 해요.",
+      "occurred_at": "2026-10-30T02:48:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-009-4",
+      "call_id": "demo-call-009",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T02:48:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-010-0",
+      "call_id": "demo-call-010",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T02:25:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-010-1",
+      "call_id": "demo-call-010",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "윤영수인데요. 병원에 가기 전에 방문 절차 문의에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T02:25:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-010-2",
+      "call_id": "demo-call-010",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T02:25:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-010-3",
+      "call_id": "demo-call-010",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "네, 처음 가는 거라 어디로 가야 할지 모르겠어요.",
+      "occurred_at": "2026-10-30T02:25:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-010-4",
+      "call_id": "demo-call-010",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T02:25:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-011-0",
+      "call_id": "demo-call-011",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T01:46:00.000Z"
+    },
+    {
+      "id": "msg-demo-call-011-1",
+      "call_id": "demo-call-011",
+      "sequence": 2,
+      "speaker": "caller",
+      "text": "장명자인데요. 병원에 가기 전에 정기 외래 방문에 대해 좀 알고 싶어서요.",
+      "occurred_at": "2026-10-30T01:46:14.000Z"
+    },
+    {
+      "id": "msg-demo-call-011-2",
+      "call_id": "demo-call-011",
+      "sequence": 3,
+      "speaker": "assistant",
+      "text": "네, 하나씩 함께 확인해 볼게요. 저희 병원에는 처음 방문하시나요?",
+      "occurred_at": "2026-10-30T01:46:28.000Z"
+    },
+    {
+      "id": "msg-demo-call-011-3",
+      "call_id": "demo-call-011",
+      "sequence": 4,
+      "speaker": "caller",
+      "text": "아니요, 전에 다녔어요. 이번에는 혼자 가려고 해요.",
+      "occurred_at": "2026-10-30T01:46:42.000Z"
+    },
+    {
+      "id": "msg-demo-call-011-4",
+      "call_id": "demo-call-011",
+      "sequence": 5,
+      "speaker": "assistant",
+      "text": "병원에서 미리 받으신 안내가 있다면 확인해 주세요. 방문 전에 준비할 것과 도착 후 확인할 순서를 차례로 정리해 드릴게요.",
+      "occurred_at": "2026-10-30T01:46:56.000Z"
+    },
+    {
+      "id": "msg-demo-call-012-0",
+      "call_id": "demo-call-012",
+      "sequence": 1,
+      "speaker": "assistant",
+      "text": "안녕하세요. 김장철병원 방문 준비를 도와드리는 AI 안내입니다. 어떤 준비를 도와드릴까요?",
+      "occurred_at": "2026-10-30T01:12:00.000Z"
+    },
+    {
+      "id": "msg-past-call-1",
+      "call_id": "past-call-1",
+      "sequence": 1,
+      "speaker": "caller",
+      "text": "병원 가기 전에 준비할 것을 다시 확인하려고 전화했어요.",
+      "occurred_at": "2026-10-23T01:32:00.000Z"
+    },
+    {
+      "id": "msg-past-call-2",
+      "call_id": "past-call-2",
+      "sequence": 1,
+      "speaker": "caller",
+      "text": "병원 가기 전에 준비할 것을 다시 확인하려고 전화했어요.",
+      "occurred_at": "2026-10-09T05:16:00.000Z"
+    },
+    {
+      "id": "msg-past-call-3",
+      "call_id": "past-call-3",
+      "sequence": 1,
+      "speaker": "caller",
+      "text": "병원 가기 전에 준비할 것을 다시 확인하려고 전화했어요.",
+      "occurred_at": "2026-10-26T02:20:00.000Z"
+    }
+  ],
+  "call_events": [
+    {
+      "id": "evt-demo-call-001",
+      "source": "fixture",
+      "event_id": "started-demo-call-001",
+      "call_id": "demo-call-001",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T04:42:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-002",
+      "source": "fixture",
+      "event_id": "started-demo-call-002",
+      "call_id": "demo-call-002",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T04:39:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-003",
+      "source": "fixture",
+      "event_id": "started-demo-call-003",
+      "call_id": "demo-call-003",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T04:31:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-004",
+      "source": "fixture",
+      "event_id": "started-demo-call-004",
+      "call_id": "demo-call-004",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T04:24:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-005",
+      "source": "fixture",
+      "event_id": "started-demo-call-005",
+      "call_id": "demo-call-005",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T04:15:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-006",
+      "source": "fixture",
+      "event_id": "started-demo-call-006",
+      "call_id": "demo-call-006",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T03:56:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-007",
+      "source": "fixture",
+      "event_id": "started-demo-call-007",
+      "call_id": "demo-call-007",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T03:38:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-008",
+      "source": "fixture",
+      "event_id": "started-demo-call-008",
+      "call_id": "demo-call-008",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T03:21:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-009",
+      "source": "fixture",
+      "event_id": "started-demo-call-009",
+      "call_id": "demo-call-009",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T02:48:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-010",
+      "source": "fixture",
+      "event_id": "started-demo-call-010",
+      "call_id": "demo-call-010",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T02:25:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-011",
+      "source": "fixture",
+      "event_id": "started-demo-call-011",
+      "call_id": "demo-call-011",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T01:46:00.000Z"
+    },
+    {
+      "id": "evt-demo-call-012",
+      "source": "fixture",
+      "event_id": "started-demo-call-012",
+      "call_id": "demo-call-012",
+      "event_type": "call_started",
+      "occurred_at": "2026-10-30T01:12:00.000Z"
+    }
+  ],
+  "desk_actions": [
+    {
+      "id": "action-note-0",
+      "call_id": "demo-call-005",
+      "actor_key": "demo-staff-01",
+      "actor_name": "이지은",
+      "action_type": "note_added",
+      "note": "첫 방문 안내를 확인했습니다. 추가로 궁금한 점은 현장 접수처에서 문의하도록 안내합니다.",
+      "created_at": "2026-10-30T04:26:00.000Z"
+    },
+    {
+      "id": "action-note-1",
+      "call_id": "demo-call-007",
+      "actor_key": "demo-staff-01",
+      "actor_name": "이지은",
+      "action_type": "note_added",
+      "note": "기존 안내 내용을 다시 확인했습니다. 다음 담당자도 방문 준비 요약을 확인해 주세요.",
+      "created_at": "2026-10-30T04:11:00.000Z"
+    },
+    {
+      "id": "action-note-2",
+      "call_id": "demo-call-004",
+      "actor_key": "demo-staff-01",
+      "actor_name": "이지은",
+      "action_type": "note_added",
+      "note": "혼자 방문할 예정입니다. 도착 후 접수 순서를 다시 설명해 주세요.",
+      "created_at": "2026-10-30T04:29:00.000Z"
+    },
+    {
+      "id": "action-note-3",
+      "call_id": "past-call-1",
+      "actor_key": "demo-staff-01",
+      "actor_name": "이지은",
+      "action_type": "note_added",
+      "note": "방문 전 안내 내용을 천천히 반복해서 확인했습니다.",
+      "created_at": "2026-10-23T01:42:00.000Z"
+    },
+    {
+      "id": "review-seed-0",
+      "call_id": "demo-call-005",
+      "actor_name": "이지은",
+      "actor_key": "demo-staff-01",
+      "action_type": "review_changed",
+      "previous_status": "reviewing",
+      "new_status": "reviewed",
+      "created_at": "2026-10-30T04:28:00.000Z"
+    },
+    {
+      "id": "review-seed-1",
+      "call_id": "demo-call-007",
+      "actor_name": "김수현",
+      "actor_key": "demo-staff-02",
+      "action_type": "review_changed",
+      "previous_status": "reviewing",
+      "new_status": "reviewed",
+      "created_at": "2026-10-30T04:14:00.000Z"
+    },
+    {
+      "id": "review-seed-2",
+      "call_id": "demo-call-009",
+      "actor_name": "이지은",
+      "actor_key": "demo-staff-01",
+      "action_type": "review_changed",
+      "previous_status": "reviewing",
+      "new_status": "reviewed",
+      "created_at": "2026-10-30T03:08:00.000Z"
+    },
+    {
+      "id": "review-seed-3",
+      "call_id": "demo-call-011",
+      "actor_name": "김수현",
+      "actor_key": "demo-staff-02",
+      "action_type": "review_changed",
+      "previous_status": "reviewing",
+      "new_status": "reviewed",
+      "created_at": "2026-10-30T02:02:00.000Z"
+    }
+  ],
+  "patients": [
+    {
+      "id": "demo-patient-001",
+      "chart_number": "KJC-2026-001",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "고혈압",
+          "since": "2018년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "골다공증",
+          "since": "2022년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "기록 있음",
+        "text": "페니실린계 · 가상 알레르기 기록"
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-001-1",
+          "name": "혈압관리정 A",
+          "purpose": "혈압 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-001-2",
+          "name": "골건강관리정 D",
+          "purpose": "골 건강 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-001-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A",
+            "골건강관리정 D"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-001-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 146,
+          "diastolic": 87,
+          "glucose": 153
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 141,
+          "diastolic": 85,
+          "glucose": 146
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 138,
+          "diastolic": 83,
+          "glucose": 139
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 134,
+          "diastolic": 81,
+          "glucose": 131
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-002",
+      "chart_number": "KJC-2026-002",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "남",
+      "conditions": [
+        {
+          "name": "만성 폐쇄성 폐질환",
+          "since": "2020년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "고혈압",
+          "since": "2016년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-002-1",
+          "name": "호흡관리흡입제 G",
+          "purpose": "호흡기 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-002-2",
+          "name": "혈압관리정 A",
+          "purpose": "혈압 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-002-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "호흡관리흡입제 G",
+            "혈압관리정 A"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-002-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "호흡관리흡입제 G"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 147,
+          "diastolic": 88,
+          "glucose": 155
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 142,
+          "diastolic": 86,
+          "glucose": 148
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 139,
+          "diastolic": 84,
+          "glucose": 141
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 135,
+          "diastolic": 82,
+          "glucose": 133
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-003",
+      "chart_number": "KJC-2026-003",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "고혈압",
+          "since": "2015년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "제2형 당뇨병",
+          "since": "2019년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "무릎 골관절염",
+          "since": "2021년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-003-1",
+          "name": "혈압관리정 A",
+          "purpose": "혈압 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-003-2",
+          "name": "혈당관리정 B",
+          "purpose": "혈당 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-003-3",
+          "name": "관절관리정 C",
+          "purpose": "관절 증상 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-003-2",
+          "date": "2026-10-23",
+          "department": "내과·정형외과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A",
+            "혈당관리정 B",
+            "관절관리정 C"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-003-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A",
+            "혈당관리정 B"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 148,
+          "diastolic": 89,
+          "glucose": 157
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 143,
+          "diastolic": 87,
+          "glucose": 150
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 140,
+          "diastolic": 85,
+          "glucose": 143
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 136,
+          "diastolic": 83,
+          "glucose": 135
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-004",
+      "chart_number": "KJC-2026-004",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "이상지질혈증",
+          "since": "2020년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "갑상선기능저하증",
+          "since": "2018년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-004-1",
+          "name": "지질관리정 E",
+          "purpose": "지질 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-004-2",
+          "name": "갑상선관리정 F",
+          "purpose": "갑상선 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-004-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "지질관리정 E",
+            "갑상선관리정 F"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-004-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "지질관리정 E"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 149,
+          "diastolic": 87,
+          "glucose": 159
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 144,
+          "diastolic": 85,
+          "glucose": 152
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 141,
+          "diastolic": 83,
+          "glucose": 145
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 137,
+          "diastolic": 81,
+          "glucose": 137
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-005",
+      "chart_number": "KJC-2026-005",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "고혈압",
+          "since": "2021년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-005-1",
+          "name": "혈압관리정 A",
+          "purpose": "혈압 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-005-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-005-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 146,
+          "diastolic": 88,
+          "glucose": 161
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 141,
+          "diastolic": 86,
+          "glucose": 154
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 138,
+          "diastolic": 84,
+          "glucose": 147
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 134,
+          "diastolic": 82,
+          "glucose": 139
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-006",
+      "chart_number": "KJC-2026-006",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "남",
+      "conditions": [
+        {
+          "name": "제2형 당뇨병",
+          "since": "2017년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "이상지질혈증",
+          "since": "2020년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-006-1",
+          "name": "혈당관리정 B",
+          "purpose": "혈당 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-006-2",
+          "name": "지질관리정 E",
+          "purpose": "지질 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-006-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈당관리정 B",
+            "지질관리정 E"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-006-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈당관리정 B"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 147,
+          "diastolic": 89,
+          "glucose": 163
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 142,
+          "diastolic": 87,
+          "glucose": 156
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 139,
+          "diastolic": 85,
+          "glucose": 149
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 135,
+          "diastolic": 83,
+          "glucose": 141
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-007",
+      "chart_number": "KJC-2026-007",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "무릎 골관절염",
+          "since": "2018년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "골다공증",
+          "since": "2021년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-007-1",
+          "name": "관절관리정 C",
+          "purpose": "관절 증상 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-007-2",
+          "name": "골건강관리정 D",
+          "purpose": "골 건강 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-007-2",
+          "date": "2026-10-23",
+          "department": "내과·정형외과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "관절관리정 C",
+            "골건강관리정 D"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-007-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "관절관리정 C"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 148,
+          "diastolic": 87,
+          "glucose": 165
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 143,
+          "diastolic": 85,
+          "glucose": 158
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 140,
+          "diastolic": 83,
+          "glucose": 151
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 136,
+          "diastolic": 81,
+          "glucose": 143
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-008",
+      "chart_number": "KJC-2026-008",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "남",
+      "conditions": [],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [],
+      "prescriptions": [],
+      "observations": [],
+      "encounters": [],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-009",
+      "chart_number": "KJC-2026-009",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "고혈압",
+          "since": "2019년 기록",
+          "source": "시연용 등록 정보"
+        },
+        {
+          "name": "이상지질혈증",
+          "since": "2022년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-009-1",
+          "name": "혈압관리정 A",
+          "purpose": "혈압 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        },
+        {
+          "id": "demo-med-009-2",
+          "name": "지질관리정 E",
+          "purpose": "지질 관리",
+          "started_on": "2026-09-11",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-009-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A",
+            "지질관리정 E"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-009-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 146,
+          "diastolic": 89,
+          "glucose": 169
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 141,
+          "diastolic": 87,
+          "glucose": 162
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 138,
+          "diastolic": 85,
+          "glucose": 155
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 134,
+          "diastolic": 83,
+          "glucose": 147
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-010",
+      "chart_number": "KJC-2026-010",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "남",
+      "conditions": [
+        {
+          "name": "만성 위염",
+          "since": "2023년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-010-1",
+          "name": "위장관리정 H",
+          "purpose": "위장 증상 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-010-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "위장관리정 H"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-010-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "위장관리정 H"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 147,
+          "diastolic": 87,
+          "glucose": 171
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 142,
+          "diastolic": 85,
+          "glucose": 164
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 139,
+          "diastolic": 83,
+          "glucose": 157
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 135,
+          "diastolic": 81,
+          "glucose": 149
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-011",
+      "chart_number": "KJC-2026-011",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "여",
+      "conditions": [
+        {
+          "name": "제2형 당뇨병",
+          "since": "2021년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-011-1",
+          "name": "혈당관리정 B",
+          "purpose": "혈당 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-011-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈당관리정 B"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-011-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈당관리정 B"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 148,
+          "diastolic": 88,
+          "glucose": 173
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 143,
+          "diastolic": 86,
+          "glucose": 166
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 140,
+          "diastolic": 84,
+          "glucose": 159
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 136,
+          "diastolic": 82,
+          "glucose": 151
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    },
+    {
+      "id": "demo-patient-012",
+      "chart_number": "KJC-2026-012",
+      "source": "가상 수기 기록",
+      "as_of": "2026-10-23",
+      "sex": "남",
+      "conditions": [
+        {
+          "name": "고혈압",
+          "since": "2012년 기록",
+          "source": "시연용 등록 정보"
+        }
+      ],
+      "allergies": {
+        "status": "미확인",
+        "text": "알레르기 확인 기록이 없습니다."
+      },
+      "current_medications": [
+        {
+          "id": "demo-med-012-1",
+          "name": "혈압관리정 A",
+          "purpose": "혈압 관리",
+          "started_on": "2026-08-14",
+          "status": "복용 중",
+          "source": "가상 수기 기록",
+          "is_fictional": true
+        }
+      ],
+      "prescriptions": [
+        {
+          "id": "demo-rx-012-2",
+          "date": "2026-10-23",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A"
+          ],
+          "status": "최근 처방 기록"
+        },
+        {
+          "id": "demo-rx-012-1",
+          "date": "2026-09-11",
+          "department": "내과",
+          "provider": "기존 의료기관 · 가상",
+          "medications": [
+            "혈압관리정 A"
+          ],
+          "status": "이전 처방 기록"
+        }
+      ],
+      "observations": [
+        {
+          "date": "2026-07-17",
+          "systolic": 149,
+          "diastolic": 89,
+          "glucose": 175
+        },
+        {
+          "date": "2026-08-14",
+          "systolic": 144,
+          "diastolic": 87,
+          "glucose": 168
+        },
+        {
+          "date": "2026-09-11",
+          "systolic": 141,
+          "diastolic": 85,
+          "glucose": 161
+        },
+        {
+          "date": "2026-10-23",
+          "systolic": 137,
+          "diastolic": 83,
+          "glucose": 153
+        }
+      ],
+      "encounters": [
+        {
+          "date": "2026-10-23",
+          "department": "외래",
+          "title": "만성질환 정기 확인",
+          "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+        },
+        {
+          "date": "2026-09-11",
+          "department": "외래",
+          "title": "경과 확인 및 처방 기록",
+          "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+        },
+        {
+          "date": "2026-08-14",
+          "department": "외래",
+          "title": "정기 상담",
+          "note": "시연을 위해 작성한 방문 이력입니다."
+        }
+      ],
+      "is_fictional": true
+    }
+  ],
+  "chart_fixture_version": 1
+}

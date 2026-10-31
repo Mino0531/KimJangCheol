@@ -1,0 +1,1 @@
+"""Hospital AI backend."""

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7452d6">
+  <meta name="description" content="병원 전화 상담과 추천 결과를 확인하는 의료기관용 화면">
+  <title>병원 상담 관리</title>
+  <!--STYLE-->
+</head>
+<body class="records-view">
+  <aside class="sidebar" aria-label="업무 안내">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✚</span><span>병원 상담 관리<small>HOSPITAL CARE DESK</small></span></div>
+    <div class="workspace"><span class="workspace-icon" data-icon="building"></span><div><strong>상담 접수</strong><span>의료기관 업무 화면</span></div></div>
+    <div class="nav-label">업무</div>
+    <nav aria-label="현재 화면"><span class="nav-item active" aria-current="page"><span data-icon="phone"></span><span>상담 결과</span></span></nav>
+    <div class="sidebar-bottom"><div class="desk-guidance"><strong>상담 내용을 함께 확인해 주세요.</strong><p>전화 문의와 추천 결과를 한곳에서 살펴볼 수 있습니다.</p></div></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="breadcrumb"><span>병원 상담 관리</span><span class="crumb-separator">/</span><strong>상담 결과</strong></div><span class="header-label">의료기관용</span></header>
+    <main id="main-content">
+      <section class="page-heading"><div><div class="eyebrow"><span></span>상담 접수</div><h1>전화 상담 결과</h1><p>동의 후 전달된 문의와 병원 추천 내용을 확인하세요.</p></div></section>
+      <section class="panel consultation-panel" aria-labelledby="consultation-title">
+        <div class="panel-title"><div><h2 id="consultation-title">수신된 상담 <span class="count-badge" id="consultation-count">잠김</span></h2><span class="muted panel-description">최근 전달된 상담과 추천 결과</span></div><button type="button" class="button quiet" id="consultation-lock" hidden>잠그기</button></div>
+        <div class="consultation-access" id="consultation-access"><form id="consultation-access-form"><label for="consultation-token">병원 담당자 접근 토큰</label><div><input id="consultation-token" type="password" autocomplete="off" required placeholder="접근 토큰 입력"><button type="submit" class="button primary">상담 결과 보기</button></div></form><p class="consultation-note">접근 토큰은 이 화면에 저장하지 않습니다.</p></div>
+        <p class="consultation-warning">AI 답변은 생성 결과입니다. 실제 안내 여부와 진료 가능 여부를 확인해 주세요.</p>
+        <div id="consultation-status" class="consultation-status" role="status" aria-live="polite"></div>
+        <div id="consultation-results"></div>
+      </section>
+      <footer class="page-footer"><span>병원 상담 관리</span><span>상담 내용은 의료진이 확인해 주세요.</span></footer>
+    </main>
+  </div>
+  <!--SCRIPT-->
+</body>
+</html>

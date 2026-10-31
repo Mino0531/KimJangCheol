@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2d6d5b">
+  <meta name="description" content="김장철병원 방문 준비 데스크에서 지자체가 인계한 전화 상담을 확인합니다.">
+  <title>김장철병원 · 방문 준비 데스크</title>
+  <style>:root{--bg:#f7f8fb;--white:#fff;--text:#252a3d;--muted:#8b90a1;--line:#eceef4;--purple:#7854d8;--purple-dark:#6640c6;--purple-light:#f0eafb;--green:#399d82;--green-light:#eaf6f0;--amber:#bf8a2b;--amber-light:#fbf3e2;--sidebar:222px;--shadow:0 2px 7px #292c491d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;font-size:13px;letter-spacing:-.28px}button,input,textarea,select{font:inherit}button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #b7a0ed;outline-offset:3px}button{color:inherit}a{color:inherit;text-decoration:none}.sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar);background:#fff;border-right:1px solid var(--line);padding:31px 17px 0;z-index:30;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:9px;padding:0 12px;font-size:21px;font-weight:800;letter-spacing:-.8px}.brand-mark{display:flex;align-items:center;justify-content:center;background:var(--purple);color:#fff;font-size:27px;width:37px;height:40px;border-radius:12px;line-height:1}.brand small{font-size:7px;display:block;letter-spacing:1.1px;font-weight:600;color:#a2a4b2;margin-top:4px}.workspace{margin-top:37px;margin-bottom:29px;border:1px solid var(--line);border-radius:9px;padding:12px 10px;display:flex;align-items:center;gap:9px;background:#fcfcfe}.workspace-icon{color:var(--purple);background:var(--purple-light);border-radius:6px;padding:7px;display:flex}.workspace strong{display:block;font-size:12px}.workspace div>span{display:block;font-size:10px;color:var(--muted);margin-top:5px}.workspace-dot{width:6px;height:6px;background:var(--green);border-radius:50%;margin-left:auto}.nav-label{font-size:9px;color:#aaaebc;font-weight:600;letter-spacing:1.4px;padding:0 15px 13px}.nav-item{border:0;background:none;width:100%;display:flex;align-items:center;gap:11px;padding:13px 15px;margin-bottom:6px;border-radius:8px;font-size:12px;color:#777d90;text-align:left}.nav-item svg{width:17px;height:17px}.nav-item.active{color:var(--purple);background:#f1ebfb;font-weight:700}.nav-item:hover{background:#f7f5fb}.nav-item b{font-size:10px;background:#ebe5f8;border-radius:5px;padding:2px 6px;margin-left:auto;font-weight:600}.sidebar-bottom{margin-top:auto}.demo-help{margin:20px 9px 22px;background:#f7f5fc;border:1px solid #efebf7;padding:16px 13px;border-radius:10px}.demo-help>.small-icon{display:block;color:var(--purple);margin-bottom:11px}.demo-help strong{font-size:12px}.demo-help p{font-size:11px;color:#9691a5;line-height:1.85;margin:7px 0 12px}.text-link{border:0;background:none;padding:0;font-size:11px;font-weight:600;color:var(--purple)}.text-link:hover{text-decoration:underline}.text-link span{margin-left:24px}.sidebar-status{display:flex;align-items:center;gap:6px;font-size:10px;color:#969aaa;margin:0 11px 16px}.status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#59ac91;flex-shrink:0}.profile{display:flex;align-items:center;gap:10px;border:0;border-top:1px solid var(--line);background:#fff;padding:17px 9px;width:100%;text-align:left}.avatar{width:34px;height:34px;display:flex;justify-content:center;align-items:center;background:#ece6fa;color:#795bc1;border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0}.avatar.small{width:29px;height:29px;font-size:11px}.profile strong{font-size:11px}.profile small{display:block;color:var(--muted);font-size:9px;margin-top:4px}.profile>span:last-child{margin-left:auto;color:#aaa}.app-shell{margin-left:var(--sidebar)}.topbar{height:66px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px}.breadcrumb{display:flex;align-items:center;gap:14px;color:#8b90a0;font-size:11px}.breadcrumb svg{width:14px}.breadcrumb strong{font-weight:500;color:#42485c}.crumb-separator{color:#d4d6df}.header-tools{display:flex;align-items:center;gap:17px}.demo-badge{display:inline-flex;align-items:center;gap:5px;background:#f4f0fc;border:1px solid #e9e1f8;border-radius:5px;padding:4px 7px;font-size:9px;letter-spacing:1px;color:#9679ca}.demo-badge span{height:4px;width:4px;border-radius:50%;background:#9d7bd0}.today-label{font-size:10px;color:#8f94a4}.icon-button{position:relative;border:0;background:transparent;padding:5px;display:inline-flex;align-items:center;justify-content:center;color:#9398a7;border-radius:5px}.icon-button:hover{background:#f1edf8;color:var(--purple)}.icon-button svg{width:16px;height:16px}svg{width:18px;height:18px;vertical-align:middle;flex-shrink:0}.header-divider{height:19px;width:1px;background:var(--line)}#notification-dot{position:absolute;right:6px;top:4px;width:4px;height:4px;background:#df9c72;border:1px solid #fff;border-radius:50%}.notification-wrap{position:relative}.notification-panel{position:absolute;right:-30px;top:37px;width:286px;z-index:40;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 35px #292c4920;padding:16px}.notification-panel>strong{font-size:12px;display:block;margin-bottom:12px}.notification-row{width:100%;display:flex;gap:10px;align-items:center;padding:11px 2px;background:none;border:0;border-top:1px solid var(--line);text-align:left}.notification-row small{color:var(--muted);display:block;margin-top:4px;font-size:10px}.notification-row .tag{margin-left:auto}main{padding:30px 30px 0;max-width:1900px;margin:auto}.page-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:25px}.eyebrow{font-size:8px;letter-spacing:1.6px;color:#a09bac;font-weight:600;display:flex;align-items:center;gap:6px}.eyebrow>span{width:5px;height:5px;border-radius:50%;background:#a389d7}h1{font-size:27px;font-weight:750;letter-spacing:-1.1px;margin:10px 0 10px;line-height:1.25}.page-heading p{font-size:11px;color:#969baa;margin:0;line-height:1.7}.button{border:1px solid var(--line);background:#fff;border-radius:7px;padding:9px 12px;display:inline-flex;justify-content:center;align-items:center;gap:7px;font-size:11px;white-space:nowrap;font-weight:600;transition:background .15s,box-shadow .15s}.button svg{width:14px;height:14px}.button.primary{background:var(--purple);border-color:var(--purple);color:#fff;padding:11px 15px;box-shadow:0 3px 6px #7955d51a}.button.primary:hover{background:var(--purple-dark);box-shadow:0 3px 9px #7955d533}.button.quiet{color:#9095a5;font-size:10px;font-weight:500;padding:7px 9px}.button:hover{background:#faf9fc}.full{width:100%}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:23px}.stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:17px 18px 14px;position:relative;min-height:123px}.stat-head{display:flex;justify-content:space-between;align-items:center;color:#858a9c;font-size:11px}.stat-icon{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;background:#f4f0fc;color:#9778cf}.stat-icon.green{background:#edf7f3;color:#63aa90}.stat-icon.amber{background:#fcf7ed;color:#cfaa63}.stat-number{font-size:30px;font-weight:700;margin-top:1px;letter-spacing:-1px}.stat-number small{font-size:11px;font-weight:400;letter-spacing:0;margin-left:5px;color:#9195a4}.stat-bottom{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:9px;color:#a2a5b2}.stat-bottom strong{font-weight:500;color:#8b70be}.stat-bottom .green-text{color:#459b7e}.stat-bottom .amber-text{color:#c59542}.mini-bars{display:flex;align-items:flex-end;gap:3px;height:22px;position:absolute;right:20px;bottom:20px}.mini-bars i{width:4px;border-radius:2px;background:#e9e1f7}.mini-bars i:last-child{background:#a28ad6}.main-grid{display:grid;grid-template-columns:minmax(0,1fr) 337px;gap:20px;align-items:start}.primary-column{min-width:0}.panel{background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden}.panel-title{display:flex;justify-content:space-between;align-items:center;padding:20px 20px 17px;gap:8px}.panel-title h2{font-size:13px;font-weight:700;display:flex;gap:7px;align-items:center;line-height:1.3;margin:0 0 5px}.panel-description{font-size:10px}.muted{color:var(--muted)}.count-badge{background:#f1ecfa;color:#9275c8;padding:2px 6px;border-radius:5px;font-size:10px;font-weight:600}.list-controls{padding:0 18px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px}.segmented{display:flex;gap:3px;background:#f7f8fb;border:1px solid #f0f1f5;border-radius:6px;padding:3px;white-space:nowrap}.segmented button{border:0;background:none;padding:7px 8px;border-radius:4px;color:#9398a7;font-size:10px;white-space:nowrap}.segmented button.selected{background:#fff;color:var(--purple);box-shadow:0 1px 4px #25314a0d;font-weight:600}.segmented button span{font-size:8px;color:#a58bcf;margin-left:3px}.search{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;height:32px;padding:0 8px;min-width:140px;width:215px;color:#a8acb8}.search svg{width:13px;height:13px}.search input{border:0;outline:none;background:none;min-width:0;width:100%;font-size:9px;color:#676b7e}.search input::placeholder{color:#a6aab6}.search kbd{font:8px inherit;background:#f8f9fb;border:1px solid #f0f1f5;padding:2px 3px;border-radius:3px;white-space:nowrap}.table-scroll{position:relative;overflow-x:auto}table{border-collapse:collapse;width:100%;text-align:left;white-space:nowrap}thead{background:#fafbfe;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}th{color:#969baa;font-size:9px;font-weight:500;padding:11px 8px}th:first-child,td:first-child{padding-left:20px}th:last-child,td:last-child{padding-right:15px}td{padding:14px 8px;border-bottom:1px solid #f1f2f7;font-size:10px;color:#7f8597}tbody tr{cursor:pointer;transition:background .12s}tbody tr:hover{background:#faf8fe}tbody tr.selected{background:#f9f6ff;box-shadow:inset 3px 0 var(--purple)}tbody tr:focus-visible{outline:2px solid var(--purple);outline-offset:-2px}.person-cell{display:flex;align-items:center;gap:9px}.person-avatar{width:31px;height:31px;background:#f0edf8;color:#9c89c3;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0}.person-avatar.peach{background:#faf0e9;color:#c9a08a}.person-avatar.mint{background:#eaf4f0;color:#8cb5a5}.person-avatar.blue{background:#edf2fa;color:#8ba1c8}.person-cell strong{display:block;font-size:11px;color:#454b60;font-weight:600}.person-cell small{display:block;color:#a2a6b3;font-size:8px;margin-top:5px}.purpose-cell strong{display:block;font-size:10px;font-weight:500;color:#747a8c}.purpose-cell small{display:block;font-size:8px;color:#a3a7b3;margin-top:5px}.time-cell{font-variant-numeric:tabular-nums;font-size:10px;color:#9297a6}.tag{display:inline-flex;align-items:center;gap:4px;font-size:8px;padding:5px 7px;border-radius:5px;white-space:nowrap;font-weight:500;line-height:1}.tag i{width:4px;height:4px;background:currentColor;border-radius:50%}.tag.violet{color:#9870c9;background:#f1eafb}.tag.green{color:#55a58c;background:#eaf6f0}.tag.amber{color:#c39443;background:#fcf3df}.tag.neutral{color:#969baa;background:#f2f4f8}.wave{display:inline-flex;gap:1.5px;align-items:center;height:8px;color:#9a78cf}.wave i{width:2px;height:4px;background:currentColor;border-radius:1px;animation:wave .8s infinite alternate}.wave i:nth-child(2){height:8px;animation-delay:.2s}.wave i:nth-child(3){height:6px;animation-delay:.4s}.wave i:nth-child(4){height:3px;animation-delay:.1s}@keyframes wave{to{height:3px}}.table-footer{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:13px 18px;font-size:8px;color:#a2a6b4}.table-footer>.status-dot,.table-footer>span>.status-dot{width:4px;height:4px;margin-right:4px}.pagination{display:flex;align-items:center;gap:9px;white-space:nowrap}.pagination .icon-button{border:1px solid var(--line);padding:4px}.pagination svg{width:10px;height:10px}.bottom-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:17px;margin-top:20px}.map-panel .panel-title,.activity-panel .panel-title{padding:17px 17px 12px}.map-canvas{margin:0 15px;border:1px solid #edf0ee;border-radius:7px;background:#f3f6f1;overflow:hidden;height:183px;position:relative}.map-canvas>svg{width:100%;height:100%;display:block}.map-controls{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;border-radius:5px;background:#fff;box-shadow:0 1px 5px #25314a15}.map-controls button{border:0;background:transparent;width:23px;height:23px;color:#959b9a;font-size:14px}.map-controls button+button{border-top:1px solid #eee}.map-hint{position:absolute;bottom:7px;left:10px;color:#9aa69a;font-size:8px;pointer-events:none}.map-legend{display:flex;align-items:center;gap:12px;padding:12px 17px 14px;font-size:8px;color:#9ca3a2}.map-legend span{display:flex;align-items:center;gap:4px}.map-dot{height:5px;width:5px;border-radius:50%}.purple{background:var(--purple)}.green{background:var(--green)}.map-location-count{margin-left:auto}.activity-panel .small-icon{color:#b0a1ce}#activity-list{padding:2px 18px 9px}.activity-item{display:flex;gap:10px;position:relative;padding:9px 0 10px}.activity-item:not(:last-child):after{content:"";width:1px;position:absolute;left:12px;top:34px;bottom:-4px;background:#f0edf7}.activity-avatar{background:#f4f0fb;color:#a58dcd;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}.activity-copy{min-width:0;padding-top:1px}.activity-copy p{font-size:9px;color:#8a8e9f;margin:0;line-height:1.5}.activity-copy p strong{font-weight:600;color:#63697e}.activity-copy small{font-size:8px;color:#b1b4be;display:block;margin-top:5px}.detail-panel{position:sticky;top:18px}.detail-heading{display:flex;align-items:center;justify-content:space-between;padding:18px 19px;border-bottom:1px solid var(--line)}.detail-heading h2{margin:0;font-size:12px;font-weight:600}.detail-heading .reference{font-size:8px;color:#aaaebc}.detail-person{padding:22px 20px 17px;display:flex;align-items:center;gap:12px}.detail-avatar{height:45px;width:45px;border-radius:13px;background:#eee8f9;color:#9b80c7;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}.detail-person h3{font-size:17px;margin:0 0 7px;letter-spacing:-.5px}.detail-person h3 small{font-size:10px;font-weight:400;color:#999eac;margin-left:7px}.detail-person p{font-size:9px;color:#a1a5b1;margin:0}.detail-person .tag{margin-left:auto;align-self:flex-start;margin-top:3px}.detail-facts{display:grid;grid-template-columns:1fr 1fr;gap:15px 10px;padding:0 21px 20px}.detail-fact label{font-size:9px;display:block;color:#aaaebc;margin-bottom:6px}.detail-fact span{font-size:10px;color:#696f83;font-weight:500}.detail-tabs{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0 17px;gap:20px}.detail-tabs button{border:0;background:none;padding:13px 0 12px;font-size:10px;color:#a1a6b4;position:relative}.detail-tabs button.active{color:var(--purple);font-weight:600}.detail-tabs button.active:after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--purple)}.detail-tab-content{padding:19px 19px 17px;min-height:250px}.summary-label{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}.summary-label strong{color:#8e6ac5;font-size:10px;display:flex;align-items:center;gap:5px}.summary-label svg{width:13px;height:13px}.summary-label small{font-size:8px;color:#b3a3ce}.summary-box{background:#f8f5fd;border:1px solid #f0e9fa;border-radius:7px;padding:12px 13px;font-size:10px;color:#8c7ba9;line-height:1.85;margin:0 0 15px}.summary-box.pending{color:#a59aaf;border-style:dashed}.detail-subtitle{font-size:10px;font-weight:600;color:#73788c;margin:15px 0 10px;display:flex;align-items:center;gap:6px}.detail-subtitle svg{width:13px;height:13px;color:#9b8cb6}.checklist{list-style:none;padding:0;margin:0}.checklist li{display:flex;gap:7px;align-items:flex-start;color:#9296a5;font-size:9px;line-height:1.7;margin:8px 0}.checklist svg{width:12px;height:12px;color:#8a72bd;margin-top:2px}.summary-footnote{font-size:8px;line-height:1.7;color:#b3a9c0;margin-top:13px}.location-strip{display:flex;align-items:center;gap:7px;padding:11px;background:#f8faf9;border:1px solid #edf1ef;border-radius:7px;font-size:9px;color:#8ca094}.location-strip svg{width:13px;height:13px}.location-strip .tag{margin-left:auto;padding:4px 5px;font-size:7px}.location-strip span>small{display:block;font-size:8px;color:#b2b9b4;margin-top:4px}.review-section{border-top:1px solid var(--line);padding:16px 19px}.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.section-heading h3{margin:0;font-size:10px;color:#777e91;font-weight:600}.review-select{border:1px solid var(--line);border-radius:5px;padding:5px 7px;background:#fff;font-size:9px;color:#8b7ca5}.note-label{font-size:9px;color:#9da2af;display:block;margin-bottom:7px}.note-input{width:100%;resize:vertical;min-height:64px;max-height:160px;background:#fbfcfe;border:1px solid #eceff5;border-radius:6px;padding:10px;color:#74798c;font-size:10px;line-height:1.7}.note-input::placeholder{color:#b2b6c1}.note-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:9px}.note-bottom small{font-size:8px;color:#b2b6c2}.note-save{font-size:9px;padding:7px 10px}.existing-note{background:#fbfbfd;border:1px solid #f0f0f5;border-radius:6px;padding:10px;margin-bottom:12px}.existing-note>p{margin:0;color:#8a8fa1;font-size:9px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}.existing-note small{display:block;font-size:8px;color:#b1b4c1;margin-top:6px}.existing-note .note-author{color:#8d76b3}.detail-footer{background:#fcfcfe;border-top:1px solid var(--line);padding:11px 15px;text-align:center;font-size:8px;color:#b0b3c0}.detail-footer svg{width:11px;height:11px;margin-right:3px}.transcript{max-height:293px;overflow:auto;padding-right:3px}.message{margin-bottom:13px}.message>small{font-size:8px;color:#aba6b6;display:block;margin-bottom:5px}.message.assistant{padding-right:17px}.message.caller{padding-left:17px}.message.caller>small{text-align:right}.bubble{background:#f6f3fc;border-radius:0 7px 7px;padding:9px 11px;font-size:10px;line-height:1.8;color:#8a7ba3;overflow-wrap:anywhere}.message.caller .bubble{background:#f6f7fa;color:#83899a;border-radius:7px 0 7px 7px}.history-card{border:1px solid var(--line);border-radius:7px;padding:12px;margin-bottom:10px}.history-card header{display:flex;justify-content:space-between;align-items:center}.history-card strong{font-size:10px;font-weight:600;color:#757b8d}.history-card p{font-size:9px;color:#a0a5b2;line-height:1.7;margin:9px 0}.history-card button{font-size:9px}.history-card .history-location{font-size:8px;color:#a5b0a9;display:flex;gap:4px;align-items:center;margin:0 0 9px}.history-location svg{width:11px;height:11px}.empty-state{text-align:center;color:#a8adba;font-size:11px;padding:38px 15px;line-height:1.8}.empty-state svg{display:block;margin:0 auto 10px;color:#c7bbdb;width:24px;height:24px}.empty-row td{padding:45px 20px;text-align:center}.history-tools{padding:0 19px 14px;display:flex;gap:12px;align-items:center;color:#a0a6b3;font-size:10px}.history-tools input{border:1px solid var(--line);padding:5px;border-radius:5px;color:#8b8e9e;margin-left:5px;background:#fff}.all-notes-panel{margin-top:20px}.all-note-row{display:flex;gap:12px;padding:16px 20px;border-top:1px solid var(--line);cursor:pointer}.all-note-row:hover{background:#fcfaff}.all-note-copy{flex:1;min-width:0}.all-note-copy header{display:flex;justify-content:space-between;gap:5px}.all-note-copy strong{font-size:11px;font-weight:600}.all-note-copy small{font-size:9px;color:#a5a9b6}.all-note-copy p{font-size:11px;color:#8f94a5;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:0}.locations-view .bottom-grid{grid-template-columns:1fr}.locations-view .map-panel{order:-1}.locations-view .map-canvas{height:390px}.locations-view .activity-panel{display:none}.locations-view #call-panel{display:none}.locations-view .bottom-grid{margin-top:0}.notes-view #call-panel,.notes-view .bottom-grid{display:none}.notes-view .all-notes-panel{margin-top:0}.page-footer{display:flex;justify-content:space-between;align-items:center;padding:22px 1px 20px;font-size:8px;color:#b6b9c4;gap:15px}.tiny-cross{font-size:10px;color:#b4a2d2;margin-right:5px}.toast{position:fixed;bottom:24px;left:calc(50% + 90px);transform:translate(-50%,14px);background:#373248;color:#fff;border-radius:9px;box-shadow:0 5px 25px #2c26462b;padding:13px 20px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:100;max-width:90vw;line-height:1.6}.toast.show{opacity:1;transform:translate(-50%,0)}dialog{border:1px solid #ede7f8;border-radius:17px;padding:26px 30px;max-width:460px;width:calc(100% - 36px);color:var(--text);box-shadow:0 30px 100px #211b3338}dialog::backdrop{background:#25203969;backdrop-filter:blur(3px)}.dialog-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}.dialog-symbol{width:41px;height:41px;display:flex;align-items:center;justify-content:center;background:#f0eafb;color:var(--purple);font-size:26px;border-radius:12px}dialog h2{font-size:24px;letter-spacing:-1px;margin:14px 0}dialog p{color:#9593a5;font-size:12px;line-height:1.9}dialog ol{padding-left:17px;font-size:11px;color:#9690a3;line-height:2.4}dialog ol strong{font-weight:600;color:#7d699c}.help-note{background:#f8f5fc;border-radius:8px;padding:14px;font-size:10px;color:#9b8fae;line-height:1.9;margin:20px 0}.reset-link{display:block;margin:18px auto 0;color:#aaa5b5;font-size:10px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}.mobile-menu{display:none}[hidden]{display:none!important}.small-icon svg{height:15px;width:15px}.faded{color:#b8bdc7}.live-indicator{display:flex;gap:5px;align-items:center;font-size:9px;color:#9c81c5}.live-indicator .status-dot{background:#a889d7;width:4px;height:4px}.map-marker{cursor:pointer;outline:none}.map-marker:focus-visible circle{stroke:#5c36ae;stroke-width:3}.simulation-banner{padding:9px 13px;background:#f8f4ff;border-bottom:1px solid #eee5fc;font-size:9px;color:#9d80ca;display:flex;gap:7px;align-items:center}.simulation-banner .wave{color:#a17cd6}.history-current{font-size:9px;color:#aaa3b9;line-height:1.8;margin-bottom:12px}
+@media(min-width:1600px){:root{--sidebar:240px}main{padding:34px 36px 0}.main-grid{grid-template-columns:minmax(0,1fr) 365px;gap:24px}.stat{padding:20px 22px;min-height:135px}.stat-number{font-size:34px}.panel-title{padding:22px}.list-controls{padding:0 22px 19px}td{padding:17px 12px}.detail-tab-content{min-height:280px}.map-canvas{height:211px}.bottom-grid{gap:20px}.activity-item{padding:13px 0}.detail-person{padding-top:25px;padding-bottom:22px}.detail-facts{gap:20px 10px}.detail-panel .detail-tab-content{padding:21px}.stats{gap:19px;margin-bottom:26px}.map-panel .panel-title,.activity-panel .panel-title{padding:19px}.map-legend{padding:14px 18px}.page-heading{margin-bottom:29px}h1{font-size:30px}.page-footer{padding-top:25px}.search{width:250px}.search input{font-size:10px}.segmented button{font-size:11px;padding:8px 11px}th{font-size:10px}.person-cell strong{font-size:12px}.person-cell small,.purpose-cell small{font-size:9px}.purpose-cell strong,.time-cell{font-size:11px}.tag{font-size:9px}.summary-box{font-size:11px}.checklist li{font-size:10px}.detail-fact span{font-size:11px}.activity-copy p{font-size:10px}.activity-copy small{font-size:9px}}
+@media(max-width:1250px){:root{--sidebar:190px}.sidebar{padding-left:12px;padding-right:12px}.brand{padding:0 5px;font-size:19px}.brand small{font-size:6px}.workspace{padding:10px 7px;gap:6px}.workspace strong{font-size:11px}.workspace div>span{font-size:9px}main{padding:24px 20px 0}.topbar{padding:0 20px}.main-grid{grid-template-columns:minmax(0,1fr) 302px;gap:15px}.stats{gap:10px}.stat{padding:14px}.stat-number{font-size:27px}.stat-bottom{font-size:8px}.stat-icon{height:26px;width:26px}.list-controls{flex-wrap:wrap}.search{width:100%}.search input{font-size:10px}.bottom-grid{grid-template-columns:1fr}.activity-panel{display:none}.person-avatar{display:none}th:first-child,td:first-child{padding-left:14px}.detail-tabs{gap:19px}.panel-title{padding:17px 15px}.today-label{font-size:9px}.header-tools{gap:12px}.table-footer{padding:12px}.table-footer>span{font-size:7px}.mini-bars{display:none}}
+@media(max-width:1000px){:root{--sidebar:176px}.brand{font-size:17px;gap:6px}.brand small{font-size:5.5px}.brand-mark{width:32px;height:35px;font-size:23px}.main-grid{grid-template-columns:1fr}.detail-panel{position:static}.detail-tab-content{min-height:180px}.detail-facts{grid-template-columns:repeat(4,1fr)}.detail-person{padding-top:18px}.stats{gap:9px}.stat-head{font-size:10px}.stat{min-height:110px}.stat-number{font-size:25px}.page-heading p{max-width:360px}.bottom-grid{grid-template-columns:1fr 1fr}.activity-panel{display:block}.person-avatar{display:flex}.list-controls{flex-wrap:nowrap}.search{max-width:230px}.today-label{display:none}.page-footer{align-items:flex-start}.detail-panel{margin-top:0}.table-footer>span{font-size:8px}}
+@media(max-width:700px){:root{--sidebar:0px}.sidebar{width:220px;transform:translateX(-100%);transition:transform .2s;box-shadow:10px 0 35px #25203910}.sidebar.open{transform:translateX(0)}.brand{font-size:21px}.brand small{font-size:7px}.mobile-menu{display:inline-flex;margin-right:0}.topbar{height:57px;padding:0 17px}.breadcrumb{gap:9px;font-size:10px}.breadcrumb>span[data-icon="home"]{display:none}.breadcrumb>.crumb-separator:first-of-type{display:none}.header-tools{gap:11px}.header-divider{display:none}main{padding:22px 16px 0}.page-heading{align-items:flex-start;gap:10px;margin-bottom:21px}.eyebrow{font-size:6px;letter-spacing:1.1px}h1{font-size:24px;margin:10px 0 9px}.page-heading p{font-size:10px;line-height:1.8;max-width:250px}.page-heading .button{font-size:10px;padding:9px 10px;margin-top:22px}.stats{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}.stat{min-height:113px;padding:14px}.stat-number{font-size:28px}.stat-head{font-size:10px}.stat-bottom{font-size:8px}.mini-bars{display:flex;right:15px;bottom:18px}.main-grid{gap:16px}.list-controls{flex-wrap:wrap;gap:11px;padding:0 14px 14px}.segmented{width:100%;justify-content:space-between}.segmented button{padding:8px 11px}.search{max-width:none;width:100%;height:34px}.panel-title{padding:17px 15px 14px}.table-scroll table{min-width:530px}.bottom-grid{grid-template-columns:1fr;margin-top:16px;gap:16px}.activity-panel{display:block}.map-canvas{height:210px}.detail-facts{grid-template-columns:1fr 1fr}.page-footer{flex-direction:column;gap:8px;padding-bottom:20px;font-size:8px}.table-footer{font-size:8px;gap:5px;flex-wrap:wrap}.table-footer>span{font-size:7px}.toast{left:50%;width:max-content;max-width:90vw;text-align:center}.notification-panel{right:-40px;width:270px}.detail-person{padding-top:21px}.detail-panel{position:static}.locations-view .map-canvas{height:320px}.history-tools input{font-size:10px}.profile strong{font-size:12px}.profile small{font-size:10px}.sidebar .workspace strong{font-size:12px}.sidebar .workspace div>span{font-size:10px}.sidebar .brand-mark{width:37px;height:40px;font-size:27px}.sidebar .brand{padding:0 12px;gap:9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+@media(max-width:1250px){.stat-bottom>span{display:none}}
+
+/* Contact information is visible in the desk list and selected-call card. */
+.contact-cell{font-size:10px;color:#7d718f;font-variant-numeric:tabular-nums;letter-spacing:0;white-space:nowrap;user-select:all}.detail-contact{display:flex;align-items:center;gap:7px;margin-top:9px}.detail-contact small{display:block;color:#a19aaa;font-size:8px;margin-bottom:4px}.detail-contact strong{display:block;color:#77628e;font-size:12px;letter-spacing:.15px;font-weight:600;font-variant-numeric:tabular-nums;user-select:all}.contact-copy{padding:5px;background:#f6f2fc;color:#a08bbd}.contact-copy svg{width:13px;height:13px}@media(max-width:700px){.table-scroll table{min-width:645px}}
+
+/* Patient chart: synthetic history and observations, separate from call notes. */
+@media(min-width:1251px){.main-grid{grid-template-columns:minmax(0,1fr) 405px}}@media(min-width:1600px){.main-grid{grid-template-columns:minmax(0,1fr) 430px}}
+.detail-tabs{gap:0;justify-content:space-between}.detail-tabs button{padding-left:3px;padding-right:3px}.chart-source{display:flex;align-items:center;gap:6px;padding:9px 10px;background:#f5f0fc;border:1px solid #eee5fa;border-radius:6px;font-size:9px;color:#a18cbb}.chart-source strong{font-size:9px;font-weight:600;color:#9375b6}.chart-source>span:last-child{margin-left:auto;font-size:8px}.chart-source-dot{height:5px;width:5px;border-radius:50%;background:#b59bd6}.chart-patient-meta{display:flex;justify-content:space-between;gap:7px;font-size:8px;color:#aaa3b5;margin:9px 0 16px;font-variant-numeric:tabular-nums}.chart-section{margin-bottom:18px}.chart-section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.chart-section-title h4{font-size:11px;margin:0;font-weight:650;color:#777084}.chart-section-title>span{color:#b2a7bf;font-size:9px}.condition-chips{display:flex;flex-wrap:wrap;gap:7px}.condition-chip{padding:8px 10px;border:1px solid #ece7f3;background:#fcfbfe;border-radius:7px}.condition-chip strong{display:block;font-size:10px;font-weight:600;color:#8a739f}.condition-chip small{display:block;font-size:8px;color:#b6aabe;margin-top:4px}.allergy-line{display:flex;gap:8px;background:#fcf9f3;border:1px solid #f5efdf;border-radius:6px;padding:9px 10px;margin-top:10px}.allergy-symbol{color:#be9c65;background:#f4ebda;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:10px;font-weight:700;width:14px;height:14px;flex-shrink:0;margin-top:1px}.allergy-line strong{font-size:9px;font-weight:600;color:#a59170}.allergy-line strong small{font-size:8px;font-weight:400;color:#b3a58e;margin-left:5px}.allergy-line p{font-size:9px;color:#b4a48d;margin:5px 0 0;line-height:1.6}.medication-list{border:1px solid #efedf4;border-radius:7px;overflow:hidden}.medication-row{display:flex;gap:9px;align-items:center;padding:10px}.medication-row+.medication-row{border-top:1px solid #f3f0f7}.medication-icon{color:#ad98c6;background:#f6f2fc;border-radius:7px;height:28px;width:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.medication-icon svg{height:14px;width:14px}.medication-row>div{min-width:0;flex:1}.medication-row strong{display:flex;align-items:center;flex-wrap:wrap;gap:4px;color:#81708f;font-size:10px;font-weight:600;line-height:1.7}.fictional-drug{font-size:7px;font-weight:400;border:1px solid #f0e9f7;border-radius:3px;padding:0 3px;color:#b7a5c6}.medication-row p{margin:4px 0 0;font-size:8px;color:#b1a7bc;line-height:1.6}.medication-status{color:#78a793;background:#edf7f1;font-size:8px;white-space:nowrap;border-radius:4px;padding:4px 5px;flex-shrink:0}.chart-disclaimer{font-size:8px;line-height:1.7;color:#b5a9c0;margin:8px 0 0}.trend-switch{display:flex;gap:2px;padding:3px;border:1px solid #f0ecf6;border-radius:5px;background:#faf9fc}.trend-switch button{border:0;background:none;border-radius:3px;padding:3px 7px;font-size:8px;color:#b1a4bf}.trend-switch button.selected{background:white;box-shadow:0 1px 3px #66537c0b;color:#9273b5;font-weight:600}.trend-card{border:1px solid #efebf5;border-radius:7px;padding:11px 12px 10px;background:#fdfcfe}.trend-latest{display:flex;justify-content:space-between;align-items:center;gap:8px}.trend-latest>span{font-size:9px;color:#a79bb6}.trend-latest>span small{font-size:8px;color:#bfb4ca;margin-left:5px}.trend-latest strong{font-size:17px;color:#9273b5;letter-spacing:-.5px;font-variant-numeric:tabular-nums;font-weight:600}.trend-latest em{font-style:normal;color:#baacd0;font-size:12px;margin:0 4px}.trend-latest strong small{font-size:8px;font-weight:400;color:#b5a8c3;letter-spacing:0;margin-left:5px}.vital-chart{width:100%;height:auto;display:block;margin-top:3px;max-height:150px}.trend-legend{display:flex;align-items:center;gap:12px;font-size:8px;color:#b2a5c2}.trend-legend span{display:flex;align-items:center;gap:4px}.trend-legend i{height:2px;width:10px;background:#9a7bd3;display:inline-block}.trend-legend i.mint-line{background:#8fc1b4}.trend-legend>small{font-size:7px;color:#c0b6ca;margin-left:auto}.prescription-record{border:1px solid #efedf4;border-radius:6px;margin-bottom:7px}.prescription-record summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px;cursor:pointer}.prescription-record summary::-webkit-details-marker{display:none}.prescription-record summary>span:first-child{display:flex;flex-direction:column;gap:5px}.prescription-record summary strong{color:#8b7b9c;font-size:10px;font-weight:600;font-variant-numeric:tabular-nums}.prescription-record summary small{color:#b8adbf;font-size:8px}.prescription-label{font-size:8px;color:#b8abc6;white-space:nowrap}.prescription-label b{font-weight:400;font-size:13px;margin-left:4px}.prescription-content{border-top:1px solid #f3f0f7;padding:9px 12px 10px;background:#fcfbfe}.prescription-content>p{font-size:8px;color:#b1a5bd;margin:0 0 7px}.prescription-content ul{padding:0 0 0 12px;margin:0 0 7px;color:#bcaed0}.prescription-content li{font-size:9px;color:#9a88ae;line-height:1.9}.prescription-content li small{font-size:7px;color:#c2b5ce;margin-left:5px}.prescription-content>small{font-size:7px;color:#bfb3ca}.encounter-item{display:flex;gap:9px;position:relative;padding:0 0 14px}.encounter-item:last-child{padding-bottom:0}.encounter-item>i{width:6px;height:6px;border-radius:50%;background:#bcacd2;margin-top:3px;flex-shrink:0}.encounter-item:not(:last-child):before{content:'';position:absolute;left:2.5px;top:10px;bottom:4px;background:#f0ebf6;width:1px}.encounter-item>div{flex:1;min-width:0}.encounter-item header{display:flex;align-items:center;justify-content:space-between;gap:7px}.encounter-item strong{font-size:9px;font-weight:600;color:#9b8baa}.encounter-item time{font-size:8px;color:#c0b3cc;font-variant-numeric:tabular-nums}.encounter-item p{font-size:8px;color:#bbb0c5;margin:5px 0 0;line-height:1.7}.chart-footer-note{font-size:8px;color:#b7acc3;line-height:1.8;padding:10px 0 1px;border-top:1px solid #f0ecf5}.chart-empty,.chart-unlinked p{font-size:10px;color:#b1a5be;line-height:1.8;margin:4px 0}.chart-unlinked{padding:18px 0 25px}.chart-unlinked strong{color:#937ca8;font-size:12px}.patient-chart{overflow-wrap:anywhere}.detail-person h3{margin-bottom:5px}.detail-heading h2{font-size:11px}.detail-tab-content:has(.patient-chart){padding-top:15px}.encounters-section{margin-bottom:12px}@media(max-width:700px){.chart-source strong{font-size:10px}.chart-section-title h4{font-size:12px}.condition-chip strong,.medication-row strong{font-size:11px}.chart-patient-meta{font-size:8px}.trend-legend{gap:8px}.trend-legend>small{font-size:7px}}
+
+.backend-error{grid-column:1/-1;background:#fff6ee;border:1px solid #efd9c8;color:#a77857;padding:24px;border-radius:10px}.detail-panel{position:static}
+
+.preparation-section{background:#f9fbfa;border:1px solid #eaf0ed;border-radius:7px;padding:12px}.preparation-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.preparation-grid small{display:block;font-size:8px;color:#a3b1aa;margin-bottom:4px}.preparation-grid strong{font-size:10px;color:#80998c;font-weight:500}.preparation-note{font-size:9px;color:#a0afa6;line-height:1.8;margin:12px 0 0;border-top:1px solid #eaf0ed;padding-top:9px}
+
+/* Patient-specific, source-linked preparation panel. */
+.prep-intro{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}.prep-intro>div{display:flex;gap:6px;align-items:center}.prep-intro strong{font-size:12px;color:#8060a4}.prep-sparkle{font-size:20px;color:#ad8bd7}.prep-count{font-size:8px;color:#b29ac9;background:#f5effb;border:1px solid #eee4f8;padding:5px 6px;border-radius:5px;white-space:nowrap}.prep-description{font-size:10px;color:#a394b5;line-height:1.9;margin:0 0 13px}.prep-query{display:flex;border:1px solid #e9e1f2;border-radius:7px;background:#fcfaff;overflow:hidden;margin-bottom:13px}.prep-query input{min-width:0;width:100%;border:0;background:none;padding:10px;color:#867294;font-size:10px;outline-offset:-3px}.prep-query input::placeholder{color:#c2b4cd}.prep-query button{flex-shrink:0;border:0;border-left:1px solid #eee5f8;background:#f4edf9;color:#a188b7;padding:0 10px;font-size:9px}.prep-query button:hover{background:#ede1f7}.prep-legend{display:flex;justify-content:space-between;gap:7px;align-items:center;font-size:8px;color:#a294b0;margin:0 0 12px}.prep-legend>span{display:flex;gap:4px;align-items:center}.prep-legend i{width:4px;height:4px;border-radius:50%;background:#81b29c}.prep-legend small{font-size:7px;color:#bdafca}.prep-card{border:1px solid #eee8f5;border-radius:8px;margin-bottom:10px;background:#fff;overflow:hidden}.prep-card>header{display:flex;align-items:center;gap:8px;padding:12px 12px 0}.prep-card-number{font-size:8px;color:#ab8ec7;background:#f3edf9;border-radius:5px;padding:4px 5px;font-variant-numeric:tabular-nums}.prep-card h4{font-size:11px;color:#867195;margin:0;font-weight:600;line-height:1.6}.prep-action{font-size:11px;color:#8c7b9c;line-height:1.9;margin:8px 12px 10px}.prep-reason{font-size:8px;line-height:1.9;color:#b6a7c2;background:#fcfafd;padding:8px 12px;border-top:1px solid #f6f1fa}.prep-reason>span{font-size:7px;background:#f2edf7;color:#b5a0c6;border-radius:3px;padding:2px 4px;margin-right:5px;white-space:nowrap}.prep-evidence{border-top:1px solid #f4eff8}.prep-evidence summary{display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-size:8px;color:#b29bc6;padding:9px 12px}.prep-evidence summary::-webkit-details-marker,.prep-word-panel summary::-webkit-details-marker{display:none}.prep-evidence summary>span{font-size:11px}.prep-evidence>div{padding:0 12px 12px;background:#fdfbff}.prep-evidence p{font-size:9px;line-height:1.8;color:#a793b8;margin:8px 0}.prep-evidence p>strong{display:block;font-size:8px;color:#b8a5c8;margin:0 0 4px;font-weight:600}.prep-citation a{display:block;font-size:8px;line-height:1.9;color:#a182bc;text-decoration:underline;text-underline-offset:2px}.prep-citation small{font-size:7px;color:#c0b2cb;display:block;line-height:1.8;margin-top:5px}.prep-loading{padding:25px 12px;font-size:10px;color:#b8a3c7;background:#fcf9ff;border:1px dashed #e9def2;border-radius:7px;line-height:1.8}.prep-error button{border:0;background:none;color:#9a74b9;text-decoration:underline}.prep-word-panel{border:1px solid #ece6f3;border-radius:7px;background:#faf8fd;margin-top:17px}.prep-word-panel>summary{padding:12px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;color:#a086b7;font-size:10px}.prep-word-panel>summary small{font-size:8px;color:#b5a3c6}.prep-word-panel>p{font-size:8px;line-height:1.8;color:#b5a6c3;margin:0;padding:0 12px 9px}.prep-word-list{padding:0 12px 4px}.prep-word-row{padding:10px 0;border-top:1px solid #eee7f5}.prep-word-row>div{display:flex;gap:6px;align-items:center}.prep-word-row strong{font-size:10px;color:#a18bb4;font-weight:600}.word-tier{font-size:7px;border-radius:3px;padding:3px 4px;background:#f1e9f8;color:#b09bc1}.word-tier.tier-1{background:#edf6f0;color:#94b4a1}.prep-word-row p{font-size:9px;color:#a291b1;line-height:1.8;margin:6px 0}.prep-word-row small{font-size:7px;color:#beb0c9}.prep-footer{font-size:8px;line-height:1.9;color:#b5a6c3;border-top:1px solid #f0ebf5;padding-top:12px;margin:14px 0}.detail-tabs{gap:7px}.detail-tabs button{font-size:9px;white-space:nowrap}.prep-cards{overflow-wrap:anywhere}@media(max-width:700px){.prep-action{font-size:12px}.prep-description{font-size:11px}.prep-card h4{font-size:12px}.prep-intro{flex-wrap:wrap}.detail-tabs{gap:5px}.detail-tabs button{font-size:9px}}
+
+.prep-offline-source{display:block;font-size:8px;line-height:1.9;color:#a182bc}
+
+.consultation-panel{margin-bottom:20px}
+.consultation-panel .panel-title{border-bottom:1px solid var(--line)}
+.consultation-access{padding:16px 20px}
+.consultation-access form>label{display:block;color:var(--text);font-size:11px;font-weight:600;margin-bottom:8px}
+.consultation-access form>div{display:flex;align-items:stretch;gap:8px}
+.consultation-access input{width:min(360px,100%);min-width:0;border:1px solid var(--line);border-radius:7px;padding:10px 12px;color:var(--text);background:var(--white)}
+.consultation-note,.consultation-status{color:var(--muted);font-size:10px;line-height:1.7}
+.consultation-note{margin:10px 0 0}
+.consultation-warning{padding:12px 20px;margin:0;color:var(--muted);font-size:10px;line-height:1.7;word-break:keep-all;background:var(--bg)}
+.call-panel .empty-row .empty-state{position:sticky;left:0;max-width:calc(100vw - 64px);word-break:keep-all}
+:root{--urgent-text:#9d3616}
+.person-cell small.amber-text{font-size:12px;font-weight:700;color:var(--urgent-text)}
+.consultation-status:not(:empty){padding:12px 20px}
+.consultation-record{padding:16px 20px;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.consultation-record>header{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.consultation-record>header strong{font-size:12px;color:var(--text)}
+.consultation-record>header span:not(.tag){display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.consultation-record dl{margin:14px 0 0}
+.consultation-record dt{font-size:10px;font-weight:700;color:var(--purple);margin-top:12px}
+.consultation-record dt small{font-weight:400;color:var(--muted);margin-left:6px}
+.consultation-record dd{margin:5px 0 0;color:var(--text);font-size:12px;line-height:1.7;white-space:pre-wrap}
+.consultation-source{font-size:10px;color:var(--muted);line-height:1.7;margin:12px 0 0}
+@media(max-width:700px){.consultation-access form>div{flex-direction:column}.consultation-access input{width:100%}.consultation-access button{width:100%}}
+/* Authentication-first consultation workspace. */
+.records-view .desk-guidance{margin:0 10px 28px;color:var(--muted);font-size:12px;line-height:1.7}
+.records-view .desk-guidance strong{display:block;color:var(--text);font-size:12px}
+.records-view .desk-guidance p{margin:8px 0 0}
+.records-view .header-label{font-size:12px;color:var(--muted)}
+.records-view main{max-width:1180px;padding-top:36px}
+.records-view .consultation-panel{margin-top:8px}
+.records-view .consultation-panel .panel-title h2{font-size:16px}
+.records-view .consultation-access form>label{font-size:13px}
+.records-view .consultation-access input{font-size:14px;min-height:44px}
+.records-view .consultation-note,.records-view .consultation-warning,.records-view .consultation-status,.records-view .consultation-source{font-size:12px}
+.records-view .consultation-record>header strong,.records-view .consultation-record dd{font-size:14px}
+.records-view .consultation-record dt{font-size:12px}
+.records-view .consultation-record>header span:not(.tag){font-size:12px}
+.records-view .consultation-record dd{line-height:1.8}
+.records-view .empty-state{padding:28px 20px;color:var(--muted);font-size:13px}
+@media(max-width:700px){.records-view .sidebar{display:none}.records-view .app-shell{margin-left:0}.records-view .topbar{height:58px;padding:0 20px}.records-view main{padding:28px 16px 0}.records-view .page-heading h1{font-size:24px}.records-view .consultation-record{padding:16px}.records-view .consultation-record>header{align-items:flex-start}.records-view .page-footer{gap:12px;flex-wrap:wrap}.records-view .consultation-access form>div{flex-direction:column}}
+.records-view .brand{font-size:16px;letter-spacing:-.6px;white-space:nowrap}
+.records-view .desk-guidance{word-break:keep-all}
+
+/* Hospital live workspace; intentionally not used by the example desk. */
+:root { --bg:#f4f6f5; --white:#fff; --text:#21322e; --muted:#52665f; --line:#dce5e0; --purple:#2d6d5b; --purple-dark:#245849; --purple-light:#e6f1eb; --green:#2d6d5b; --green-light:#e6f1eb; --amber:#8c4b1f; --amber-light:#fff3e7; --shadow:0 1px 2px #203b3010; }
+body { font-size:14px; letter-spacing:-.015em; }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid #237057; outline-offset:3px; }
+.sidebar { padding:26px 16px 0; }
+.brand { font-size:18px; letter-spacing:-.04em; }
+.brand-mark { width:36px; height:36px; border-radius:8px; font-size:23px; }
+.brand small { color:#60746a; font-size:9px; letter-spacing:.06em; }
+.workspace { margin:30px 0 24px; background:#f6f9f7; }
+.workspace strong,.workspace div>span { font-size:12px; }
+.nav-label { color:#64776d; font-size:12px; letter-spacing:0; }
+.nav-item { min-height:44px; font-size:13px; color:#40574d; }
+.nav-item.active { background:var(--purple-light); color:var(--purple-dark); }
+.nav-item:hover { background:#f0f5f2; }
+.nav-item b,.avatar,.person-avatar.violet,.detail-avatar { background:var(--purple-light); color:var(--purple-dark); }
+.demo-help { background:#f5f8f6; border-color:var(--line); padding:14px; }
+.demo-help p,.sidebar-status { color:var(--muted); font-size:12px; }
+.breadcrumb,.today-label { color:var(--muted); font-size:12px; }
+.icon-button { min-width:44px; min-height:44px; }
+main { max-width:1600px; }
+.eyebrow { color:var(--purple-dark); font-size:12px; letter-spacing:0; }
+.page-heading h1 { color:var(--text); font-size:28px; letter-spacing:-.04em; }
+.page-heading p { color:var(--muted); font-size:14px; line-height:1.6; }
+.panel { border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow); }
+.panel-title h2,.detail-heading h2 { color:var(--text); font-size:16px; }
+.panel-description,.muted { color:var(--muted); font-size:13px; }
+.button { min-height:44px; font-size:13px; border-radius:7px; }
+.button.primary { background:var(--purple); color:#fff; }
+.button.primary:hover { background:var(--purple-dark); }
+.button.quiet { color:var(--purple-dark); border-color:var(--line); }
+.consultation-warning { background:#f4f8f5; color:#435c50; font-size:13px; }
+.consultation-access form>label,.consultation-note,.consultation-status { color:var(--muted); font-size:13px; }
+.consultation-access input { min-height:44px; border-color:#b8c9bf; font-size:14px; }
+.consultation-status:not(:empty) { color:#884322; }
+.consultation-panel .panel-title { padding:18px 20px; }
+.consultation-panel #consultation-results:not(:empty) { padding:0 20px 12px; }
+.stat { border:1px solid var(--line); box-shadow:none; border-radius:9px; padding:16px 18px; }
+.stat-head,.stat-bottom { color:var(--muted); font-size:13px; }
+.stat-number { color:var(--text); font-size:28px; font-variant-numeric:tabular-nums; }
+.stat-icon.violet,.stat-icon.green { color:var(--purple-dark); background:var(--purple-light); }
+.stat-icon.amber { color:var(--amber); background:var(--amber-light); }
+.count-badge,.tag.violet { color:var(--purple-dark); background:var(--purple-light); }
+.list-controls { gap:12px; }
+.segmented { background:#f1f5f2; }
+.segmented button { min-height:40px; font-size:13px; color:#455d50; }
+.segmented button.selected { color:var(--purple-dark); background:#fff; }
+.search { min-height:44px; border-color:#c8d6ce; }
+.search input { font-size:14px; color:var(--text); }
+.search input::placeholder { color:#687c71; }
+table th { color:#52665f; font-size:12px; }
+table td { color:var(--text); font-size:13px; line-height:1.5; }
+.call-panel tr.selected,.call-panel tbody tr:hover { background:#edf6f0; }
+.person-cell strong,.contact-cell,.purpose-cell,.time-cell { color:var(--text); font-size:13px; }
+.purpose-cell { max-width:220px; overflow-wrap:anywhere; }
+.time-cell,.contact-cell { font-variant-numeric:tabular-nums; }
+.tag { font-size:12px; font-weight:650; }
+.tag.green { color:#245c49; background:#e7f2eb; }
+.tag.amber,.person-cell small.amber-text { color:#854622; background:#fff0e4; }
+.detail-panel { align-self:start; }
+.detail-heading { padding:20px; }
+.detail-person { padding:18px 20px; background:#f6f9f7; }
+.detail-person h3 { color:var(--text); font-size:15px; }
+.detail-person p { color:var(--muted); font-size:13px; }
+.detail-tab-content { padding:18px 20px; }
+.detail-fact { margin-bottom:18px; overflow-wrap:anywhere; }
+.detail-fact label { color:var(--muted); font-size:12px; font-weight:700; }
+.detail-fact p { color:var(--text); font-size:14px; line-height:1.65; white-space:pre-wrap; }
+.detail-footer,.empty-state,.table-footer,.page-footer { color:var(--muted); font-size:12px; line-height:1.6; }
+@media (max-width:1050px) { .main-grid { grid-template-columns:1fr; } .detail-panel { position:static; } }
+@media (max-width:700px) {
+  main { padding:24px 16px 0; }
+  .page-heading h1 { font-size:24px; }
+  .page-heading p { font-size:14px; }
+  .sidebar { width: min(280px, 85vw); }
+  .list-controls { flex-wrap:wrap; }
+  .segmented { width:100%; overflow-x:auto; }
+  .segmented button { flex:1 0 auto; }
+  .search { width:100%; max-width:none; }
+  .call-panel table { min-width:620px; }
+  .stat-head,.stat-bottom { font-size:12px; }
+  .stat-number { font-size:25px; }
+}
+
+/* Keep the full table readable; on narrow screens show each record as a compact card. */
+.call-panel .table-scroll { overflow-x:auto; }
+.call-panel table { min-width:800px; table-layout:auto; }
+.call-panel .purpose-cell { min-width:185px; white-space:normal; overflow-wrap:anywhere; }
+.table-scroll-hint { margin:0; padding:0 20px 10px; color:var(--muted); font-size:12px; }
+@media (max-width:1050px) {
+  .primary-column { display:contents; }
+  .call-panel { order:1; }
+  .detail-panel { order:2; }
+  .bottom-grid { order:3; }
+  .all-notes-panel { order:4; }
+}
+@media (max-width:1050px) {
+  .table-scroll-hint { display:none; }
+  .call-panel table,.call-panel tbody,.call-panel tr,.call-panel td { display:block; width:100%; min-width:0; }
+  .call-panel thead { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .call-panel tr:not(.empty-row) { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px 12px; padding:16px; border-bottom:1px solid var(--line); }
+  .call-panel tr:not(.empty-row) td { padding:0; border:0; white-space:normal; overflow-wrap:anywhere; }
+  .call-panel tr:not(.empty-row) td:nth-child(3) { grid-column:1/-1; max-width:none; min-width:0; }
+  .call-panel tr:not(.empty-row) td:last-child { display:none; }
+  .call-panel tr:not(.empty-row) td:nth-child(2)::before,.call-panel tr:not(.empty-row) td:nth-child(3)::before,.call-panel tr:not(.empty-row) td:nth-child(4)::before,.call-panel tr:not(.empty-row) td:nth-child(6)::before { display:block; margin-bottom:3px; color:var(--muted); font-size:12px; font-weight:600; }
+  .call-panel tr:not(.empty-row) td:nth-child(2)::before { content:'연락처'; }
+  .call-panel tr:not(.empty-row) td:nth-child(3)::before { content:'문의 내용'; }
+  .call-panel tr:not(.empty-row) td:nth-child(4)::before { content:'상담 시각'; }
+  .call-panel tr:not(.empty-row) td:nth-child(6)::before { content:'직원 확인'; }
+}
+.call-panel tr[role="button"]:focus-visible { outline:3px solid #237057; outline-offset:-3px; }
+</style>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#dashboard" aria-label="김장철병원 대시보드"><span class="brand-mark">✚</span><span>김장철병원<small>KIM JANG CHEOL HOSPITAL</small></span></a>
+    <div class="workspace"><span class="workspace-icon" data-icon="building"></span><div><strong>방문 준비 데스크</strong><span>원무팀 워크스페이스</span></div><span class="workspace-dot"></span></div>
+    <div class="nav-label">업무 메뉴</div>
+    <nav aria-label="주요 메뉴">
+      <button class="nav-item active" data-view="dashboard"><span data-icon="grid"></span><span>대시보드</span></button>
+      <button class="nav-item" data-view="history"><span data-icon="phone"></span><span>통화 기록</span><b id="nav-call-count"></b></button>
+      <button class="nav-item" data-view="locations"><span data-icon="pin"></span><span>위치 현황</span></button>
+      <button class="nav-item" data-view="notes"><span data-icon="note"></span><span>직원 메모</span><b id="nav-note-count"></b></button>
+    </nav>
+    <a class="nav-item municipality-link" href="/municipality"><span data-icon="users"></span>지자체 대시보드 ↗</a>
+    <a class="nav-item" href="/hospital-reference"><span data-icon="grid"></span>기존 병원 화면 · 예시 자료 ↗</a>
+    <div class="sidebar-bottom"><div class="demo-help"><span class="small-icon" data-icon="sparkles"></span><strong>인계 상담 확인</strong><p>지자체에서 인계한 상담을<br>확인합니다.</p></div><div class="sidebar-status"><span class="status-dot"></span>인계 상담 확인</div></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="menu-toggle" aria-label="메뉴 열기" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button><span data-icon="home"></span><span class="crumb-separator">/</span><span>방문 준비</span><span class="crumb-separator">/</span><strong id="breadcrumb-current">대시보드</strong></div><div class="header-tools"><span class="today-label" id="today-label"></span><div class="notification-wrap"><button class="icon-button" id="notifications-button" aria-label="인계 상담 알림 보기" aria-expanded="false"><span data-icon="bell"></span><i id="notification-dot" hidden></i></button><div class="notification-panel" id="notification-panel" hidden></div></div><span class="header-divider"></span><span class="avatar small">병</span></div></header>
+    <main>
+      <section class="page-heading"><div><div class="eyebrow"><span></span>병원 업무</div><h1 id="page-title">방문 준비 데스크</h1><p id="page-description">지자체에서 확인하고 인계한 전화 상담을 살펴보세요.</p></div></section>
+      <section class="panel consultation-panel" aria-labelledby="consultation-title">
+        <div class="panel-title"><div><h2 id="consultation-title">지자체 인계 상담 <span class="count-badge" id="consultation-count">잠김</span></h2><span class="muted panel-description">직원이 확인하고 병원에 인계한 상담</span></div><button type="button" class="button quiet" id="consultation-lock" hidden>잠그기</button></div>
+        <div class="consultation-access" id="consultation-access"><form id="consultation-access-form"><label for="consultation-token">병원 담당자 접근 토큰</label><div><input id="consultation-token" type="password" autocomplete="off" required placeholder="접근 토큰 입력"><button type="submit" class="button primary">상담 결과 보기</button></div></form><p class="consultation-note">토큰은 현재 화면에만 보관합니다.</p></div>
+        <p class="consultation-warning">AI 답변과 실제 접수 여부는 의료진 확인이 필요합니다.</p><div id="consultation-status" class="consultation-status" role="status" aria-live="polite"></div><div id="consultation-results"></div>
+      </section>
+      <section class="stats" id="stats" aria-label="오늘의 통화 요약"></section>
+      <div class="main-grid">
+        <div class="primary-column">
+          <section class="panel call-panel" id="call-panel">
+            <div class="panel-title"><div><h2 id="list-title">오늘의 통화 <span class="count-badge" id="list-count"></span></h2><span class="muted panel-description" id="list-description">방문 준비 상담과 직원 확인 현황</span></div><button class="button quiet" id="export-button"><span data-icon="download"></span>내보내기</button></div>
+            <div class="list-controls"><div class="segmented" id="status-tabs" aria-label="상담 필터"><button class="selected" data-filter="all">전체</button><button data-filter="emergency">긴급</button><button data-filter="completed">답변 완료</button><button data-filter="degraded">대체 안내</button></div><label class="search"><span data-icon="search"></span><input id="search-input" placeholder="연락처, 문의 검색" aria-label="통화 검색"><kbd>⌘ K</kbd></label></div>
+            <div class="history-tools" id="history-tools" hidden><label>조회 날짜 <input type="date" id="date-filter" aria-label="통화 날짜 필터"></label><button class="text-link" id="all-dates">전체 기간</button></div>
+            <p class="table-scroll-hint">표를 가로로 스크롤하면 모든 항목을 볼 수 있습니다.</p><div class="table-scroll"><table><thead><tr><th>상담자</th><th>연락처</th><th>문의 내용</th><th>상담 시각</th><th>AI 안내 상태</th><th>직원 확인</th><th><span class="sr-only">상세 보기</span></th></tr></thead><tbody id="call-table"></tbody></table></div>
+            <div class="table-footer"><span><span class="status-dot"></span>지자체 인계 상담</span><div class="pagination"><span id="page-range"></span><button class="icon-button" id="prev-page" aria-label="이전 페이지"><span data-icon="chevron-left"></span></button><button class="icon-button" id="next-page" aria-label="다음 페이지"><span data-icon="chevron-right"></span></button></div></div>
+          </section>
+          <div class="bottom-grid">
+            <section class="panel map-panel" id="map-panel"><div class="panel-title"><div><h2>통화 위치 현황</h2><span class="muted panel-description">인계된 위치 정보가 없습니다.</span></div><span class="tag neutral">미연결</span></div><div class="map-canvas" id="map-canvas"><div class="empty-state">위치 정보는 인계되지 않았습니다.</div></div><div class="map-legend"><span class="map-location-count" id="map-count"></span></div></section>
+            <section class="panel activity-panel" id="activity-panel"><div class="panel-title"><div><h2>최근 처리 활동</h2><span class="muted panel-description">함께 확인하고 이어가는 기록</span></div><span class="small-icon" data-icon="activity"></span></div><div id="activity-list"></div></section>
+          </div>
+          <section class="panel all-notes-panel" id="all-notes-panel" hidden><div class="panel-title"><div><h2>직원 메모 모아보기</h2><span class="muted panel-description">통화별 전달사항과 확인 내역</span></div><span class="tag violet" id="all-notes-count"></span></div><div id="all-notes-list"></div></section>
+        </div>
+        <aside class="panel detail-panel" id="detail-panel" aria-label="선택한 통화 상세"></aside>
+      </div>
+      <footer class="page-footer"><span><span class="tiny-cross">✚</span>김장철병원 · 방문 준비 데스크</span><span>상담 내용은 의료진이 확인해 주세요.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>(() => {
+  'use strict';
+  const $ = selector => document.querySelector(selector);
+  const $$ = selector => [...document.querySelectorAll(selector)];
+  const node = (tag, text, className) => {
+    const element = document.createElement(tag);
+    if (text != null) element.textContent = text;
+    if (className) element.className = className;
+    return element;
+  };
+  const icons = {
+    grid: 'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z',
+    phone: 'M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z',
+    pin: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z M15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0',
+    note: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M8 13h8 M8 17h6',
+    building: 'M6 22V3h12v19 M3 22h18 M9 6h1 M14 6h1 M9 10h1 M14 10h1 M10 22v-4h4v4',
+    home: 'm3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z',
+    bell: 'M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9 M10 21h4',
+    menu: 'M3 6h18 M3 12h18 M3 18h18',
+    search: 'M21 21l-5-5 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',
+    'chevron-left': 'm15 5-7 7 7 7', 'chevron-right': 'm9 5 7 7-7 7',
+    activity: 'M2 12h4l3-8 6 16 3-8h4', 'check-circle': 'M22 11v1a10 10 0 1 1-6-9 M22 4 12 14l-3-3',
+    inbox: 'M4 3h16l2 12v6H2v-6z M2 15h6l2 3h4l2-3h6',
+    users: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0',
+  };
+  function icon(name) {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '1.65');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', icons[name] || icons.note);
+    svg.append(path);
+    return svg;
+  }
+  $$('[data-icon]').forEach(element => element.append(icon(element.dataset.icon)));
+
+  const form = $('#consultation-access-form');
+  const input = $('#consultation-token');
+  const access = $('#consultation-access');
+  const lock = $('#consultation-lock');
+  const status = $('#consultation-status');
+  const count = $('#consultation-count');
+  const results = $('#consultation-results');
+  const table = $('#call-table');
+  const detail = $('#detail-panel');
+  const notification = $('#notification-panel');
+  const state = {token: '', rows: [], playback: new Set(), filter: 'all', search: '', page: 0, selected: null, generation: 0, pending: false, view: 'dashboard'};
+  const pageSize = 7;
+  const labels = {completed: '답변 완료', degraded: '대체 안내', interrupted: '응답 중단', emergency: '긴급 안내'};
+  const badgeClass = {completed: 'green', degraded: 'amber', interrupted: 'amber', emergency: 'amber'};
+  const datetime = value => {
+    const date = new Date(value);
+    return value && !Number.isNaN(date.getTime())
+      ? new Intl.DateTimeFormat('ko-KR', {timeZone: 'Asia/Seoul', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}).format(date)
+      : '시각 미확인';
+  };
+  const badge = value => node('span', labels[value] || '상태 미확인', `tag ${badgeClass[value] || 'neutral'}`);
+  const textOr = (value, fallback) => typeof value === 'string' && value.trim() ? value.trim() : fallback;
+  const rowKey = row => JSON.stringify([row.source, row.event_id]);
+  const isInterruptedAnswer = row => typeof row.event_id === 'string' && row.event_id.startsWith('turn:') && state.rows.some(entry => entry.call_id === row.call_id && entry.source === row.source && entry.event_id === `interrupted:${row.event_id.slice('turn:'.length)}`);
+  const displayStatus = row => isInterruptedAnswer(row) ? 'interrupted' : row.answer_status;
+  const playbackStatus = row => displayStatus(row) === 'interrupted' ? '안내가 중단되어 끝까지 전달됐는지 확인되지 않았습니다.' : typeof row.event_id === 'string' && row.event_id.startsWith('turn:') && state.playback.has(JSON.stringify([row.call_id, `playback:${row.event_id.slice('turn:'.length)}`])) ? '재생 완료 · 청취 여부 미확인' : '재생 여부 미확인';
+  function showUnlinked() {
+    $('#map-canvas').replaceChildren(node('div', '현재 위치 정보가 연결되지 않았습니다.', 'empty-state'));
+    $('#map-count').textContent = '위치 미연결';
+    $('#activity-list').replaceChildren(node('div', '직원 처리 기록이 연결되지 않았습니다.', 'empty-state'));
+    $('#all-notes-list').replaceChildren(node('div', '직원 메모가 연결되지 않았습니다.', 'empty-state'));
+    $('#all-notes-count').textContent = '미연결';
+    $('#nav-note-count').textContent = '–';
+  }
+  function renderStats() {
+    const values = [
+      ['인계 상담 기록', state.rows.length, 'phone', 'violet', '통화별 발화 기록'],
+      ['긴급 안내', state.rows.filter(row => row.answer_status === 'emergency').length, 'activity', 'amber', '의료진 확인 필요'],
+      ['답변 완료', state.rows.filter(row => displayStatus(row) === 'completed').length, 'check-circle', 'green', 'AI 응답 생성'],
+      ['대체 안내', state.rows.filter(row => row.answer_status === 'degraded').length, 'inbox', 'violet', '추가 확인 필요'],
+    ];
+    const stats = $('#stats');
+    stats.replaceChildren();
+    for (const [title, number, graphic, color, explanation] of values) {
+      const article = node('article', null, 'stat');
+      const head = node('div', null, 'stat-head');
+      const symbol = node('span', null, `stat-icon ${color}`);
+      symbol.append(icon(graphic));
+      head.append(node('span', title), symbol);
+      const total = node('div', null, 'stat-number');
+      total.append(document.createTextNode(state.token ? String(number) : '–'), node('small', '건'));
+      const bottom = node('div', null, 'stat-bottom');
+      bottom.append(node('span', state.token ? explanation : '인증 후 확인'));
+      article.append(head, total, bottom);
+      stats.append(article);
+    }
+    $('#nav-call-count').textContent = state.token ? String(state.rows.length) : '–';
+    const urgentCount = state.rows.filter(row => row.answer_status === 'emergency').length;
+    $('#notification-dot').hidden = !state.token || urgentCount === 0;
+  }
+  function filtered() {
+    const query = state.search.toLocaleLowerCase();
+    return state.rows.filter(row => {
+      if (state.filter !== 'all' && displayStatus(row) !== state.filter) return false;
+      if (!query) return true;
+      return [row.phone, row.user_text, row.assistant_text].some(value => String(value || '').toLocaleLowerCase().includes(query));
+    });
+  }
+  function cell(text, className) { return node('td', text, className); }
+  function renderTable() {
+    const rows = filtered();
+    state.page = Math.max(0, Math.min(state.page, Math.ceil(rows.length / pageSize) - 1));
+    const page = rows.slice(state.page * pageSize, (state.page + 1) * pageSize);
+    const title = $('#list-title');
+    title.replaceChildren(document.createTextNode('인계된 상담 '), node('span', state.token ? String(rows.length) : '잠김', 'count-badge'));
+    $('#list-description').textContent = '직원이 지자체에서 인계한 상담 기록';
+    table.replaceChildren();
+    for (const row of page) {
+      const tr = node('tr', null, state.selected === rowKey(row) ? 'selected' : '');
+      tr.tabIndex = 0;
+      tr.setAttribute('role', 'button');
+      tr.setAttribute('aria-label', `${textOr(row.phone, '발신번호 미확인')} 상담 상세 보기`);
+      tr.setAttribute('aria-selected', String(state.selected === rowKey(row)));
+      const person = node('td');
+      const wrapper = node('div', null, 'person-cell');
+      const personInfo = node('span');
+      personInfo.append(node('strong', '상담자 미확인'));
+      if (row.answer_status === 'emergency') personInfo.append(node('small', '긴급 안내', 'amber-text'));
+      if (displayStatus(row) === 'interrupted') personInfo.append(node('small', '응답 중단', 'amber-text'));
+      wrapper.append(node('span', '상', 'person-avatar violet'), personInfo);
+      person.append(wrapper);
+      const purpose = cell(textOr(row.user_text, '문의 내용 없음'), 'purpose-cell');
+      const kind = node('td');
+      kind.append(badge(displayStatus(row)));
+      const arrow = node('td');
+      arrow.append(icon('chevron-right'));
+      tr.append(person, cell(textOr(row.phone, '번호 미확인'), 'contact-cell'), purpose,
+        cell(datetime(row.occurred_at), 'time-cell'), kind, cell('미연결'), arrow);
+      const select = () => { state.selected = rowKey(row); renderTable(); renderDetail(); };
+      tr.addEventListener('click', select);
+      tr.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(); } });
+      table.append(tr);
+    }
+    if (!page.length) {
+      const tr = node('tr', null, 'empty-row');
+      const td = node('td'); td.colSpan = 7;
+      td.append(node('div', state.token ? '조건에 맞는 인계 상담이 없습니다.' : '병원 담당자 인증 후 인계 상담을 확인할 수 있습니다.', 'empty-state'));
+      tr.append(td); table.append(tr);
+    }
+    $('#page-range').textContent = rows.length ? `${state.page * pageSize + 1}–${Math.min((state.page + 1) * pageSize, rows.length)} / ${rows.length}건` : '0건';
+    $('#prev-page').disabled = state.page === 0;
+    $('#next-page').disabled = (state.page + 1) * pageSize >= rows.length;
+    $$('#status-tabs [data-filter]').forEach(button => {
+      const selected = button.dataset.filter === state.filter;
+      button.classList.toggle('selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+  }
+  function field(parent, title, value) {
+    const block = node('section', null, 'detail-fact');
+    block.append(node('label', title), node('p', textOr(value, '미확인')));
+    parent.append(block);
+  }
+  function renderDetail() {
+    const row = state.rows.find(item => rowKey(item) === state.selected);
+    detail.replaceChildren();
+    if (!row) {
+      detail.append(node('div', state.token ? '목록에서 상담을 선택해 주세요.' : '인증 후 상담을 선택해 주세요.', 'empty-state'));
+      return;
+    }
+    const heading = node('div', null, 'detail-heading');
+    heading.append(node('h2', '인계 상담 상세'), badge(displayStatus(row)));
+    const person = node('div', null, 'detail-person');
+    const copy = node('div');
+    copy.append(node('h3', '상담자 정보 미확인'), node('p', textOr(row.phone, '연락처 미확인')));
+    person.append(node('span', '상', 'detail-avatar'), copy);
+    const body = node('div', null, 'detail-tab-content');
+    field(body, '상담 시각', datetime(row.occurred_at));
+    field(body, '병원 인계 시각', datetime(row.handed_at));
+    field(body, '사용자 문의', row.user_text);
+    if (row.answer_status !== 'interrupted' && row.answer_status !== 'emergency') field(body, '재생 상태', playbackStatus(row));
+    field(body, row.answer_status === 'interrupted' ? '안내 상태' : 'AI 생성 답변', row.assistant_text);
+    field(body, '환자 차트', '기존 의료기록과 연결되지 않았습니다.');
+    field(body, '현재 위치', '위치 정보가 연결되지 않았습니다.');
+    detail.append(heading, person, body, node('div', 'AI 답변은 의료진이 확인해 주세요.', 'detail-footer'));
+  }
+  function renderNotifications() {
+    const urgent = state.rows.filter(row => row.answer_status === 'emergency');
+    notification.replaceChildren(node('strong', state.token ? `긴급 안내 ${urgent.length}건` : '인증 후 확인 가능합니다.'));
+    for (const row of urgent.slice(0, 5)) {
+      const button = node('button', null, 'notification-row');
+      const text = node('span');
+      text.append(node('strong', textOr(row.phone, '발신번호 미확인')), node('small', datetime(row.occurred_at)));
+      button.append(text, badge('emergency'));
+      button.addEventListener('click', () => {
+        state.selected = rowKey(row); state.filter = 'all'; state.search = ''; $('#search-input').value = '';
+        setView('dashboard'); renderTable(); renderDetail();
+        notification.hidden = true; $('#notifications-button').setAttribute('aria-expanded', 'false');
+      });
+      notification.append(button);
+    }
+    if (state.token && !urgent.length) notification.append(node('div', '긴급 안내가 없습니다.', 'empty-state'));
+  }
+  function render() {
+    renderStats(); renderTable(); renderDetail(); renderNotifications(); showUnlinked();
+    count.textContent = state.token ? `${state.rows.length}건` : '잠김';
+    results.replaceChildren(node('p', state.token ? '아래 목록에서 인계된 상담을 선택하세요.' : '', 'consultation-note'));
+  }
+  function clearSession(message = '') {
+    state.generation += 1; state.token = ''; state.rows = []; state.playback = new Set(); state.selected = null;
+    state.search = ''; state.filter = 'all'; state.page = 0;
+    $('#search-input').value = ''; notification.hidden = true;
+    $('#notifications-button').setAttribute('aria-expanded', 'false');
+    input.value = ''; access.hidden = false; lock.hidden = true;
+    status.textContent = message; render();
+  }
+  async function refresh(token) {
+    if (state.pending) return false;
+    const generation = state.generation;
+    state.pending = true;
+    status.textContent = '인계된 상담을 불러오는 중입니다.';
+    try {
+      const response = await fetch('/api/team/municipality-handoffs', {headers: {'X-Hospital-Authorization': `Bearer ${token}`}, cache: 'no-store'});
+      if (response.status === 401 || response.status === 403) {
+        if (generation === state.generation) clearSession('접근 토큰을 확인해 주세요.');
+        return false;
+      }
+      if (!response.ok) throw new Error('상담 수신함을 불러오지 못했습니다.');
+      const data = await response.json();
+      if (!Array.isArray(data.handoffs)) throw new Error('상담 응답 형식을 확인할 수 없습니다.');
+      if (generation !== state.generation) return false;
+      const unique = new Map();
+      const playback = new Set();
+      for (const handoff of data.handoffs) {
+        if (!handoff || !Array.isArray(handoff.events)) continue;
+        if (typeof handoff.call_id === 'string' && Array.isArray(handoff.playback_completed_event_ids)) {
+          for (const id of handoff.playback_completed_event_ids) if (typeof id === 'string' && id.startsWith('playback:')) playback.add(JSON.stringify([handoff.call_id, id]));
+        }
+        for (const row of handoff.events) {
+          if (!row || typeof row !== 'object' || typeof row.event_id !== 'string' || typeof row.source !== 'string') continue;
+          const previous = unique.get(rowKey(row));
+          if (!previous || String(handoff.handed_at) > String(previous.handed_at)) unique.set(rowKey(row), {...row, handed_at: handoff.handed_at});
+        }
+      }
+      state.rows = [...unique.values()].sort((a, b) => String(b.handed_at).localeCompare(String(a.handed_at)));
+      state.playback = playback;
+      state.token = token;
+      if (!state.rows.some(row => rowKey(row) === state.selected)) state.selected = state.rows.length ? rowKey(state.rows[0]) : null;
+      access.hidden = true; lock.hidden = false; input.value = ''; status.textContent = '';
+      render();
+      return true;
+    } catch {
+      if (generation === state.generation) status.textContent = '상담 수신함을 불러오지 못했습니다. 서버 상태를 확인해 주세요.';
+      return false;
+    } finally { state.pending = false; }
+  }
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const token = input.value.trim();
+    if (!token) return;
+    const submit = form.querySelector('button'); submit.disabled = true;
+    try { await refresh(token); } finally { submit.disabled = false; }
+  });
+  lock.addEventListener('click', () => { clearSession(); input.focus(); });
+  $('#status-tabs').addEventListener('click', event => {
+    const button = event.target.closest('[data-filter]');
+    if (button) { state.filter = button.dataset.filter; state.page = 0; renderTable(); }
+  });
+  $('#search-input').addEventListener('input', event => { state.search = event.target.value.trim(); state.page = 0; renderTable(); });
+  $('#prev-page').addEventListener('click', () => { state.page -= 1; renderTable(); });
+  $('#next-page').addEventListener('click', () => { state.page += 1; renderTable(); });
+  $('#export-button').addEventListener('click', () => {
+    if (!state.token || !state.rows.length) {
+      status.textContent = '내보낼 인계 상담이 없습니다.';
+      return;
+    }
+    const quote = value => `"${String(value ?? '').replace(/^[\s\u0000-\u001f]*[=+@-]/, "'$&").replace(/"/g, '""')}"`;
+    const entries = [['상담 시각', '연락처', '사용자 문의', 'AI 생성 답변', '안내 상태', '재생 상태'],
+      ...filtered().map(row => [datetime(row.occurred_at), row.phone, row.user_text, row.assistant_text, labels[displayStatus(row)] || '상태 미확인', playbackStatus(row)])];
+    const url = URL.createObjectURL(new Blob(['\ufeff' + entries.map(row => row.map(quote).join(',')).join('\r\n')], {type: 'text/csv;charset=utf-8'}));
+    const link = document.createElement('a'); link.href = url; link.download = '병원_인계_상담.csv'; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+  function setView(view) {
+    state.view = view;
+    $$('.nav-item[data-view]').forEach(button => {
+      const selected = button.dataset.view === view;
+      button.classList.toggle('active', selected);
+      if (selected) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current');
+    });
+    const captions = {
+      dashboard: ['대시보드', '방문 준비 데스크', '지자체에서 인계한 상담을 확인하세요.'],
+      history: ['통화 기록', '인계된 상담 기록', '병원에 인계된 상담을 살펴보세요.'],
+      locations: ['위치 현황', '위치 현황', '현재 위치 정보는 연결되지 않았습니다.'],
+      notes: ['직원 메모', '직원 메모', '직원 메모는 현재 연결되지 않았습니다.'],
+    };
+    const [name, title, description] = captions[view] || captions.dashboard;
+    $('#breadcrumb-current').textContent = name;
+    $('#page-title').textContent = title;
+    $('#page-description').textContent = description;
+    document.body.classList.toggle('locations-view', view === 'locations');
+    document.body.classList.toggle('notes-view', view === 'notes');
+    $('#all-notes-panel').hidden = view !== 'notes';
+    $('#sidebar').classList.remove('open'); $('#menu-toggle').setAttribute('aria-expanded', 'false');
+  }
+  $$('.nav-item[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
+  $('#menu-toggle').addEventListener('click', () => { const open = $('#sidebar').classList.toggle('open'); $('#menu-toggle').setAttribute('aria-expanded', String(open)); });
+  $('#notifications-button').addEventListener('click', () => {
+    notification.hidden = !notification.hidden;
+    $('#notifications-button').setAttribute('aria-expanded', String(!notification.hidden));
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { notification.hidden = true; $('#notifications-button').setAttribute('aria-expanded', 'false'); $('#sidebar').classList.remove('open'); $('#menu-toggle').setAttribute('aria-expanded', 'false'); }
+  });
+  $('#today-label').textContent = new Intl.DateTimeFormat('ko-KR', {timeZone: 'Asia/Seoul', year: 'numeric', month: 'long', day: 'numeric', weekday: 'short'}).format(new Date());
+  render();
+  setInterval(() => { if (state.token && !document.hidden) void refresh(state.token); }, 5000);
+})();
+</script>
+</body>
+</html>

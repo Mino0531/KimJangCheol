@@ -1,0 +1,2258 @@
+[
+  {
+    "id": "demo-patient-001",
+    "chart_number": "KJC-2026-001",
+    "name": "임정숙",
+    "age": 76,
+    "sex": "여",
+    "identity": {
+      "name": "임정숙",
+      "birth_date": "1950-01-15",
+      "sex": "female",
+      "phone": "010-0000-1001",
+      "region": "화순군 동면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "not_planned",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "기록 있음",
+      "knowledge_status": "recorded",
+      "text": "페니실린계 · 가상 기록"
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-001-condition-1",
+        "name": "고혈압",
+        "since": "2018년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-001-condition-2",
+        "name": "골다공증",
+        "since": "2022년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-001-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-001-2",
+        "name": "골건강관리정 D",
+        "purpose": "골 건강 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-001-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A",
+          "골건강관리정 D"
+        ],
+        "medication_ids": [
+          "demo-med-001-1",
+          "demo-med-001-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-001-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-001-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-001-obs-1",
+        "date": "2026-07-17",
+        "systolic": 146.0,
+        "diastolic": 87.0,
+        "glucose": 153.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-001-obs-2",
+        "date": "2026-08-14",
+        "systolic": 141.0,
+        "diastolic": 85.0,
+        "glucose": 146.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-001-obs-3",
+        "date": "2026-09-11",
+        "systolic": 138.0,
+        "diastolic": 83.0,
+        "glucose": 139.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-001-obs-4",
+        "date": "2026-10-23",
+        "systolic": 134.0,
+        "diastolic": 81.0,
+        "glucose": 131.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-001-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-001-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-001-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-001-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-001-2",
+        "name": "골건강관리정 D",
+        "purpose": "골 건강 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-002",
+    "chart_number": "KJC-2026-002",
+    "name": "박정호",
+    "age": 81,
+    "sex": "남",
+    "identity": {
+      "name": "박정호",
+      "birth_date": "1945-01-15",
+      "sex": "male",
+      "phone": "010-0000-1002",
+      "region": "화순군 한천면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "needs_slow_speech",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "feature_phone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-002-condition-1",
+        "name": "만성 폐쇄성 폐질환",
+        "since": "2020년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-002-condition-2",
+        "name": "고혈압",
+        "since": "2016년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-002-1",
+        "name": "호흡관리흡입제 G",
+        "purpose": "호흡기 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-002-2",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-002-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "호흡관리흡입제 G",
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-002-1",
+          "demo-med-002-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-002-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "호흡관리흡입제 G"
+        ],
+        "medication_ids": [
+          "demo-med-002-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-002-obs-1",
+        "date": "2026-07-17",
+        "systolic": 147.0,
+        "diastolic": 88.0,
+        "glucose": 155.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-002-obs-2",
+        "date": "2026-08-14",
+        "systolic": 142.0,
+        "diastolic": 86.0,
+        "glucose": 148.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-002-obs-3",
+        "date": "2026-09-11",
+        "systolic": 139.0,
+        "diastolic": 84.0,
+        "glucose": 141.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-002-obs-4",
+        "date": "2026-10-23",
+        "systolic": 135.0,
+        "diastolic": 82.0,
+        "glucose": 133.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-002-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-002-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-002-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-002-1",
+        "name": "호흡관리흡입제 G",
+        "purpose": "호흡기 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-002-2",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-003",
+    "chart_number": "KJC-2026-003",
+    "name": "이정례",
+    "age": 82,
+    "sex": "여",
+    "identity": {
+      "name": "이정례",
+      "birth_date": "1944-01-15",
+      "sex": "female",
+      "phone": "010-0000-1003",
+      "region": "화순군 화순읍"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "needs_support",
+      "hearing": "needs_slow_speech",
+      "preferred_channel": "voice",
+      "companion": "not_planned",
+      "phone_type": "feature_phone",
+      "staff_note": "짧은 문장으로 하나씩 안내하고, 병원에서 받은 안내문을 함께 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-003-condition-1",
+        "name": "고혈압",
+        "since": "2015년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-003-condition-2",
+        "name": "제2형 당뇨병",
+        "since": "2019년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-003-condition-3",
+        "name": "무릎 골관절염",
+        "since": "2021년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-003-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-003-2",
+        "name": "혈당관리정 B",
+        "purpose": "혈당 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-003-3",
+        "name": "관절관리정 C",
+        "purpose": "관절 증상 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-003-2",
+        "date": "2026-10-23",
+        "department": "내과·정형외과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A",
+          "혈당관리정 B",
+          "관절관리정 C"
+        ],
+        "medication_ids": [
+          "demo-med-003-1",
+          "demo-med-003-2",
+          "demo-med-003-3"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-003-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A",
+          "혈당관리정 B"
+        ],
+        "medication_ids": [
+          "demo-med-003-1",
+          "demo-med-003-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-003-stopped",
+        "date": "2026-07-17",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "이전시연정 Z"
+        ],
+        "medication_ids": [
+          "demo-med-003-stopped"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-003-obs-1",
+        "date": "2026-07-17",
+        "systolic": 148.0,
+        "diastolic": 89.0,
+        "glucose": 157.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-003-obs-2",
+        "date": "2026-08-14",
+        "systolic": 143.0,
+        "diastolic": 87.0,
+        "glucose": 150.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-003-obs-3",
+        "date": "2026-09-11",
+        "systolic": 140.0,
+        "diastolic": 85.0,
+        "glucose": 143.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-003-obs-4",
+        "date": "2026-10-23",
+        "systolic": 136.0,
+        "diastolic": 83.0,
+        "glucose": 135.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-003-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-003-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-003-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-003-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-003-2",
+        "name": "혈당관리정 B",
+        "purpose": "혈당 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-003-3",
+        "name": "관절관리정 C",
+        "purpose": "관절 증상 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-003-stopped",
+        "name": "이전시연정 Z",
+        "purpose": "과거 복용 기록 예시",
+        "started_on": "2026-07-17",
+        "ended_on": "2026-08-13",
+        "status": "복용 중단",
+        "status_code": "stopped",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-004",
+    "chart_number": "KJC-2026-004",
+    "name": "김영숙",
+    "age": 78,
+    "sex": "여",
+    "identity": {
+      "name": "김영숙",
+      "birth_date": "1948-01-15",
+      "sex": "female",
+      "phone": "010-0000-1004",
+      "region": "화순군 능주면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-004-condition-1",
+        "name": "이상지질혈증",
+        "since": "2020년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-004-condition-2",
+        "name": "갑상선기능저하증",
+        "since": "2018년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-004-1",
+        "name": "지질관리정 E",
+        "purpose": "지질 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-004-2",
+        "name": "갑상선관리정 F",
+        "purpose": "갑상선 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-004-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "지질관리정 E",
+          "갑상선관리정 F"
+        ],
+        "medication_ids": [
+          "demo-med-004-1",
+          "demo-med-004-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-004-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "지질관리정 E"
+        ],
+        "medication_ids": [
+          "demo-med-004-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-004-obs-1",
+        "date": "2026-07-17",
+        "systolic": 149.0,
+        "diastolic": 87.0,
+        "glucose": 159.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-004-obs-2",
+        "date": "2026-08-14",
+        "systolic": 144.0,
+        "diastolic": 85.0,
+        "glucose": 152.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-004-obs-3",
+        "date": "2026-09-11",
+        "systolic": 141.0,
+        "diastolic": 83.0,
+        "glucose": 145.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-004-obs-4",
+        "date": "2026-10-23",
+        "systolic": 137.0,
+        "diastolic": 81.0,
+        "glucose": 137.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-004-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-004-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-004-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-004-1",
+        "name": "지질관리정 E",
+        "purpose": "지질 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-004-2",
+        "name": "갑상선관리정 F",
+        "purpose": "갑상선 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-005",
+    "chart_number": "KJC-2026-005",
+    "name": "최복순",
+    "age": 74,
+    "sex": "여",
+    "identity": {
+      "name": "최복순",
+      "birth_date": "1952-01-15",
+      "sex": "female",
+      "phone": "010-0000-1005",
+      "region": "화순군 도곡면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "not_planned",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "없다고 보고됨",
+      "knowledge_status": "none_reported",
+      "text": "알레르기가 없다고 보고한 가상 기록입니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-005-condition-1",
+        "name": "고혈압",
+        "since": "2021년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-005-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-005-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-005-1"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-005-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-005-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-005-obs-1",
+        "date": "2026-07-17",
+        "systolic": 146.0,
+        "diastolic": 88.0,
+        "glucose": 161.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-005-obs-2",
+        "date": "2026-08-14",
+        "systolic": 141.0,
+        "diastolic": 86.0,
+        "glucose": 154.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-005-obs-3",
+        "date": "2026-09-11",
+        "systolic": 138.0,
+        "diastolic": 84.0,
+        "glucose": 147.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-005-obs-4",
+        "date": "2026-10-23",
+        "systolic": 134.0,
+        "diastolic": 82.0,
+        "glucose": 139.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-005-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-005-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-005-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-005-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-006",
+    "chart_number": "KJC-2026-006",
+    "name": "정만수",
+    "age": 79,
+    "sex": "남",
+    "identity": {
+      "name": "정만수",
+      "birth_date": "1947-01-15",
+      "sex": "male",
+      "phone": "010-0000-1006",
+      "region": "화순군 이양면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-006-condition-1",
+        "name": "제2형 당뇨병",
+        "since": "2017년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-006-condition-2",
+        "name": "이상지질혈증",
+        "since": "2020년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-006-1",
+        "name": "혈당관리정 B",
+        "purpose": "혈당 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-006-2",
+        "name": "지질관리정 E",
+        "purpose": "지질 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-006-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈당관리정 B",
+          "지질관리정 E"
+        ],
+        "medication_ids": [
+          "demo-med-006-1",
+          "demo-med-006-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-006-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈당관리정 B"
+        ],
+        "medication_ids": [
+          "demo-med-006-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-006-obs-1",
+        "date": "2026-07-17",
+        "systolic": 147.0,
+        "diastolic": 89.0,
+        "glucose": 163.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-006-obs-2",
+        "date": "2026-08-14",
+        "systolic": 142.0,
+        "diastolic": 87.0,
+        "glucose": 156.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-006-obs-3",
+        "date": "2026-09-11",
+        "systolic": 139.0,
+        "diastolic": 85.0,
+        "glucose": 149.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-006-obs-4",
+        "date": "2026-10-23",
+        "systolic": 135.0,
+        "diastolic": 83.0,
+        "glucose": 141.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-006-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-006-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-006-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-006-1",
+        "name": "혈당관리정 B",
+        "purpose": "혈당 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-006-2",
+        "name": "지질관리정 E",
+        "purpose": "지질 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-007",
+    "chart_number": "KJC-2026-007",
+    "name": "박순임",
+    "age": 83,
+    "sex": "여",
+    "identity": {
+      "name": "박순임",
+      "birth_date": "1943-01-15",
+      "sex": "female",
+      "phone": "010-0000-1007",
+      "region": "화순군 화순읍"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "needs_support",
+      "hearing": "needs_slow_speech",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "feature_phone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-007-condition-1",
+        "name": "무릎 골관절염",
+        "since": "2018년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-007-condition-2",
+        "name": "골다공증",
+        "since": "2021년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-007-1",
+        "name": "관절관리정 C",
+        "purpose": "관절 증상 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-007-2",
+        "name": "골건강관리정 D",
+        "purpose": "골 건강 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-007-2",
+        "date": "2026-10-23",
+        "department": "내과·정형외과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "관절관리정 C",
+          "골건강관리정 D"
+        ],
+        "medication_ids": [
+          "demo-med-007-1",
+          "demo-med-007-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-007-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "관절관리정 C"
+        ],
+        "medication_ids": [
+          "demo-med-007-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-007-obs-1",
+        "date": "2026-07-17",
+        "systolic": 148.0,
+        "diastolic": 87.0,
+        "glucose": 165.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-007-obs-2",
+        "date": "2026-08-14",
+        "systolic": 143.0,
+        "diastolic": 85.0,
+        "glucose": 158.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-007-obs-3",
+        "date": "2026-09-11",
+        "systolic": 140.0,
+        "diastolic": 83.0,
+        "glucose": 151.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-007-obs-4",
+        "date": "2026-10-23",
+        "systolic": 136.0,
+        "diastolic": 81.0,
+        "glucose": 143.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-007-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-007-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-007-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-007-1",
+        "name": "관절관리정 C",
+        "purpose": "관절 증상 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-007-2",
+        "name": "골건강관리정 D",
+        "purpose": "골 건강 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-008",
+    "chart_number": "KJC-2026-008",
+    "name": "강태식",
+    "age": 77,
+    "sex": "남",
+    "identity": {
+      "name": "강태식",
+      "birth_date": "1949-01-15",
+      "sex": "male",
+      "phone": "010-0000-1008",
+      "region": "위치 미확인"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "unknown",
+      "medications": "unknown"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [],
+    "current_medications": [],
+    "prescriptions": [],
+    "observations": [],
+    "encounters": [],
+    "medication_history": []
+  },
+  {
+    "id": "demo-patient-009",
+    "chart_number": "KJC-2026-009",
+    "name": "오정숙",
+    "age": 75,
+    "sex": "여",
+    "identity": {
+      "name": "오정숙",
+      "birth_date": "1951-01-15",
+      "sex": "female",
+      "phone": "010-0000-1009",
+      "region": "화순군 동복면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-009-condition-1",
+        "name": "고혈압",
+        "since": "2019년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      },
+      {
+        "id": "demo-patient-009-condition-2",
+        "name": "이상지질혈증",
+        "since": "2022년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-009-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-009-2",
+        "name": "지질관리정 E",
+        "purpose": "지질 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-009-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A",
+          "지질관리정 E"
+        ],
+        "medication_ids": [
+          "demo-med-009-1",
+          "demo-med-009-2"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-009-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-009-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-009-obs-1",
+        "date": "2026-07-17",
+        "systolic": 146.0,
+        "diastolic": 89.0,
+        "glucose": 169.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-009-obs-2",
+        "date": "2026-08-14",
+        "systolic": 141.0,
+        "diastolic": 87.0,
+        "glucose": 162.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-009-obs-3",
+        "date": "2026-09-11",
+        "systolic": 138.0,
+        "diastolic": 85.0,
+        "glucose": 155.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-009-obs-4",
+        "date": "2026-10-23",
+        "systolic": 134.0,
+        "diastolic": 83.0,
+        "glucose": 147.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-009-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-009-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-009-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-009-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      },
+      {
+        "id": "demo-med-009-2",
+        "name": "지질관리정 E",
+        "purpose": "지질 관리",
+        "started_on": "2026-09-11",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-010",
+    "chart_number": "KJC-2026-010",
+    "name": "윤영수",
+    "age": 80,
+    "sex": "남",
+    "identity": {
+      "name": "윤영수",
+      "birth_date": "1946-01-15",
+      "sex": "male",
+      "phone": "010-0000-1010",
+      "region": "화순군 사평면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-010-condition-1",
+        "name": "만성 위염",
+        "since": "2023년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-010-1",
+        "name": "위장관리정 H",
+        "purpose": "위장 증상 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-010-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "위장관리정 H"
+        ],
+        "medication_ids": [
+          "demo-med-010-1"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-010-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "위장관리정 H"
+        ],
+        "medication_ids": [
+          "demo-med-010-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-010-obs-1",
+        "date": "2026-07-17",
+        "systolic": 147.0,
+        "diastolic": 87.0,
+        "glucose": 171.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-010-obs-2",
+        "date": "2026-08-14",
+        "systolic": 142.0,
+        "diastolic": 85.0,
+        "glucose": 164.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-010-obs-3",
+        "date": "2026-09-11",
+        "systolic": 139.0,
+        "diastolic": 83.0,
+        "glucose": 157.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-010-obs-4",
+        "date": "2026-10-23",
+        "systolic": 135.0,
+        "diastolic": 81.0,
+        "glucose": 149.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-010-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-010-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-010-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-010-1",
+        "name": "위장관리정 H",
+        "purpose": "위장 증상 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-011",
+    "chart_number": "KJC-2026-011",
+    "name": "장명자",
+    "age": 72,
+    "sex": "여",
+    "identity": {
+      "name": "장명자",
+      "birth_date": "1954-01-15",
+      "sex": "female",
+      "phone": "010-0000-1011",
+      "region": "화순군 춘양면"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "independent",
+      "hearing": "standard",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "smartphone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-011-condition-1",
+        "name": "제2형 당뇨병",
+        "since": "2021년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-011-1",
+        "name": "혈당관리정 B",
+        "purpose": "혈당 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-011-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈당관리정 B"
+        ],
+        "medication_ids": [
+          "demo-med-011-1"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-011-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈당관리정 B"
+        ],
+        "medication_ids": [
+          "demo-med-011-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-011-obs-1",
+        "date": "2026-07-17",
+        "systolic": 148.0,
+        "diastolic": 88.0,
+        "glucose": 173.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-011-obs-2",
+        "date": "2026-08-14",
+        "systolic": 143.0,
+        "diastolic": 86.0,
+        "glucose": 166.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-011-obs-3",
+        "date": "2026-09-11",
+        "systolic": 140.0,
+        "diastolic": 84.0,
+        "glucose": 159.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-011-obs-4",
+        "date": "2026-10-23",
+        "systolic": 136.0,
+        "diastolic": 82.0,
+        "glucose": 151.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-011-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-011-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-011-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-011-1",
+        "name": "혈당관리정 B",
+        "purpose": "혈당 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-012",
+    "chart_number": "KJC-2026-012",
+    "name": "한덕수",
+    "age": 85,
+    "sex": "남",
+    "identity": {
+      "name": "한덕수",
+      "birth_date": "1941-01-15",
+      "sex": "male",
+      "phone": "010-0000-1012",
+      "region": "위치 미확인"
+    },
+    "source": "공통 차트 v1 · 가상 수기 자료",
+    "as_of": "2026-10-23",
+    "provenance": {
+      "as_of": "2026-10-23",
+      "recorded_at": "2026-10-30T14:00:00+09:00",
+      "source_kind": "synthetic_fixture",
+      "verification_status": "demo_verified",
+      "source_label": "공통 차트 v1 · 가상 수기 자료"
+    },
+    "format_id": "KJC_VISIT_PREPARATION_CHART",
+    "schema_version": "1.0",
+    "is_fictional": true,
+    "knowledge_status": {
+      "conditions": "recorded",
+      "medications": "recorded"
+    },
+    "visit_preparation": {
+      "mobility": "wheelchair",
+      "hearing": "needs_slow_speech",
+      "preferred_channel": "voice",
+      "companion": "unknown",
+      "phone_type": "feature_phone",
+      "staff_note": "방문 준비에 필요한 안내를 차례로 확인합니다."
+    },
+    "allergies": {
+      "status": "미확인",
+      "knowledge_status": "unknown",
+      "text": "알레르기 확인 기록이 없습니다."
+    },
+    "conditions": [
+      {
+        "id": "demo-patient-012-condition-1",
+        "name": "고혈압",
+        "since": "2012년 기록",
+        "status": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "note": "시연용 지병 기록"
+      }
+    ],
+    "current_medications": [
+      {
+        "id": "demo-med-012-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "demo-rx-012-2",
+        "date": "2026-10-23",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-012-1"
+        ],
+        "status": "이전 처방 기록"
+      },
+      {
+        "id": "demo-rx-012-1",
+        "date": "2026-09-11",
+        "department": "내과",
+        "provider": "기존 의료기관 · 가상",
+        "medications": [
+          "혈압관리정 A"
+        ],
+        "medication_ids": [
+          "demo-med-012-1"
+        ],
+        "status": "이전 처방 기록"
+      }
+    ],
+    "observations": [
+      {
+        "id": "demo-patient-012-obs-1",
+        "date": "2026-07-17",
+        "systolic": 149.0,
+        "diastolic": 89.0,
+        "glucose": 175.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-012-obs-2",
+        "date": "2026-08-14",
+        "systolic": 144.0,
+        "diastolic": 87.0,
+        "glucose": 168.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-012-obs-3",
+        "date": "2026-09-11",
+        "systolic": 141.0,
+        "diastolic": 85.0,
+        "glucose": 161.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      },
+      {
+        "id": "demo-patient-012-obs-4",
+        "date": "2026-10-23",
+        "systolic": 137.0,
+        "diastolic": 83.0,
+        "glucose": 153.0,
+        "blood_pressure_unit": "mmHg",
+        "glucose_unit": "mg/dL",
+        "glucose_context": "unknown"
+      }
+    ],
+    "encounters": [
+      {
+        "id": "demo-patient-012-enc-1",
+        "date": "2026-10-23",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "만성질환 정기 확인",
+        "note": "지병과 복용약 목록을 확인한 가상 기록입니다."
+      },
+      {
+        "id": "demo-patient-012-enc-2",
+        "date": "2026-09-11",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "경과 확인 및 처방 기록",
+        "note": "기존 의료기관에서 받은 가상 진료 기록입니다."
+      },
+      {
+        "id": "demo-patient-012-enc-3",
+        "date": "2026-08-14",
+        "department": "외래",
+        "provider": "기존 의료기관 · 가상",
+        "title": "정기 상담",
+        "note": "시연을 위해 작성한 방문 이력입니다."
+      }
+    ],
+    "medication_history": [
+      {
+        "id": "demo-med-012-1",
+        "name": "혈압관리정 A",
+        "purpose": "혈압 관리",
+        "started_on": "2026-08-14",
+        "ended_on": null,
+        "status": "복용 중",
+        "status_code": "active",
+        "source": "공통 차트 v1 · 가상 수기 자료",
+        "is_fictional": true
+      }
+    ]
+  }
+]

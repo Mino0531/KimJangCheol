@@ -1,0 +1,80 @@
+:root {
+  color-scheme: light;
+  --phone-white: #fff;
+  --dial-key: #e9e9eb;
+  --dial-key-active: #d5d5d8;
+  --phone-blue: #1768d2;
+  --phone-green: #30c95a;
+  --phone-line: #dedee2;
+  --phone-tab: #687077;
+  --call-screen: #292c2d;
+  --danger: #ac3028;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #17191b;
+  background: var(--phone-white);
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: default; opacity: .45; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--phone-blue); outline-offset: 3px; }
+.hidden, [hidden] { display: none !important; }
+.page { min-height: 100dvh; background: var(--phone-white); }
+.page:has(#call-screen:not(.hidden)) { background: var(--call-screen); color: var(--phone-white); }
+.phone { width: 100%; max-width: 28rem; min-height: 100dvh; display: flex; flex-direction: column; margin: 0 auto; padding: 1.25rem 1.75rem max(1.25rem, env(safe-area-inset-bottom)); }
+.setup-screen { flex: 1; display: flex; align-items: center; }
+.call-setup { width: 100%; margin: 1.5rem 0; }
+.setup-eyebrow { margin: 0 0 .75rem; color: #426d5f; font-size: .875rem; font-weight: 700; }
+.call-setup h1 { margin: 0 0 1.5rem; font-size: 1.65rem; letter-spacing: -.04em; line-height: 1.3; }
+.notice, .helper { color: #4d5955; font-size: .9375rem; line-height: 1.65; word-break: keep-all; }
+.notice { margin: 0 0 1.75rem; padding: 1rem; border-radius: .65rem; background: #f1f5f3; }
+.notice strong { color: #263d35; }
+.caller-field { display: block; font-size: .9375rem; font-weight: 700; }
+.caller-input { width: 100%; min-height: 3.125rem; margin-top: .5rem; padding: .75rem; border: 1px solid #bfcac4; border-radius: .5rem; background: #fff; font-size: 1rem; }
+.caller-input + .caller-field { margin-top: 1rem; }
+.region-preset { min-height: 44px; margin-top: .5rem; padding: .5rem .75rem; border: 1px solid #bfcac4; border-radius: .5rem; color: #2d6d5b; background: #f1f5f3; font-size: .875rem; }
+.speech-intro { margin: .8rem 0 1.25rem; }
+.speech-disclosure { display: flex; gap: .7rem; align-items: flex-start; padding: 1rem 0; border-top: 1px solid #e2e9e5; border-bottom: 1px solid #e2e9e5; color: #36443e; font-size: .9375rem; line-height: 1.6; word-break: keep-all; }
+.speech-disclosure input { flex: 0 0 auto; width: 1.25rem; height: 1.25rem; margin: .1rem 0 0; accent-color: #2d6d5b; }
+.provider-name { white-space: nowrap; }
+.setup-dial-guide { margin: 1.25rem 0 .5rem; }
+.setup-dial-guide strong { color: #263d35; font-variant-numeric: tabular-nums; }
+.setup-notice { min-height: 1.2rem; margin: .5rem 0; color: var(--danger); font-size: .875rem; }
+.prepare-call { width: 100%; min-height: 3.25rem; border: 0; border-radius: .65rem; color: #fff; background: #2d6d5b; font-size: 1rem; font-weight: 700; }
+.prepare-call:hover { background: #245b4c; }
+.dial-screen { flex: 1; display: flex; flex-direction: column; }
+.dial-display { min-height: 9rem; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 1rem 0 1.5rem; }
+.dial-number { min-height: 2.75rem; max-width: 100%; overflow: hidden; text-align: center; font-size: 2.15rem; font-weight: 400; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.number-hint { margin-top: .35rem; color: var(--phone-blue); font-size: .875rem; text-align: center; }
+.keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem 1.5rem; width: min(100%, 19rem); margin: 0 auto; }
+.key { width: 4.7rem; height: 4.7rem; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 0; border-radius: 50%; color: #111; background: var(--dial-key); transition: background-color .12s, transform .12s; }
+.key:hover { background: var(--dial-key-active); }
+.key:active, .round-btn:active { transform: scale(.95); }
+.key-number { font-size: 2rem; font-weight: 400; line-height: 1; }
+.key-letters { min-height: .62rem; margin-top: .22rem; font-size: .58rem; font-weight: 700; letter-spacing: .15em; line-height: 1; }
+.call-actions { position: relative; width: min(100%, 19rem); display: flex; justify-content: center; align-items: center; margin: 1rem auto 0; }
+.round-btn { display: flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; transition: transform .12s; }
+.call-btn { width: 4.7rem; height: 4.7rem; color: #fff; background: var(--phone-green); }
+.call-btn svg { width: 2.15rem; height: 2.15rem; }
+.delete-btn { position: absolute; right: .75rem; width: 3rem; height: 3rem; color: #252a28; background: transparent; }
+.delete-btn svg { width: 1.6rem; height: 1.6rem; }
+.dial-notice { min-height: 1.2rem; margin: .75rem 0 0; color: var(--danger); font-size: .875rem; text-align: center; word-break: keep-all; }
+.dial-notice:empty { display: none; }
+.dial-footer { display: flex; flex-direction: column; align-items: center; gap: .2rem; margin-top: 1.25rem; padding-top: .65rem; border-top: 1px solid var(--phone-line); color: var(--phone-blue); font-size: .75rem; }
+.dial-footer-icon { width: 1.35rem; height: 1.35rem; }
+.call-screen { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.call-header { padding-top: clamp(3rem, 10vh, 6rem); text-align: center; }
+.call-title { color: #fff; font-size: 2rem; font-weight: 400; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.status-pill { display: block; margin-top: .5rem; color: #e0e4e1; font-size: 1rem; font-weight: 400; }
+.conversation { flex: 1; min-height: 12rem; max-height: 48vh; overflow-y: auto; display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; margin-top: 2.25rem; padding: .5rem 0; }
+.message { max-width: 90%; padding: .8rem 1rem; border-radius: 1rem; background: #464b49; color: #fff; line-height: 1.6; font-size: 1rem; overflow-wrap: anywhere; word-break: keep-all; text-wrap: balance; white-space: pre-line; }
+.message.user { align-self: flex-end; background: #5b6862; }
+.message.warning { border: 1px solid #ffc8c3; }
+.voice-help { margin: auto 0 0; padding-top: 2rem; color: #e5e9e6; text-align: center; }
+.consent-skip { min-height: 48px; margin: .75rem 0 0; padding: .75rem 1rem; border: 1px solid #dce8df; border-radius: .7rem; background: #3c684d; color: #fff; font-size: 1rem; font-weight: 600; }
+.voice-help span { display: block; }
+.hospital-number { white-space: nowrap; }
+@media (max-width: 360px) { .phone { padding-left: 1rem; padding-right: 1rem; } .keypad { gap: .75rem; } }
+@media (max-height: 750px) { .dial-display { min-height: 5.5rem; } .keypad { gap: .5rem 1.5rem; } .key, .call-btn { width: 4.2rem; height: 4.2rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }

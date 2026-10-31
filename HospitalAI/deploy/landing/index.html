@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="전화 상담과 병원·지자체 업무 화면을 선택합니다.">
+<meta name="theme-color" content="#f4f6f5">
+<link rel="icon" href="data:,">
+<title>HospitalAI · 서비스 화면 선택</title>
+<style>
+:root { color-scheme:light; --bg:#f4f6f5; --surface:#fff; --text:#21322e; --muted:#52665f; --line:#dce5e0; --green:#2d6d5b; --pale:#e6f1eb; font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; color:var(--text); background:var(--bg); }
+*,*::before,*::after { box-sizing:border-box; }
+body { margin:0; min-width:320px; word-break:keep-all; }
+a { color:inherit; }
+a:focus-visible { outline:3px solid #237057; outline-offset:4px; }
+.shell { width:min(100% - 48px, 960px); margin:0 auto; }
+.topbar { background:#fff; border-bottom:1px solid var(--line); }
+.topbar .shell { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:750; font-size:17px; letter-spacing:-.03em; }
+.brand-mark { display:grid; place-items:center; width:34px; height:34px; border-radius:8px; background:var(--green); color:#fff; }
+svg { display:block; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.demo-label { color:var(--muted); font-size:13px; }
+main { padding:64px 0 72px; }
+.eyebrow { margin:0 0 10px; color:var(--green); font-size:13px; font-weight:700; }
+h1 { margin:0; font-size:clamp(26px,4vw,34px); line-height:1.3; letter-spacing:-.04em; }
+.intro { margin:12px 0 0; color:var(--muted); font-size:15px; line-height:1.65; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; gap:12px; margin:36px 0 12px; }
+.section-heading h2 { margin:0; font-size:15px; }
+.section-heading span { color:var(--muted); font-size:13px; }
+.services { border:1px solid var(--line); border-radius:10px; background:var(--surface); overflow:hidden; }
+.service { display:grid; grid-template-columns:44px minmax(0,1fr) auto; align-items:center; gap:16px; min-height:106px; padding:20px 24px; text-decoration:none; transition:background-color .15s; }
+.service + .service { border-top:1px solid var(--line); }
+.service:hover { background:#f5faf7; }
+.service-icon { display:grid; place-items:center; width:44px; height:44px; border-radius:9px; background:var(--pale); color:var(--green); }
+.service h3 { margin:0 0 5px; font-size:16px; letter-spacing:-.02em; }
+.service p { margin:0; color:var(--muted); font-size:14px; line-height:1.5; }
+.open { display:flex; align-items:center; gap:8px; color:var(--green); font-size:13px; font-weight:700; white-space:nowrap; }
+.open svg { width:17px; height:17px; }
+.notice { margin-top:22px; padding:15px 18px; border-left:3px solid #6b9b84; background:#eaf2ed; color:#365446; font-size:14px; line-height:1.6; }
+.notice p { margin:0; }
+footer { padding:24px 0; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+@media(max-width:600px) { .shell{width:calc(100% - 32px)} main{padding:40px 0 48px} .section-heading{margin-top:30px} .service{grid-template-columns:40px minmax(0,1fr) 18px;gap:12px;padding:18px 16px} .service-icon{width:40px;height:40px} .open{font-size:0} .open svg{width:18px;height:18px} .service p{font-size:13px} }
+@media(prefers-reduced-motion:reduce) { .service{transition:none} }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="shell"><div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg></span>HospitalAI</div><span class="demo-label">가상 시연</span></div></header>
+<main class="shell">
+<p class="eyebrow">HospitalAI</p><h1>전화 상담부터 병원 인계까지</h1><p class="intro">상담을 시작하거나 담당 업무 화면을 열어 주세요.</p>
+<div class="section-heading"><h2>서비스 화면</h2><span>목적에 맞는 화면을 선택하세요</span></div>
+<nav class="services" aria-label="서비스 화면 선택">
+<a class="service" href="/ui/"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3.8 9 7.5 7.4 9.2a15.3 15.3 0 0 0 7.4 7.4l1.7-1.6 3.7 2.4-.9 2.5c-.2.6-.8 1-1.5.9C9.5 19.5 4.5 14.5 3.2 6.2c-.1-.7.3-1.3.9-1.5z"/></svg></span><span><h3>전화 상담</h3><p>음성으로 상담을 시작합니다.</p></span><span class="open">화면 열기 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a>
+<a class="service" href="/dashboard"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V7h16v13M9 20v-5h6v5M12 3v7M9 6.5h6M7 11h.01M17 11h.01"/></svg></span><span><h3>병원 대시보드</h3><p>지자체에서 인계한 상담을 확인합니다.</p></span><span class="open">화면 열기 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a>
+<a class="service" href="/municipality"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V9h14v11M3 9l9-5 9 5M9 13v4M15 13v4"/></svg></span><span><h3>지자체 대시보드</h3><p>접수된 상담을 확인하고 병원에 인계합니다.</p></span><span class="open">화면 열기 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a>
+<a class="service" href="/hospital-reference"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg></span><span><h3>방문준비카드 레퍼런스</h3><p>예시 환자 자료로 방문준비카드 화면을 살펴봅니다.</p></span><span class="open">화면 열기 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a>
+</nav>
+<div class="notice"><p><strong>가상 시연 안내</strong><br>실제 개인정보나 의료정보를 입력하지 마세요.</p></div>
+</main>
+<footer><div class="shell">HospitalAI · 서비스 화면 선택</div></footer>
+</body>
+</html>

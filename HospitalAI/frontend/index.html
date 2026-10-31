@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="hospital-api-prefix" content="/api">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="가까운 병원과 연결하는 전화 상담">
+  <link rel="icon" href="data:,">
+  <title>병원 전화 상담</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="phone" aria-label="전화 화면">
+      <section id="setup-screen" class="setup-screen" aria-labelledby="setup-title">
+        <div class="call-setup">
+          <p class="setup-eyebrow"><a href="/">서비스 메인</a> · 전화 상담</p>
+          <h1 id="setup-title">상담을 시작하기 전에</h1>
+          <p class="notice"><strong>가상 시연 화면입니다.</strong><br>실제 전화망과 연결되지 않습니다. 실제 개인정보는 입력하지 마세요.</p>
+          <label class="caller-field" for="caller-phone">내 전화번호</label>
+          <input id="caller-phone" class="caller-input" type="tel" placeholder="010-0000-0000" autocomplete="tel" spellcheck="false">
+          <label class="caller-field" for="caller-region">병원을 찾을 지역 <span>(읍·면·동)</span></label>
+          <input id="caller-region" class="caller-input" type="text" placeholder="예: 화순군 백아면" maxlength="200" autocomplete="off">
+          <button id="use-demo-region" class="region-preset" type="button">화순 금호리조트 주변으로 설정</button>
+          <p class="helper">입력한 읍·면·동의 대표 위치로 검색합니다. 비워 두면 상담 중에 지역을 여쭤봅니다.</p>
+          <p class="helper speech-intro">전화 화면으로 이동할 때 마이크 권한을 요청합니다.<br>동의한 경우 말씀하신 지역으로 가까운 병원을 찾습니다. 기기에서 잘못 추정한 위치를 사용하지 않습니다.</p>
+          <label class="speech-disclosure"><input id="speech-notice" type="checkbox"><span>동의 여부를 알아듣기 위해 첫 음성은 <span class="provider-name">Microsoft Azure</span>로 전송됩니다. 이를 확인했습니다.</span></label>
+          <p class="helper setup-dial-guide">준비가 끝나면 <strong>070-1122-3344</strong>로 걸어 주세요.</p>
+          <p id="setup-notice" class="setup-notice" role="status"></p>
+          <button id="prepare-call" class="prepare-call" type="button">전화 화면으로</button>
+        </div>
+      </section>
+      <section id="dial-screen" class="dial-screen hidden" aria-label="전화 걸기">
+        <div class="dial-display">
+          <div id="dial-number" class="dial-number" aria-live="polite"></div>
+          <div class="number-hint">070-1122-3344로 걸어 주세요</div>
+        </div>
+        <div id="keypad" class="keypad" aria-label="전화번호 키패드"></div>
+        <div class="call-actions">
+          <button id="start-call" class="round-btn call-btn" aria-label="상담 시작" title="상담 시작"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.8 3.5 3.2 4.9 6.7 6.7l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.4.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2.2 2.3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button id="delete-digit" class="round-btn delete-btn" aria-label="마지막 번호 지우기" title="마지막 번호 지우기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7-5 5 5 5h10a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H9Zm3 3 4 4m0-4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <p id="dial-notice" class="dial-notice" role="status"></p>
+        <p id="dial-location-status" class="dial-notice" role="status"></p>
+        <div class="dial-footer" aria-hidden="true"><svg class="dial-footer-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="1.7"/><circle cx="12" cy="5" r="1.7"/><circle cx="19" cy="5" r="1.7"/><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/><circle cx="5" cy="19" r="1.7"/><circle cx="12" cy="19" r="1.7"/><circle cx="19" cy="19" r="1.7"/></svg><span>키패드</span></div>
+      </section>
+      <section id="call-screen" class="call-screen hidden" aria-label="병원 상담">
+        <div class="call-header"><div class="call-title">070 1122 3344</div><span id="call-status" class="status-pill">상담 준비</span></div>
+        <div id="conversation" class="conversation" role="log" aria-label="상담 내용" aria-live="polite"></div>
+        <button id="skip-consent" class="consent-skip hidden" type="button">동의하고 안내 건너뛰기</button>
+        <audio id="audio-player" preload="none"></audio>
+        <p id="voice-help" class="helper voice-help" role="status"><span>안내 중에도 말씀하실 수 있어요.</span><span>개인정보 안내는 끝까지 들은 뒤 답해 주세요.</span></p>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

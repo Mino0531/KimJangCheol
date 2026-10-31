@@ -1,0 +1,3998 @@
+{
+  "demo-call-001": {
+    "call_id": "demo-call-001",
+    "patient_id": "demo-patient-001",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_12",
+        "title": "골다공증 진료 자료 준비",
+        "easy_text": "이전에 받은 검사 안내나 약 목록이 있다면 모아 주세요.",
+        "staff_question": "이번 방문에 필요한 이전 검사 자료가 있는지 병원에 물어보세요.",
+        "reasons": [
+          "기록된 지병: 골다공증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "골다공증"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_14",
+            "category": "골다공증 검사/주사/약",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_17",
+        "title": "알레르기 기록 전달 준비",
+        "easy_text": "차트에 적힌 알레르기 내용을 직원에게 알려 주세요.",
+        "staff_question": "알레르기 원인과 반응이 현재 기록과 같은지 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 기록 있음"
+        ],
+        "priority_score": 8,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_17",
+            "category": "예방접종(독감/폐렴구균/대상포진/코로나)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_24",
+        "title": "혼자 방문하는 분의 이동 확인",
+        "easy_text": "병원에 가는 방법과 집으로 돌아오는 방법을 함께 정리해 주세요.",
+        "staff_question": "이번 검사나 절차에 동행자가 필요한지는 병원에 확인해 주세요.",
+        "reasons": [
+          "동행 계획 없음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [
+          "재진",
+          "정기 외래"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 9,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "골다공증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "골다공증",
+        "aliases": [
+          "골밀도",
+          "뼈 검사"
+        ],
+        "easy_expression": "뼈 건강과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "정기 외래",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "재진",
+        "aliases": [
+          "다시 가요",
+          "늘 다니는 병원",
+          "정기 외래"
+        ],
+        "easy_expression": "다시 받는 진료",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-002": {
+    "call_id": "demo-call-002",
+    "patient_id": "demo-patient-002",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_13",
+        "title": "호흡기 진료 전 기기·기록 준비",
+        "easy_text": "평소 사용하는 흡입기나 그 이름을 적은 목록이 있다면 준비해 주세요.",
+        "staff_question": "진료 때 사용하는 기기와 약 이름을 함께 전달할 수 있도록 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 만성 폐쇄성 폐질환"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "만성폐쇄성폐질환"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_23",
+            "category": "만성폐질환(COPD/농부폐/먼지 흡입)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_22",
+        "title": "천천히 듣는 전화 안내",
+        "easy_text": "안내를 한 가지씩 천천히 듣고, 어려운 말은 다시 물어보세요.",
+        "staff_question": "직원은 안내 속도와 반복 설명이 필요한지 확인해 주세요.",
+        "reasons": [
+          "천천히 설명 요청"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_26",
+            "category": "청력/보청기/귀 이물",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_23",
+        "title": "폴더폰 이용자 안내 보관",
+        "easy_text": "휴대전화 링크 대신 통화로 방문 순서를 다시 확인해 주세요.",
+        "staff_question": "기억하기 어려우면 짧게 반복하거나 종이에 적을 수 있게 설명해 주세요.",
+        "reasons": [
+          "폴더폰 이용 기록"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_25",
+        "title": "처음 방문하는 병원 접수 준비",
+        "easy_text": "도착 후 먼저 갈 접수 창구와 위치를 병원에 물어보세요.",
+        "staff_question": "첫 방문에 필요한 서류와 안내받을 창구를 확인해 주세요.",
+        "reasons": [
+          "방문 구분: 초진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 10,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "만성폐쇄성폐질환",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "만성폐쇄성폐질환",
+        "aliases": [
+          "만성 폐쇄성 폐질환",
+          "COPD",
+          "씨오피디"
+        ],
+        "easy_expression": "오래 이어지는 폐질환의 한 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-003": {
+    "call_id": "demo-call-003",
+    "patient_id": "demo-patient-003",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_10",
+        "title": "혈당 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈당 기록이 있다면 가져오세요.",
+        "staff_question": "검사 예정이 있다면 식사와 약에 관한 병원의 별도 안내를 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 제2형 당뇨병"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "당뇨병",
+          "당뇨"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_11",
+        "title": "무릎·관절 방문 준비",
+        "easy_text": "걷는 데 사용하는 지팡이나 보조기구가 있다면 함께 준비해 주세요.",
+        "staff_question": "이동에 도움이 필요한지와 병원 안에서 도움받을 곳을 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 무릎 골관절염"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "골관절염",
+          "관절"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_4",
+            "category": "정형외과/관절(무릎관절증/척추관협착증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_30",
+        "title": "여러 약을 먹는 분의 목록 준비",
+        "easy_text": "여러 곳에서 받은 약과 영양제 목록을 한곳에 모아 주세요.",
+        "staff_question": "현재 먹는 것과 과거에 받았던 것을 나눠 직원에게 보여 주세요.",
+        "reasons": [
+          "현재 복용약 3종이 차트에 기록됨"
+        ],
+        "priority_score": 8,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_20",
+        "title": "이동 도움이 필요한 방문",
+        "easy_text": "이동에 도움받을 사람이나 사용하는 보조기구를 미리 확인해 주세요.",
+        "staff_question": "병원 입구에서 접수처까지 도움받을 방법을 물어보세요.",
+        "reasons": [
+          "차트에 이동 지원 정보가 있음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_22",
+        "title": "천천히 듣는 전화 안내",
+        "easy_text": "안내를 한 가지씩 천천히 듣고, 어려운 말은 다시 물어보세요.",
+        "staff_question": "직원은 안내 속도와 반복 설명이 필요한지 확인해 주세요.",
+        "reasons": [
+          "천천히 설명 요청"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_26",
+            "category": "청력/보청기/귀 이물",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_23",
+        "title": "폴더폰 이용자 안내 보관",
+        "easy_text": "휴대전화 링크 대신 통화로 방문 순서를 다시 확인해 주세요.",
+        "staff_question": "기억하기 어려우면 짧게 반복하거나 종이에 적을 수 있게 설명해 주세요.",
+        "reasons": [
+          "폴더폰 이용 기록"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_24",
+        "title": "혼자 방문하는 분의 이동 확인",
+        "easy_text": "병원에 가는 방법과 집으로 돌아오는 방법을 함께 정리해 주세요.",
+        "staff_question": "이번 검사나 절차에 동행자가 필요한지는 병원에 확인해 주세요.",
+        "reasons": [
+          "동행 계획 없음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 3종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [
+          "재진",
+          "정기 외래"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 14,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "골관절염",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "골관절염",
+        "aliases": [
+          "퇴행성 관절염",
+          "무릎 관절염",
+          "무릎이 아픔"
+        ],
+        "easy_expression": "관절과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "당뇨병",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "당뇨병",
+        "aliases": [
+          "당뇨",
+          "혈당이 높음",
+          "혈당 높음"
+        ],
+        "easy_expression": "혈당 관리가 필요한 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "정기 외래",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "재진",
+        "aliases": [
+          "다시 가요",
+          "늘 다니는 병원",
+          "정기 외래"
+        ],
+        "easy_expression": "다시 받는 진료",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-004": {
+    "call_id": "demo-call-004",
+    "patient_id": "demo-patient-004",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_14",
+        "title": "지질 진료 전 자료 준비",
+        "easy_text": "이전에 받은 검사 결과와 지금 먹는 약 목록이 있다면 가져오세요.",
+        "staff_question": "새 검사가 예정돼 있는지와 필요한 준비를 병원에 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 이상지질혈증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "이상지질혈증"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_15",
+        "title": "갑상선 진료 기록 준비",
+        "easy_text": "기존 진료 기록이나 검사 결과가 있다면 약 목록과 함께 준비해 주세요.",
+        "staff_question": "병원에서 요청한 검사 자료가 있는지 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 갑상선기능저하증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "갑상선기능저하증",
+          "갑상선"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 8,
+    "word_comparison": [
+      {
+        "input_expression": "갑상선기능저하증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "갑상선기능저하증",
+        "aliases": [
+          "갑상선",
+          "갑상샘",
+          "갑상선 약"
+        ],
+        "easy_expression": "갑상선과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "이상지질혈증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "이상지질혈증",
+        "aliases": [
+          "고지혈증",
+          "콜레스테롤",
+          "지질"
+        ],
+        "easy_expression": "혈액 속 지방 성분과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-005": {
+    "call_id": "demo-call-005",
+    "patient_id": "demo-patient-005",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_24",
+        "title": "혼자 방문하는 분의 이동 확인",
+        "easy_text": "병원에 가는 방법과 집으로 돌아오는 방법을 함께 정리해 주세요.",
+        "staff_question": "이번 검사나 절차에 동행자가 필요한지는 병원에 확인해 주세요.",
+        "reasons": [
+          "동행 계획 없음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 1종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_25",
+        "title": "처음 방문하는 병원 접수 준비",
+        "easy_text": "도착 후 먼저 갈 접수 창구와 위치를 병원에 물어보세요.",
+        "staff_question": "첫 방문에 필요한 서류와 안내받을 창구를 확인해 주세요.",
+        "reasons": [
+          "방문 구분: 초진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 7,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-006": {
+    "call_id": "demo-call-006",
+    "patient_id": "demo-patient-006",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_10",
+        "title": "혈당 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈당 기록이 있다면 가져오세요.",
+        "staff_question": "검사 예정이 있다면 식사와 약에 관한 병원의 별도 안내를 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 제2형 당뇨병"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "당뇨병",
+          "당뇨"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_14",
+        "title": "지질 진료 전 자료 준비",
+        "easy_text": "이전에 받은 검사 결과와 지금 먹는 약 목록이 있다면 가져오세요.",
+        "staff_question": "새 검사가 예정돼 있는지와 필요한 준비를 병원에 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 이상지질혈증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "이상지질혈증"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 8,
+    "word_comparison": [
+      {
+        "input_expression": "당뇨병",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "당뇨병",
+        "aliases": [
+          "당뇨",
+          "혈당이 높음",
+          "혈당 높음"
+        ],
+        "easy_expression": "혈당 관리가 필요한 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "이상지질혈증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "이상지질혈증",
+        "aliases": [
+          "고지혈증",
+          "콜레스테롤",
+          "지질"
+        ],
+        "easy_expression": "혈액 속 지방 성분과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-007": {
+    "call_id": "demo-call-007",
+    "patient_id": "demo-patient-007",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_11",
+        "title": "무릎·관절 방문 준비",
+        "easy_text": "걷는 데 사용하는 지팡이나 보조기구가 있다면 함께 준비해 주세요.",
+        "staff_question": "이동에 도움이 필요한지와 병원 안에서 도움받을 곳을 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 무릎 골관절염"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "골관절염",
+          "관절"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_4",
+            "category": "정형외과/관절(무릎관절증/척추관협착증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_12",
+        "title": "골다공증 진료 자료 준비",
+        "easy_text": "이전에 받은 검사 안내나 약 목록이 있다면 모아 주세요.",
+        "staff_question": "이번 방문에 필요한 이전 검사 자료가 있는지 병원에 물어보세요.",
+        "reasons": [
+          "기록된 지병: 골다공증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "골다공증"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_14",
+            "category": "골다공증 검사/주사/약",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_20",
+        "title": "이동 도움이 필요한 방문",
+        "easy_text": "이동에 도움받을 사람이나 사용하는 보조기구를 미리 확인해 주세요.",
+        "staff_question": "병원 입구에서 접수처까지 도움받을 방법을 물어보세요.",
+        "reasons": [
+          "차트에 이동 지원 정보가 있음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_22",
+        "title": "천천히 듣는 전화 안내",
+        "easy_text": "안내를 한 가지씩 천천히 듣고, 어려운 말은 다시 물어보세요.",
+        "staff_question": "직원은 안내 속도와 반복 설명이 필요한지 확인해 주세요.",
+        "reasons": [
+          "천천히 설명 요청"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_26",
+            "category": "청력/보청기/귀 이물",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_23",
+        "title": "폴더폰 이용자 안내 보관",
+        "easy_text": "휴대전화 링크 대신 통화로 방문 순서를 다시 확인해 주세요.",
+        "staff_question": "기억하기 어려우면 짧게 반복하거나 종이에 적을 수 있게 설명해 주세요.",
+        "reasons": [
+          "폴더폰 이용 기록"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 11,
+    "word_comparison": [
+      {
+        "input_expression": "골관절염",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "골관절염",
+        "aliases": [
+          "퇴행성 관절염",
+          "무릎 관절염",
+          "무릎이 아픔"
+        ],
+        "easy_expression": "관절과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "골다공증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "골다공증",
+        "aliases": [
+          "골밀도",
+          "뼈 검사"
+        ],
+        "easy_expression": "뼈 건강과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-008": {
+    "call_id": "demo-call-008",
+    "patient_id": "demo-patient-008",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_19",
+        "title": "약 이름이 기억나지 않을 때 준비",
+        "easy_text": "가지고 있는 약 봉투나 약 이름을 적은 종이가 있다면 가져오세요.",
+        "staff_question": "약을 먹는지와 어떤 약인지 확인되지 않은 부분을 직원에게 알려 주세요.",
+        "reasons": [
+          "복용약 정보 미확인"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_25",
+        "title": "처음 방문하는 병원 접수 준비",
+        "easy_text": "도착 후 먼저 갈 접수 창구와 위치를 병원에 물어보세요.",
+        "staff_question": "첫 방문에 필요한 서류와 안내받을 창구를 확인해 주세요.",
+        "reasons": [
+          "방문 구분: 초진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 5,
+    "word_comparison": [
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-009": {
+    "call_id": "demo-call-009",
+    "patient_id": "demo-patient-009",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_14",
+        "title": "지질 진료 전 자료 준비",
+        "easy_text": "이전에 받은 검사 결과와 지금 먹는 약 목록이 있다면 가져오세요.",
+        "staff_question": "새 검사가 예정돼 있는지와 필요한 준비를 병원에 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 이상지질혈증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "이상지질혈증"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 8,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "이상지질혈증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "이상지질혈증",
+        "aliases": [
+          "고지혈증",
+          "콜레스테롤",
+          "지질"
+        ],
+        "easy_expression": "혈액 속 지방 성분과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-010": {
+    "call_id": "demo-call-010",
+    "patient_id": "demo-patient-010",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_16",
+        "title": "위장 진료 전 설명할 내용 정리",
+        "easy_text": "불편했던 때와 먹었던 약을 기억나는 만큼 적어 두세요.",
+        "staff_question": "검사 준비는 검사 종류에 따라 병원에 직접 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 만성 위염"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "위염"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_5",
+            "category": "소화기질환(위염/역류성식도염/장염)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 1종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_25",
+        "title": "처음 방문하는 병원 접수 준비",
+        "easy_text": "도착 후 먼저 갈 접수 창구와 위치를 병원에 물어보세요.",
+        "staff_question": "첫 방문에 필요한 서류와 안내받을 창구를 확인해 주세요.",
+        "reasons": [
+          "방문 구분: 초진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 7,
+    "word_comparison": [
+      {
+        "input_expression": "위염",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "위염",
+        "aliases": [
+          "속이 쓰림",
+          "속쓰림",
+          "위장 진료"
+        ],
+        "easy_expression": "위와 관련된 병 이름",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-011": {
+    "call_id": "demo-call-011",
+    "patient_id": "demo-patient-011",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_10",
+        "title": "혈당 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈당 기록이 있다면 가져오세요.",
+        "staff_question": "검사 예정이 있다면 식사와 약에 관한 병원의 별도 안내를 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 제2형 당뇨병"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "당뇨병",
+          "당뇨"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 1종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [
+          "재진",
+          "정기 외래"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 7,
+    "word_comparison": [
+      {
+        "input_expression": "당뇨병",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "당뇨병",
+        "aliases": [
+          "당뇨",
+          "혈당이 높음",
+          "혈당 높음"
+        ],
+        "easy_expression": "혈당 관리가 필요한 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "정기 외래",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "재진",
+        "aliases": [
+          "다시 가요",
+          "늘 다니는 병원",
+          "정기 외래"
+        ],
+        "easy_expression": "다시 받는 진료",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "demo-call-012": {
+    "call_id": "demo-call-012",
+    "patient_id": "demo-patient-012",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_21",
+        "title": "휠체어 이용 방문 준비",
+        "easy_text": "휠체어를 이용한다는 점을 방문 전에 병원에 알려 주세요.",
+        "staff_question": "내리는 곳과 휠체어로 들어갈 수 있는 입구를 확인해 주세요.",
+        "reasons": [
+          "차트에 이동 지원 정보가 있음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_22",
+        "title": "천천히 듣는 전화 안내",
+        "easy_text": "안내를 한 가지씩 천천히 듣고, 어려운 말은 다시 물어보세요.",
+        "staff_question": "직원은 안내 속도와 반복 설명이 필요한지 확인해 주세요.",
+        "reasons": [
+          "천천히 설명 요청"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_26",
+            "category": "청력/보청기/귀 이물",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_23",
+        "title": "폴더폰 이용자 안내 보관",
+        "easy_text": "휴대전화 링크 대신 통화로 방문 순서를 다시 확인해 주세요.",
+        "staff_question": "기억하기 어려우면 짧게 반복하거나 종이에 적을 수 있게 설명해 주세요.",
+        "reasons": [
+          "폴더폰 이용 기록"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 1종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 9,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "past-call-3": {
+    "call_id": "past-call-3",
+    "patient_id": "demo-patient-004",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_14",
+        "title": "지질 진료 전 자료 준비",
+        "easy_text": "이전에 받은 검사 결과와 지금 먹는 약 목록이 있다면 가져오세요.",
+        "staff_question": "새 검사가 예정돼 있는지와 필요한 준비를 병원에 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 이상지질혈증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "이상지질혈증"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_15",
+        "title": "갑상선 진료 기록 준비",
+        "easy_text": "기존 진료 기록이나 검사 결과가 있다면 약 목록과 함께 준비해 주세요.",
+        "staff_question": "병원에서 요청한 검사 자료가 있는지 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 갑상선기능저하증"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "갑상선기능저하증",
+          "갑상선"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 2종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_18",
+        "title": "미확인 알레르기 정보 확인",
+        "easy_text": "약이나 음식으로 불편했던 경험이 기억나면 직원에게 말씀해 주세요.",
+        "staff_question": "미확인 상태를 알레르기가 없다는 뜻으로 바꾸지 말고 확인해 주세요.",
+        "reasons": [
+          "알레르기 정보 미확인"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_31",
+        "title": "과거 처방과 현재 복용 구분",
+        "easy_text": "이전 처방전이 있다면 지금 먹는 약 목록과 구분해 준비해 주세요.",
+        "staff_question": "과거 처방에 적혀 있다는 이유만으로 현재 복용 중으로 기록하지 않도록 확인해 주세요.",
+        "reasons": [
+          "이전 처방 이력이 기록됨"
+        ],
+        "priority_score": 3,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_32",
+        "title": "방문 계획과 이동 시간 확인",
+        "easy_text": "병원에서 안내받은 날짜·시각과 이동 방법을 다시 확인해 주세요.",
+        "staff_question": "말씀하신 방문 계획이 실제 예약으로 확인된 것인지 구분해 주세요.",
+        "reasons": [
+          "사용자가 전달한 방문 계획이 있음"
+        ],
+        "priority_score": 2,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_7",
+        "title": "방문 전 기본 서류 확인",
+        "easy_text": "병원에서 받은 안내문과 본인 확인에 필요한 서류를 한곳에 모아 두세요.",
+        "staff_question": "이번 방문에 필요한 서류가 무엇인지 병원에 확인해 주세요.",
+        "reasons": [
+          "모든 방문의 기본 준비"
+        ],
+        "priority_score": 1,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_1",
+            "category": "어느 병원에 가야 할지 모를 때(의료기관 선택)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 8,
+    "word_comparison": [
+      {
+        "input_expression": "갑상선기능저하증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "갑상선기능저하증",
+        "aliases": [
+          "갑상선",
+          "갑상샘",
+          "갑상선 약"
+        ],
+        "easy_expression": "갑상선과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "이상지질혈증",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "이상지질혈증",
+        "aliases": [
+          "고지혈증",
+          "콜레스테롤",
+          "지질"
+        ],
+        "easy_expression": "혈액 속 지방 성분과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "past-call-1": {
+    "call_id": "past-call-1",
+    "patient_id": "demo-patient-003",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_10",
+        "title": "혈당 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈당 기록이 있다면 가져오세요.",
+        "staff_question": "검사 예정이 있다면 식사와 약에 관한 병원의 별도 안내를 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 제2형 당뇨병"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "당뇨병",
+          "당뇨"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_11",
+        "title": "무릎·관절 방문 준비",
+        "easy_text": "걷는 데 사용하는 지팡이나 보조기구가 있다면 함께 준비해 주세요.",
+        "staff_question": "이동에 도움이 필요한지와 병원 안에서 도움받을 곳을 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 무릎 골관절염"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "골관절염",
+          "관절"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_4",
+            "category": "정형외과/관절(무릎관절증/척추관협착증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_30",
+        "title": "여러 약을 먹는 분의 목록 준비",
+        "easy_text": "여러 곳에서 받은 약과 영양제 목록을 한곳에 모아 주세요.",
+        "staff_question": "현재 먹는 것과 과거에 받았던 것을 나눠 직원에게 보여 주세요.",
+        "reasons": [
+          "현재 복용약 3종이 차트에 기록됨"
+        ],
+        "priority_score": 8,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_20",
+        "title": "이동 도움이 필요한 방문",
+        "easy_text": "이동에 도움받을 사람이나 사용하는 보조기구를 미리 확인해 주세요.",
+        "staff_question": "병원 입구에서 접수처까지 도움받을 방법을 물어보세요.",
+        "reasons": [
+          "차트에 이동 지원 정보가 있음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_22",
+        "title": "천천히 듣는 전화 안내",
+        "easy_text": "안내를 한 가지씩 천천히 듣고, 어려운 말은 다시 물어보세요.",
+        "staff_question": "직원은 안내 속도와 반복 설명이 필요한지 확인해 주세요.",
+        "reasons": [
+          "천천히 설명 요청"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_26",
+            "category": "청력/보청기/귀 이물",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_23",
+        "title": "폴더폰 이용자 안내 보관",
+        "easy_text": "휴대전화 링크 대신 통화로 방문 순서를 다시 확인해 주세요.",
+        "staff_question": "기억하기 어려우면 짧게 반복하거나 종이에 적을 수 있게 설명해 주세요.",
+        "reasons": [
+          "폴더폰 이용 기록"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_24",
+        "title": "혼자 방문하는 분의 이동 확인",
+        "easy_text": "병원에 가는 방법과 집으로 돌아오는 방법을 함께 정리해 주세요.",
+        "staff_question": "이번 검사나 절차에 동행자가 필요한지는 병원에 확인해 주세요.",
+        "reasons": [
+          "동행 계획 없음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 3종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [
+          "재진",
+          "정기 외래"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 14,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "골관절염",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "골관절염",
+        "aliases": [
+          "퇴행성 관절염",
+          "무릎 관절염",
+          "무릎이 아픔"
+        ],
+        "easy_expression": "관절과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "당뇨병",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "당뇨병",
+        "aliases": [
+          "당뇨",
+          "혈당이 높음",
+          "혈당 높음"
+        ],
+        "easy_expression": "혈당 관리가 필요한 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "정기 외래",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "재진",
+        "aliases": [
+          "다시 가요",
+          "늘 다니는 병원",
+          "정기 외래"
+        ],
+        "easy_expression": "다시 받는 진료",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  },
+  "past-call-2": {
+    "call_id": "past-call-2",
+    "patient_id": "demo-patient-003",
+    "method": "lexical_alias_retrieval_and_constrained_templates",
+    "word_level_method": "service_authored_heuristic",
+    "word_level_scale": {
+      "1": "일상 표현",
+      "2": "진료·행정 용어",
+      "3": "전문 용어"
+    },
+    "query": "",
+    "cards": [
+      {
+        "document_id": "guide_10",
+        "title": "혈당 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈당 기록이 있다면 가져오세요.",
+        "staff_question": "검사 예정이 있다면 식사와 약에 관한 병원의 별도 안내를 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 제2형 당뇨병"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "당뇨병",
+          "당뇨"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_11",
+        "title": "무릎·관절 방문 준비",
+        "easy_text": "걷는 데 사용하는 지팡이나 보조기구가 있다면 함께 준비해 주세요.",
+        "staff_question": "이동에 도움이 필요한지와 병원 안에서 도움받을 곳을 확인해 주세요.",
+        "reasons": [
+          "기록된 지병: 무릎 골관절염"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "골관절염",
+          "관절"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_4",
+            "category": "정형외과/관절(무릎관절증/척추관협착증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_9",
+        "title": "혈압 진료 전 기록 준비",
+        "easy_text": "집에서 적어 둔 혈압 기록이 있다면 가져오세요.",
+        "staff_question": "기록한 날짜와 측정값을 접수·진료 때 보여줄 수 있게 준비해 주세요.",
+        "reasons": [
+          "기록된 지병: 고혈압"
+        ],
+        "priority_score": 9,
+        "matched_terms": [
+          "고혈압"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_3",
+            "category": "만성질환(본태성고혈압/당뇨병/고지혈증)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_30",
+        "title": "여러 약을 먹는 분의 목록 준비",
+        "easy_text": "여러 곳에서 받은 약과 영양제 목록을 한곳에 모아 주세요.",
+        "staff_question": "현재 먹는 것과 과거에 받았던 것을 나눠 직원에게 보여 주세요.",
+        "reasons": [
+          "현재 복용약 3종이 차트에 기록됨"
+        ],
+        "priority_score": 8,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_20",
+        "title": "이동 도움이 필요한 방문",
+        "easy_text": "이동에 도움받을 사람이나 사용하는 보조기구를 미리 확인해 주세요.",
+        "staff_question": "병원 입구에서 접수처까지 도움받을 방법을 물어보세요.",
+        "reasons": [
+          "차트에 이동 지원 정보가 있음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_22",
+        "title": "천천히 듣는 전화 안내",
+        "easy_text": "안내를 한 가지씩 천천히 듣고, 어려운 말은 다시 물어보세요.",
+        "staff_question": "직원은 안내 속도와 반복 설명이 필요한지 확인해 주세요.",
+        "reasons": [
+          "천천히 설명 요청"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_26",
+            "category": "청력/보청기/귀 이물",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_23",
+        "title": "폴더폰 이용자 안내 보관",
+        "easy_text": "휴대전화 링크 대신 통화로 방문 순서를 다시 확인해 주세요.",
+        "staff_question": "기억하기 어려우면 짧게 반복하거나 종이에 적을 수 있게 설명해 주세요.",
+        "reasons": [
+          "폴더폰 이용 기록"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_24",
+        "title": "혼자 방문하는 분의 이동 확인",
+        "easy_text": "병원에 가는 방법과 집으로 돌아오는 방법을 함께 정리해 주세요.",
+        "staff_question": "이번 검사나 절차에 동행자가 필요한지는 병원에 확인해 주세요.",
+        "reasons": [
+          "동행 계획 없음"
+        ],
+        "priority_score": 7,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "guide_3",
+            "category": "이동 수단이 없을 때(병원 가는 길)",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_8",
+        "title": "현재 먹는 약 목록 준비",
+        "easy_text": "지금 먹는 약의 목록이나 약 봉투를 챙겨 주세요.",
+        "staff_question": "가져온 약 목록이 현재 복용 내용과 같은지 확인해 주세요.",
+        "reasons": [
+          "현재 복용약 3종이 차트에 기록됨"
+        ],
+        "priority_score": 6,
+        "matched_terms": [],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_22",
+            "category": "다약제 복용/약 중복·부작용",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      },
+      {
+        "document_id": "guide_26",
+        "title": "다시 방문하는 병원 접수 준비",
+        "easy_text": "이전 방문 기록이나 진료 안내문이 있다면 준비해 주세요.",
+        "staff_question": "접수할 때 기존에 다니던 환자임을 전달할 수 있게 정리해 주세요.",
+        "reasons": [
+          "방문 구분: 재진"
+        ],
+        "priority_score": 4,
+        "matched_terms": [
+          "재진",
+          "정기 외래"
+        ],
+        "language_level": 1,
+        "source_kind": "service_authored",
+        "review_status": "pending_review",
+        "scope": "visit_preparation_only",
+        "reference_documents": [
+          {
+            "document_id": "freq_20",
+            "category": "약 처방 갱신/장기처방/약 떨어짐",
+            "review_status": "pending_review",
+            "used_for_action_generation": false
+          }
+        ]
+      }
+    ],
+    "matched_document_count": 14,
+    "word_comparison": [
+      {
+        "input_expression": "고혈압",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "고혈압",
+        "aliases": [
+          "혈압이 높다",
+          "혈압이 높음",
+          "혈압 높음"
+        ],
+        "easy_expression": "혈압이 높은 상태",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "골관절염",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "골관절염",
+        "aliases": [
+          "퇴행성 관절염",
+          "무릎 관절염",
+          "무릎이 아픔"
+        ],
+        "easy_expression": "관절과 관련된 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "당뇨병",
+        "match_type": "canonical",
+        "lexical_similarity": 1.0,
+        "canonical": "당뇨병",
+        "aliases": [
+          "당뇨",
+          "혈당이 높음",
+          "혈당 높음"
+        ],
+        "easy_expression": "혈당 관리가 필요한 병 이름",
+        "professional_level": 3,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "병원",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "의료기관",
+        "aliases": [
+          "병원",
+          "의원",
+          "보건소"
+        ],
+        "easy_expression": "진료나 건강 관련 도움을 받는 곳",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      },
+      {
+        "input_expression": "정기 외래",
+        "match_type": "alias",
+        "lexical_similarity": 1.0,
+        "canonical": "재진",
+        "aliases": [
+          "다시 가요",
+          "늘 다니는 병원",
+          "정기 외래"
+        ],
+        "easy_expression": "다시 받는 진료",
+        "professional_level": 2,
+        "easy_level": 1,
+        "interpretation": "검색 표현 연결이며 환자 진단이 아님"
+      }
+    ],
+    "knowledge_document_count": 100,
+    "clinical_instructions_generated": false,
+    "embedding_used": false,
+    "llm_used": false,
+    "notice": "방문 준비 참고용 초안입니다. 미검토 의료 원문은 행동 지시 생성에 사용하지 않습니다."
+  }
+}

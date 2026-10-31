@@ -1,0 +1,30 @@
+{
+  "snapshot_at_kst": "2026-10-30T14:50:16.284444+09:00",
+  "synthetic_data": true,
+  "clinical_system_connected": false,
+  "database": "hospital-demo.sqlite3",
+  "sha256": "0ae556594d81b06b4e9f3789180ead7864e9b197621c5add8f91f42d2da1e31f",
+  "integrity_check": "ok",
+  "foreign_key_check": [],
+  "row_counts": {
+    "call_events": 12,
+    "call_locations": 13,
+    "call_messages": 55,
+    "calls": 15,
+    "chart_imports": 1,
+    "chart_revisions": 12,
+    "desk_actions": 8,
+    "patient_conditions": 19,
+    "patient_encounters": 33,
+    "patient_medications": 20,
+    "patient_observations": 44,
+    "patient_prescriptions": 23,
+    "patients": 12,
+    "rag_chunks": 100,
+    "rag_document_versions": 100,
+    "rag_documents": 100,
+    "rag_imports": 2,
+    "rag_preparation_policies": 27,
+    "rag_vocabulary": 27
+  }
+}

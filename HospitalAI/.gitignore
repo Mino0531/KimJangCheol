@@ -1,0 +1,24 @@
+# Local secrets, databases, and generated runtime files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+.venv/
+__pycache__/
+.pytest_cache/
+.playwright-cli/
+.omo/
+*.pyc
+*.mp3
+*.wav
+qa-*.png
+qa-*.jpg
+
+# Local experiments and generated archives
+/azure-speech-*/
+*.zip
